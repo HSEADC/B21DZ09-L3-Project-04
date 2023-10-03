@@ -1,0 +1,8 @@
+.taskCard,
+.answerCard {
+  display: block;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  text-decoration: none;
+  color: black;
+}

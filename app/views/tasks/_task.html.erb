@@ -1,0 +1,13 @@
+<div id="<%= dom_id task %>">
+  <div class="taskCard">
+    <p>
+      <strong><%= task.name %></strong>
+    </p>
+
+    <p>
+      <%= task.description %>
+    </p>
+
+    <%= image_tag task.example.url, width: 400 %>
+  </div>
+</div>
