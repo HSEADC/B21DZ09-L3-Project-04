@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commenter: MyString
+  body: MyText
+  task: one
+  image: MyString
+  string: MyString
+
+two:
+  commenter: MyString
+  body: MyText
+  task: two
+  image: MyString
+  string: MyString

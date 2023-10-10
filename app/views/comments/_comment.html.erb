@@ -1,0 +1,13 @@
+<p>
+	<b>Выполнил:</b>
+	<%= comment.commenter %>
+</p>
+
+<p>
+	<b>Ответ:</b>
+	<%= comment.body %>
+</p>
+
+<p>
+	<%= link_to 'Destroy Comment', [comment.task, comment], :confirm => 'Are you sure?', :method => :delete %>
+</p>
