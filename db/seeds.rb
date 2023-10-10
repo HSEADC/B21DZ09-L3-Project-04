@@ -46,6 +46,12 @@ def upload_random_avatar
   uploader
 end
 
+def upload_random_image
+  uploader = CoverUploader.new(Task.new, :image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
+  uploader
+end
+
 def upload_random_cover
   uploader = CoverUploader.new(Answer.new, :cover)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
@@ -57,7 +63,8 @@ def create_tasks
     task = Task.create(
       name: task_name,
       description: create_sentence(10..40),
-      example: upload_random_example
+      example: upload_random_example,
+      image: upload_random_image
     )
     puts "Task with id #{task.id} and name #{task.name} just created"
   end

@@ -1,5 +1,7 @@
 <div id="<%= dom_id task %>">
   <div class="taskCard">
+    <%= image_tag task.image.url, width: 300 if task.image.url %>
+
     <p>
       <strong><%= task.name %></strong>
     </p>
@@ -8,6 +10,5 @@
       <%= task.description %>
     </p>
 
-    <%= image_tag task.example.url, width: 400 %>
   </div>
 </div>

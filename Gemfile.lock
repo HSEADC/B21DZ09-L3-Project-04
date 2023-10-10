@@ -236,7 +236,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
-  carrierwave
+  carrierwave (~> 3.0)
   debug
   importmap-rails
   jbuilder

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :answers
-  resources :tasks
+  resources :tasks 
 
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'welcome#about'
