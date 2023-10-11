@@ -23,12 +23,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_10_214855) do
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
     t.text "body"
-    t.integer "id"
+    t.integer "task_id"
     t.string "image"
     t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id"]
+    t.index ["task_id"]
   end
 
   create_table "tasks", force: :cascade do |t|
