@@ -10,32 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_11_090125) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_16_180214) do
   create_table "answers", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "avatar"
-    t.string "cover"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "answer_image"
+    t.string "answer_status"
+    t.boolean "best_answer"
+    t.integer "user_id"
+    t.string "username"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "answer_id"
+    t.integer "user_id"
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.integer "task_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.string "commenter"
-    t.text "body"
-    t.string "image"
-    t.string "string"
+  create_table "likes", force: :cascade do |t|
+    t.integer "answer_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "task_id"
   end
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "example"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "theme"
+    t.string "status"
+    t.boolean "active"
+    t.datetime "ending_at"
+    t.string "ref_image"
+    t.string "first_answer_image"
   end
 
   create_table "tasks_answers", id: false, force: :cascade do |t|

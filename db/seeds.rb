@@ -34,26 +34,26 @@ def create_sentence(quantity)
   sentence = sentence_words.join(' ').capitalize
 end
 
-def upload_random_example
-  uploader = ExampleUploader.new(Task.new, :example)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
-  uploader
-end
-
 def upload_random_avatar
   uploader = AvatarUploader.new(Answer.new, :avatar)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
   uploader
 end
 
-def upload_random_image
-  uploader = CoverUploader.new(Task.new, :image)
+def upload_random_task_image
+  uploader = TaskImageUploader.new(Task.new, :first_answer_image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
   uploader
 end
 
-def upload_random_cover
-  uploader = CoverUploader.new(Answer.new, :cover)
+def upload_random_ref_image
+  uploader = RefImageUploader.new(Task.new, :ref_image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
+  uploader
+end
+
+def upload_random_answer_image
+  uploader = AnswerImageUploader.new(Answer.new, :answer_image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
   uploader
 end
@@ -63,8 +63,8 @@ def create_tasks
     task = Task.create(
       name: task_name,
       description: create_sentence(10..40),
-      example: upload_random_example,
-      image: upload_random_image
+      first_answer_image: upload_random_task_image,
+      ref_image: upload_random_ref_image
     )
     puts "Task with id #{task.id} and name #{task.name} just created"
   end

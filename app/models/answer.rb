@@ -1,5 +1,7 @@
 class Answer < ApplicationRecord
-  has_and_belongs_to_many :tasks
+  belongs_to :task
+  belongs_to :user
+  has_many :comments, :dependent => :destroy
   mount_uploader :avatar, AvatarUploader
-  mount_uploader :cover, CoverUploader
+  mount_uploader :answer_image, AnswerImageUploader
 end

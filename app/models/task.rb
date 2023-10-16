@@ -1,6 +1,5 @@
 class Task < ApplicationRecord
-  has_and_belongs_to_many :answers
-  mount_uploader :example, ExampleUploader
-
-  has_many :comments, :dependent => :destroy
+  has_many :answers
+  mount_uploader :first_answer_image, TaskImageUploader
+  mount_uploader :ref_image, RefImageUploader
 end

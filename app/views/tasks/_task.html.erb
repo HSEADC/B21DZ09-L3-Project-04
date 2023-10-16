@@ -1,6 +1,6 @@
 <div id="<%= dom_id task %>">
   <div class="taskCard">
-    <%= image_tag task.example.url, width: 300 if task.example.url %>
+    <%= image_tag task.first_answer_image.url, width: 300 if task.first_answer_image.url %>
 
     <p>
       <strong><%= task.name %></strong>

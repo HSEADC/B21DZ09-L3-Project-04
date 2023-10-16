@@ -1,6 +1,6 @@
 <p>
 	<b>Выполнил:</b>
-	<%= comment.commenter %>
+	<%= comment.username %>
 </p>
 
 <p>
@@ -9,5 +9,5 @@
 </p>
 
 <p>
-	<%= link_to 'Destroy Comment', [comment.task, comment], :confirm => 'Are you sure?', :method => :delete %>
+	<%= button_to 'Destroy Comment', [comment.task, comment], :confirm => 'Are you sure?', :method => :delete %>
 </p>
