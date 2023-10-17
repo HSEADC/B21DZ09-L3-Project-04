@@ -1,12 +1,13 @@
 <div id="<%= dom_id answer %>">
   <div class="answerCard">
+    <%= answer.user.email %>
     <%#= image_tag answer.avatar.url, width: 50 %>
 
     <p>
      <strong><%= answer.name %></strong>
     </p>
 
-    <%#= image_tag answer.answer_image.url, width: 400 %>
+    <%= image_tag answer.answer_image.url, width: 400 %>
 
     <p>
       <%= answer.description %>

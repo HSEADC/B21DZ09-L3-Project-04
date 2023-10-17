@@ -14,14 +14,32 @@ raw_text = 'К каждому заданию прилагаются специа
 
 def seed
   reset_db
+  create_users
   create_tasks
-  create_answers(100)
+  create_answers(10)
+  create_comments(5)
 end
 
 def reset_db
   Rake::Task['db:drop'].invoke
   Rake::Task['db:create'].invoke
   Rake::Task['db:migrate'].invoke
+end
+
+def create_users
+  i = 0
+
+  10.times do
+    user_data = {
+      email: "user_#{i}@email.com",
+      password: 'testtest'
+    }
+
+    user = User.create!(user_data)
+    puts "User created with id #{user.id}"
+
+    i += 1
+  end
 end
 
 def create_sentence(quantity)
@@ -71,15 +89,39 @@ def create_tasks
 end
 
 def create_answers(quantity)
+  tasks = Task.all
+
+  tasks.each do |task|
   quantity.times do
+    user = User.all.sample
     answer = Answer.create(
+      task_id: task.id,
       name: create_sentence(1..3),
       description: create_sentence(4..20),
       avatar: upload_random_avatar,
-      cover: upload_random_cover
+      answer_image: upload_random_answer_image,
+      user_id: user.id
     )
 
-    puts "Answer with id #{answer.id} and name #{answer.name} just created"
+      puts "Answer with id #{answer.id} for task with id #{answer.task.id} just created"
+    end
+  end
+end
+
+def create_comments(quantity)
+  answers = Answer.all
+
+  answers.each do |answer|
+  quantity.times do
+    user = User.all.sample
+    comment = Comment.create(
+      answer_id: answer.id,
+      body: create_sentence(4..20),
+      user_id: user.id
+    )
+
+      puts "Comment with id #{comment.id} for answer with id #{comment.answer.id} just created"
+    end
   end
 end
 
