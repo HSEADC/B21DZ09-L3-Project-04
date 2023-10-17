@@ -11,9 +11,11 @@
 <br>
 <br>
 
+<% if can? :manage, @answer %>
 <div>
   <%= link_to "Edit this answer", edit_answer_path(@answer) %> |
   <%= link_to "Back to answers", answers_path %>
 
   <%= button_to "Destroy this answer", @answer, method: :delete %>
 </div>
+<% end %>

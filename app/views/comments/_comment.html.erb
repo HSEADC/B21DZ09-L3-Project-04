@@ -10,7 +10,8 @@
 	<%= comment.body %>
 </p>
 
-<p>
-	<%= button_to 'Destroy Comment', [comment.answer, comment], :confirm => 'Are you sure?', :method => :delete %>
-</p>
+<% if can? :manage, comment %>
+	 <%= link_to "Edit this comment", edit_answer_comment_path(answer, comment) %>
+	 <%= button_to "Destroy this comment", [answer, comment], method: :delete %>
+ <% end %>
 </div>

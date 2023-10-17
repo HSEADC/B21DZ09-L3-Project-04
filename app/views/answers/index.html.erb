@@ -1,8 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Answers</h1>
-
-<%= link_to "New answer", new_answer_path %>
+<% if can? :create, Answer %>
+  <%= link_to "New answer", new_answer_path %>
+<% end %>
 
 <div id="answers">
   <% @answers.each do | answer | %>
