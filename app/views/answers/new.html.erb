@@ -1,6 +1,8 @@
 <h1>New answer</h1>
 
-<%= render "form", answer: @answer %>
+<%= (1..100).to_a.sample %>
+
+<%= render "form", task: @task, answer: @answer %>
 
 <br>
 

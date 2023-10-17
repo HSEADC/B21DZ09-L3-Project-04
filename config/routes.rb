@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :answers
   resources :tasks do
-    resources :comments
+    resources :answers do
+      resources :comments
+    end
   end
 
   get 'welcome', to: 'welcome#index'

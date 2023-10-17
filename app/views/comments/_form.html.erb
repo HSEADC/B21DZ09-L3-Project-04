@@ -1,8 +1,16 @@
-<%= form_for([@task, @task.comments.build]) do |f| %>
-	<div class="field">
-		<%= f.label :username %><br />
-		<%= f.text_field :username %>
-	</div>
+<%= form_with(model: [answer, comment]) do |form| %>
+  <% if comment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% comment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 
 	<div class="field">
 		<%= f.label :body %><br />

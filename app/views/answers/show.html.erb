@@ -2,6 +2,15 @@
 
 <%= render @answer %>
 
+<h3>Comments</h3>
+
+<%= link_to "New comment", new_answer_comment_path(@answer) %>
+
+<%= render @answer.comments, answer: @answers %>
+
+<br>
+<br>
+
 <div>
   <%= link_to "Edit this answer", edit_answer_path(@answer) %> |
   <%= link_to "Back to answers", answers_path %>

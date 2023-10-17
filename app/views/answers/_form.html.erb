@@ -1,7 +1,7 @@
-<%= form_with(model: answer) do |form| %>
+<%= form_with(model: [task, answer]) do |form| %>
   <% if answer.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
       <ul>
         <% answer.errors.each do |error| %>
@@ -11,27 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="field">
+		<%= f.label :username %><br />
+		<%= f.text_field :username %>
+	</div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
+	<div class="field">
+		<%= f.label :description %><br />
+		<%= f.text_area :description %>
+	</div>
 
-  <div>
-    <%= form.label :avatar, style: "display: block" %>
-    <%= form.text_field :avatar %>
-  </div>
-
-  <div>
-    <%= form.label :answer_image, style: "display: block" %>
-    <%= form.text_field :answer_image %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
 <% end %>
