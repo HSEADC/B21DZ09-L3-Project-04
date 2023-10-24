@@ -2,14 +2,14 @@
 
 <h1>Answers</h1>
 <% if can? :create, Answer %>
-  <%= link_to "New answer", new_answer_path %>
+  <%= link_to "New answer", new_admin_answer_path %>
 <% end %>
 
 <div id="answers">
   <% @answers.each do | answer | %>
     <%= render answer %>
     <p>
-      <%= link_to "Show this answer", answer %>
+      <%= link_to "Show this answer", [:admin, answer] %>
     </p>
   <% end %>
 </div>

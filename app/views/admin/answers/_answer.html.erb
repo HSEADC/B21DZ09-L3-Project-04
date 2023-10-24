@@ -14,3 +14,10 @@
     </p>
   </div>
 </div>
+
+<% if can? :manage, answer %>
+  <div>
+    <%= link_to "Edit this answer", edit_admin_answer_path(answer) %>
+    <%= button_to "Destroy this answer", [:admin, answer], method: :delete %>
+  </div>
+<% end %>

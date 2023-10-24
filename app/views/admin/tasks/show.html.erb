@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @task %>
+
+<hr>
+<h3>Answers</h3>
+
+<%= link_to "New answer", new_admin_task_answer_path(@task) %>
+
+<%= render @task.answers, task: @task %>
+<%#= render @answer.comments, answer: @answer %>
+
+<br>
+<br>
+
+
+  <div>
+    <%= link_to "Edit this task", edit_admin_task_path(@task) %> |
+    <%= link_to "Back to tasks", admin_tasks_path %>
+
+    <%= button_to "Destroy this task",[:admin, @task], method: :delete %>
+  </div>

@@ -11,7 +11,7 @@
 </p>
 
 <% if can? :manage, comment %>
-	 <%= link_to "Edit this comment", edit_answer_comment_path(answer, comment) %>
-	 <%= button_to "Destroy this comment", [answer, comment], method: :delete %>
+	 <%= link_to "Edit this comment", edit_admin_answer_comment_path(answer, comment) %>
+	 <%= button_to "Destroy this comment", [:admin, answer, comment], method: :delete %>
  <% end %>
 </div>

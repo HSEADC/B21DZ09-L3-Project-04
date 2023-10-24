@@ -1,4 +1,4 @@
-class AnswersController < ApplicationController
+class Admin::AnswersController < ApplicationController
   load_and_authorize_resource
   before_action :set_answer, only: %i[ show edit update destroy ]
 
@@ -13,23 +13,23 @@ class AnswersController < ApplicationController
 
   # GET /answers/new
   def new
-    @task = Task.find(params[:task_id])
+    # @task = Task.find(params[:task_id])
     @answer = Answer.new
   end
 
   # GET /answers/1/edit
   def edit
-    @task = @answer.task
+    # @task = @answer.task
   end
 
   # POST /answers or /answers.json
   def create
     @task = Task.find(params[:task_id])
-    @answer = Answer.new(description: params[:answer][:description], task_id: @task.id)
+    @answer = @task.answers.new(answer_params)
 
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to task_url(@task), notice: "answer was successfully created." }
+        format.html { redirect_to admin_task_url(@task), notice: "answer was successfully created." }
         format.json { render :show, status: :created, location: @answer }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,11 +40,9 @@ class AnswersController < ApplicationController
 
   # PATCH/PUT /answers/1 or /answers/1.json
   def update
-    @task = @answer.task
-
     respond_to do |format|
       if @answer.update(answer_params)
-        format.html { redirect_to task_url(@task), notice: "answer was successfully updated." }
+        format.html { redirect_to admin_task_url(@task), notice: "answer was successfully updated." }
         format.json { render :show, status: :ok, location: @answer }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -59,7 +57,7 @@ class AnswersController < ApplicationController
     @answer.destroy
 
     respond_to do |format|
-      format.html { redirect_to task_url(@task), notice: "answer was successfully destroyed." }
+      format.html { redirect_to admin_task_url(@task), notice: "answer was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -70,8 +68,12 @@ class AnswersController < ApplicationController
       @answer = Answer.find(params[:id])
     end
 
+    def set_task
+     @task = Task.find(params[:task_id])
+   end
+
     # Only allow a list of trusted parameters through.
     def answer_params
-      params.require(:answer).permit(:description)
+      params.require(:answer).permit(:description, :answer_image).merge(user_id: current_user.id)
     end
 end

@@ -1,0 +1,18 @@
+<div id="<%= dom_id answer %>">
+  <p>
+    <strong>
+      <%= answer.user.email %>
+    </strong>
+  </p>
+
+  <p>
+    <%= answer.description %>
+  </p>
+</div>
+
+<% if can? :manage, answer %>
+  <div>
+    <%= link_to "Edit this answer", edit_admin_pin_answer_path(@task, answer) %>
+    <%= button_to "Destroy this answer", [:admin, @task, answer], method: :delete %>
+  </div>
+<% end %>
