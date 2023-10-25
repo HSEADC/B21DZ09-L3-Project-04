@@ -9,11 +9,12 @@ class Admin::AnswersController < ApplicationController
 
   # GET /answers/1 or /answers/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /answers/new
   def new
-    # @task = Task.find(params[:task_id])
+    @task = Task.find(params[:task_id])
     @answer = Answer.new
   end
 
@@ -29,7 +30,7 @@ class Admin::AnswersController < ApplicationController
 
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to admin_task_url(@task), notice: "answer was successfully created." }
+        format.html { redirect_to admin_task_url(@answer.task), notice: "answer was successfully created." }
         format.json { render :show, status: :created, location: @answer }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -42,7 +43,7 @@ class Admin::AnswersController < ApplicationController
   def update
     respond_to do |format|
       if @answer.update(answer_params)
-        format.html { redirect_to admin_task_url(@task), notice: "answer was successfully updated." }
+        format.html { redirect_to admin_task_url(@answer.task), notice: "answer was successfully updated." }
         format.json { render :show, status: :ok, location: @answer }
       else
         format.html { render :edit, status: :unprocessable_entity }

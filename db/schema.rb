@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_18_085534) do
     t.integer "task_id"
   end
 
-  create_table "comments", id: false, force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -64,13 +64,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_18_085534) do
     t.datetime "ending_at"
     t.string "ref_image"
     t.string "first_answer_image"
-  end
-
-  create_table "tasks_answers", id: false, force: :cascade do |t|
-    t.integer "task_id"
-    t.integer "answer_id"
-    t.index ["answer_id"], name: "index_tasks_answers_on_answer_id"
-    t.index ["task_id"], name: "index_tasks_answers_on_task_id"
   end
 
   create_table "users", force: :cascade do |t|

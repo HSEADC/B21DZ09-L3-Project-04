@@ -7,17 +7,21 @@
      <strong><%= answer.name %></strong>
     </p>
 
-    <%= image_tag answer.answer_image.url, width: 400 %>
+    <%= image_tag answer.answer_image.url, width: 400 if answer.answer_image.url %>
 
     <p>
       <%= answer.description %>
     </p>
+
+    <% if can? :manage, answer %>
+      <div>
+        <%= link_to "Edit this answer", edit_admin_answer_path(answer) %>
+        <%= button_to "Destroy this answer", [:admin, answer], method: :delete %>
+      </div>
+    <% end %>
+    
   </div>
 </div>
 
-<% if can? :manage, answer %>
-  <div>
-    <%= link_to "Edit this answer", edit_admin_answer_path(answer) %>
-    <%= button_to "Destroy this answer", [:admin, answer], method: :delete %>
-  </div>
-<% end %>
+<%= render 'admin/comments/form', task: @task, answer: answer, comment: Comment.new %>
+<%= render answer.comments, answer: answer, task: @task %>

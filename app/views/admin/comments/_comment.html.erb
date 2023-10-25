@@ -1,8 +1,8 @@
 <div id="<%= dom_id comment %>">
 <p>
 	<b>Выполнил:</b>
-	<%= comment.username %>
 	<%= comment.user.email %>
+	<%#= comment.user.email %>
 </p>
 
 <p>
@@ -10,8 +10,9 @@
 	<%= comment.body %>
 </p>
 
+
 <% if can? :manage, comment %>
-	 <%= link_to "Edit this comment", edit_admin_answer_comment_path(answer, comment) %>
-	 <%= button_to "Destroy this comment", [:admin, answer, comment], method: :delete %>
+	 <%= link_to "Edit this comment", edit_admin_task_answer_comment_path(task, answer, comment) %>
+	 <%= button_to "Destroy this comment", [:admin, task, answer, comment], method: :delete %>
  <% end %>
 </div>

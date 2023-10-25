@@ -1,3 +1,4 @@
+
 <div id="<%= dom_id answer %>">
   <p>
     <strong>
@@ -9,6 +10,8 @@
     <%= answer.description %>
   </p>
 </div>
+
+<%= render 'comments/form', comment: @comment%>
 
 <% if can? :manage, answer %>
   <div>

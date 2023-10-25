@@ -15,7 +15,10 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :answers
+     resources :answers
+    #   resources :comments, except: :show
+    # end
+    #
     resources :subscriptions
 
     root "admin/tasks#index"

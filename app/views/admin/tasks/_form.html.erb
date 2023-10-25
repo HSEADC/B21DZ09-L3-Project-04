@@ -21,6 +21,15 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :ref_image %><br />
+    <%= form.file_field :ref_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_answer_image %><br />
+    <%= form.file_field :first_answer_image %>
+  </div>
 
   <div>
     <%= form.submit %>
