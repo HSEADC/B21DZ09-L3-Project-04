@@ -1,20 +1,25 @@
 <nav>
-  <div>
-    <%= link_to "Главная", welcome_path %>
+    <%= link_to "", welcome_path, class:"logo" %>
+
+    <div class="headerLinks">
+      <%= link_to "О нас", about_path %>
+      <a href="#subscribeEmail">Подписаться</a>
+    </div>
 
     <% if user_signed_in? && current_user.admin == true %>
+    <div class="adminLinks">
       <%= link_to "Задания", admin_tasks_url %>
       <%= link_to "Подписки", admin_subscriptions_url %>
+    </div>
     <% end%>
-  </div>
 
-  <div>
-    <% if user_signed_in? %>
+
+  <% if user_signed_in? %>
   <%#= link_to current_user.email, edit_user_registration_path %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  <%#= link_to "Log out", destroy_user_session_path, method: :delete %>
 <% else %>
-  <%= link_to "Log in", new_user_session_path %>
+  <%#= link_to "Log in", new_user_session_path %>
   <%#= link_to "Register", new_user_registration_path %>
 <% end %>
-  </div>
+
 </nav>

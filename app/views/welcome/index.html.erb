@@ -1,6 +1,49 @@
-<h1>Это главная страница проекта</h1>
-<p>
-  <%= notice %>
-</p>
+<body id="main">
+  <section id="mainTop">
+    <div class="circles"></div>
+    <div class="mainContainer">
+      <img src="/assets/logo-full.svg" alt="" class="logoFull">
+      <h2>МЕДИА ДЛЯ ПОИСКА РЕФОВ</h2>
+      <a href="#subscribeEmail" class="buttonWhite">ПОДПИСАТЬСЯ</a>
+    </div>
+  </section>
 
-<%= render 'subscriptions/form', subscription: @subscription%>
+  <section id="seeMore">
+    <div class="photoBG"></div>
+    <div class="moreContainer">
+      <h1>Видеть больше</h1>
+      <p>Любишь фотографировать свое окружение? Совмести это с прокачкой креативности!</p>
+    </div>
+  </section>
+
+  <section id="subscribeTG">
+    <div class="circlesTG"></div>
+    <div class="wrapper">
+      <div class="phonesTG">
+        <img src="/assets/phones.png" alt="">
+      </div>
+      <div class="containerTG">
+        <h1>Уже сейчас</h1>
+        <p>Ты можешь участвовать в наших челленджах и развивать свою креативность</p>
+        <div class="linksTG">
+          <img src="/assets/qr-tg.svg" alt="">
+          <div class="wrapper">
+            <a href="https://t.me/reeeefs" class="linkTG"></a>
+            <p>@reeeefs</p>
+          </div>
+        </div>
+      </div>
+      <div class="linesImg">
+        <img src="/assets/lines.svg" alt="">
+      </div>
+    </div>
+
+  </section>
+
+  <section id="subscribeEmail">
+    <div class="containerSubscribtion">
+      <h1>Узнай о нашем запуске</h1>
+      <%= render 'subscriptions/form', subscription: @subscription%>
+    </div>
+  </section>
+</body>
