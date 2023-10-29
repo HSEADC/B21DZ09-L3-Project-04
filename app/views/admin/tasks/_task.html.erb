@@ -1,15 +1,17 @@
 <div id="<%= dom_id task %>">
   <div class="taskCard">
-    <%= image_tag task.first_answer_image.url, width: 300 if task.first_answer_image.url %>
-    <%= image_tag task.ref_image.url, width: 300 if task.ref_image.url %>
+    <h3>
+    <%= task.name %>
+    </h3>
 
-    <p>
-      <strong><%= task.name %></strong>
-    </p>
+    <%= image_tag task.first_answer_image.url, class: "firstImg" if task.first_answer_image.url %>
 
-    <p>
-      <%= task.description %>
-    </p>
+    <div class="ref-container">
+      <%= image_tag task.ref_image.url, class: "refImg" if task.ref_image.url %>
+      <p>
+        <%= task.description %>
+      </p>
+    </div>
 
   </div>
 </div>

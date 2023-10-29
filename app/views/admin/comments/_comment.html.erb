@@ -1,18 +1,20 @@
 <div id="<%= dom_id comment %>">
-<p>
-	<b>Выполнил:</b>
-	<%= comment.user.email %>
-	<%#= comment.user.email %>
-</p>
+	<div class="commentBody">
+		<p>
+			<b>Написал:</b>
+			<%= comment.user.email %>
+		</p>
 
-<p>
-	<b>Ответ:</b>
-	<%= comment.body %>
-</p>
+		<p>
+			<b>Коммент:</b>
+			<%= comment.body %>
+		</p>
 
-
-<% if can? :manage, comment %>
-	 <%= link_to "Edit this comment", edit_admin_task_answer_comment_path(task, answer, comment) %>
-	 <%= button_to "Destroy this comment", [:admin, task, answer, comment], method: :delete %>
- <% end %>
+		<div class="smallButtonsContainer">
+		<% if can? :manage, comment %>
+			 <%= link_to "Редактировать", edit_admin_task_answer_comment_path(task, answer, comment), class: "smallButton" %>
+			 <%= button_to "Удалить", [:admin, task, answer, comment], method: :delete, class: "smallButton"  %>
+		 <% end %>
+		 </div>
+	</div>
 </div>

@@ -15,6 +15,7 @@ class Admin::CommentsController < ApplicationController
   # GET /comments/new
   def new
     # @answer = Answer.find(params[:answer_id])
+    @task = Task.find(params[:task_id])
     @comment = Comment.new
   end
 

@@ -1,11 +1,9 @@
 <nav>
   <div>
     <%= link_to "Главная", welcome_path %>
-    <%= link_to "Задания", admin_tasks_path %>
 
     <% if user_signed_in? && current_user.admin == true %>
       <%= link_to "Задания", admin_tasks_url %>
-      <%= link_to "Ответы", admin_answers_url %>
       <%= link_to "Подписки", admin_subscriptions_url %>
     <% end%>
   </div>

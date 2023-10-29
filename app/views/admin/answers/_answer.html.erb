@@ -1,27 +1,28 @@
 <div id="<%= dom_id answer %>">
   <div class="answerCard">
-    <%= answer.user.email %>
-    <%#= image_tag answer.avatar.url, width: 50 %>
+    <%= image_tag answer.answer_image.url,  class: "answerImg" if answer.answer_image.url %>
 
-    <p>
-     <strong><%= answer.name %></strong>
-    </p>
+    <div class="answerBody">
+      <p>  <%= answer.user.email %> </p>
+      <h3>
+      <%= answer.name %>
+      </h3>
 
-    <%= image_tag answer.answer_image.url, width: 400 if answer.answer_image.url %>
-
-    <p>
-      <%= answer.description %>
-    </p>
+      <p>
+        <%= answer.description %>
+      </p>
+    </div>
 
     <% if can? :manage, answer %>
-      <div>
-        <%= link_to "Edit this answer", edit_admin_answer_path(answer) %>
-        <%= button_to "Destroy this answer", [:admin, answer], method: :delete %>
+      <div class="editButtons">
+        <%= link_to "Редактировать", edit_admin_answer_path(answer), class:"button" %>
+        <%= button_to "Удалить", [:admin, answer], method: :delete, class:"button" %>
       </div>
     <% end %>
-    
+
+    <div class="commentsContainer">
+      <%= render 'admin/comments/form', task: @task, answer: answer, comment: Comment.new %>
+      <%= render answer.comments, answer: answer, task: @task %>
+    </div>
   </div>
 </div>
-
-<%= render 'admin/comments/form', task: @task, answer: answer, comment: Comment.new %>
-<%= render answer.comments, answer: answer, task: @task %>

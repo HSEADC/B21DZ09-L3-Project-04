@@ -1,5 +1,78 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  align-items: center;
+  padding: 0 20;
+  max-width: 1440px;
+}
+
+p,
+h3,
+a {
+  font-family: "SF Pro Display";
+}
+
+h1,
+h2 {
+  font-family: "Helsa Display";
+  font-weight: 400;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background: black;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #343434;
+}
+
+.smallButton {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.smallButton:hover {
+  background: #ababab;
 }

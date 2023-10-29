@@ -1,9 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Answers</h1>
-<% if can? :create, Answer %>
-  <%= link_to "New answer", new_admin_answer_path %>
-<% end %>
+<div class="answerCreate">
+  <h1>Answers</h1>
+  <% if can? :create, Answer %>
+    <%= link_to "New answer", new_admin_answer_path, class: "button" %>
+  <% end %>
+</div>
+
 
 <div id="answers">
   <% @answers.each do | answer | %>

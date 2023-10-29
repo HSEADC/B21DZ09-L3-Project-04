@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Helsa Display";
+  src: url("/assets/HelsaDisplay-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/assets/SF-Pro-Display-Regular.otf") format("opentype");
+}
