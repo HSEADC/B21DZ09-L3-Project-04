@@ -1,4 +1,5 @@
-body#main {
+body#main,
+body#about {
   background-color: #174bd0;
   background-image: url("/assets/bluebg.png");
   background-position: center;
@@ -6,7 +7,8 @@ body#main {
   background-repeat: repeat-y;
 }
 
-#main section {
+#main section,
+#about section {
   margin-bottom: 50px;
 }
 
