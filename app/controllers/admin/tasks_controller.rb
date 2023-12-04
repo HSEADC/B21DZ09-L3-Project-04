@@ -22,7 +22,7 @@ class Admin::TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    @task = Task.new(task_params)
+    @task = Task.new(sti_task_params)
 
     respond_to do |format|
       if @task.save
@@ -37,8 +37,9 @@ class Admin::TasksController < ApplicationController
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
+
     respond_to do |format|
-      if @task.update(task_params)
+      if @task.update(sti_task_params)
         format.html { redirect_to admin_task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
       else
@@ -64,9 +65,23 @@ class Admin::TasksController < ApplicationController
       @task = Task.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def task_params
-      params.require(:task).permit(:name, :description, :ref_image, :first_answer_image)
-      # params.require(:task).permit(:name, :description).merge(user_id: current_user.id)
+    def sti_task_params
+      p = nil
+
+      if params[:task]
+        p = params.require(:task)
+      elsif params[:colour_task]
+        p = params.require(:colour_task)
+      elsif params[:regularity_task]
+        p = params.require(:regularity_task)
+      elsif params[:shape_task]
+        p = params.require(:shape_task)
+      elsif params[:font_task]
+        p = params.require(:font_task)
+      elsif params[:texture_task]
+        p = params.require(:texture_task)
+      end
+
+      p.permit(:name, :description, :ref_image, :first_answer_image, :colour_hex, :vector_shape, :vector_font, :vector_regularity, :texture_image)
     end
 end
