@@ -7,4 +7,6 @@ class Comment < ApplicationRecord
 
   default_scope { where(reply_to_comment_id: nil) }
   # scope :not_replies, -> { where(out_of_print: true) }
+
+  validates :body, presence: true
 end
