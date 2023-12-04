@@ -19,6 +19,7 @@ def seed
   create_tasks
   create_answers(10)
   create_comments(5)
+  create_comment_replies(100)
 end
 
 def reset_db
@@ -138,5 +139,18 @@ def create_comments(quantity)
   end
 end
 
+def create_comment_replies(quantity)
+  quantity.times do
+    comment = Comment.all.sample
+    user = User.all.sample
+    reply = comment.replies.create(
+      answer_id: comment.answer.id,
+      body: create_sentence(4..20),
+      user_id: user.id
+    )
+
+      puts "Comment reply with id #{reply.id} for comment with id #{comment.id} just created"
+  end
+end
 
 seed

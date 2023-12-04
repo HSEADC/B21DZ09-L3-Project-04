@@ -12,9 +12,15 @@
 
 		<div class="smallButtonsContainer">
 		<% if can? :manage, comment %>
-			 <%= link_to "Редактировать", edit_admin_task_answer_comment_path(task, answer, comment), class: "smallButton" %>
-			 <%= button_to "Удалить", [:admin, task, answer, comment], method: :delete, class: "smallButton"  %>
+			 <%#= link_to "Редактировать", edit_admin_task_answer_comment_path(task, answer, comment), class: "smallButton" %>
+			 <%#= button_to "Удалить", [:admin, task, answer, comment], method: :delete, class: "smallButton"  %>
 		 <% end %>
+		 </div>
+
+		 <div class="commentReplies">
+			 <% comment.replies.each do |reply| %>
+		 	<%= render reply, partial: "admin/comments/comment", comment: reply, answer: answer %>
+			<% end %>
 		 </div>
 	</div>
 </div>

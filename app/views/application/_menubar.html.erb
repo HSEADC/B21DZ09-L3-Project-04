@@ -7,10 +7,10 @@
     </div>
 
     <% if user_signed_in? && current_user.admin == true %>
-    <%# <div class="adminLinks"> %>
-      <%#= link_to "Задания", admin_tasks_url %>
-      <%#= link_to "Подписки", admin_subscriptions_url %>
-    <%# </div> %>
+    <div class="adminLinks">
+      <%= link_to "Задания", admin_tasks_url %>
+      <%= link_to "Подписки", admin_subscriptions_url %>
+    </div>
     <% end%>
 
 
@@ -18,7 +18,9 @@
   <%#= link_to current_user.email, edit_user_registration_path %>
   <%#= link_to "Log out", destroy_user_session_path, method: :delete %>
 <% else %>
-  <%#= link_to "Log in", new_user_session_path %>
+<div class="adminLinks">
+  <%= link_to "Log in", new_user_session_path %>
+</div>
   <%#= link_to "Register", new_user_registration_path %>
 <% end %>
 
