@@ -1,0 +1,15 @@
+<div id="<%= dom_id regularity_task %>">
+  <div class="taskCard">
+    <h3>
+    <%= regularity_task.name %>
+    </h3>
+
+    <div class="ref-container">
+      <%= image_tag regularity_task.vector_regularity.url, class: "refImg" if regularity_task.vector_regularity.url %>
+      <p>
+        <%= regularity_task.description %>
+      </p>
+    </div>
+
+  </div>
+</div>

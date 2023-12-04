@@ -1,0 +1,15 @@
+<div id="<%= dom_id shape_task %>">
+  <div class="taskCard">
+    <h3>
+    <%= shape_task.name %>
+    </h3>
+
+    <div class="ref-container">
+      <%= image_tag shape_task.vector_shape.url, class: "refImg" if shape_task.vector_shape.url %>
+      <p>
+        <%= shape_task.description %>
+      </p>
+    </div>
+
+  </div>
+</div>

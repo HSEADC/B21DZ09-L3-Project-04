@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_04_074953) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_04_092346) do
   create_table "answers", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -59,12 +59,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_04_074953) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "theme"
     t.string "status"
     t.boolean "active"
     t.datetime "ending_at"
-    t.string "ref_image"
     t.string "first_answer_image"
+    t.string "vector_shape"
+    t.string "vector_font"
+    t.string "vector_regularity"
+    t.string "texture_image"
+    t.string "type"
+    t.string "colour_hex"
   end
 
   create_table "tasks_answers", id: false, force: :cascade do |t|

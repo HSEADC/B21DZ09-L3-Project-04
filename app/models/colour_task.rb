@@ -1,0 +1,2 @@
+class ColourTask < Task
+end

@@ -1,0 +1,2 @@
+class TextureTask < Task
+end

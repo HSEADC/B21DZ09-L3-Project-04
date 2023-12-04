@@ -1,0 +1,2 @@
+class RegularityTask < Task
+end

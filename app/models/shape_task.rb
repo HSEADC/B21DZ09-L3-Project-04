@@ -1,0 +1,2 @@
+class ShapeTask < Task
+end

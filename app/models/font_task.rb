@@ -1,0 +1,2 @@
+class FontTask < Task
+end

@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
 
   def about
   end
+
+  def tasksThemes
+    @tasks = Task.all
+  end
 end
