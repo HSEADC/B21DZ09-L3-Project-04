@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @answer %>
+
+<h3>Comments</h3>
+
+<%= render "comments/form", answer: @answers, comment: Comment.new %>
+<%= render @answer.comments, answer: @answers %>
+
+# <%= link_to "New comment", new_answer_comment_path(@answer) %>
+
+<br>
+<br>
+
+<% if can? :manage, @answer %>
+<div>
+  <%= link_to "Edit this answer", edit_answer_path(@answer) %> |
+  <%= link_to "Back to answers", answers_path %>
+
+  <%= button_to "Destroy this answer", @answer, method: :delete %>
+</div>
+<% end %>

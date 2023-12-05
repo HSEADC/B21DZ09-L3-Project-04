@@ -1,7 +1,10 @@
 class Answer < ApplicationRecord
   belongs_to :task
   belongs_to :user
+
   has_many :comments, :dependent => :destroy
+  has_many :poly_comments, as: :commentable, dependent: :destroy
+
   mount_uploader :avatar, AvatarUploader
   mount_uploader :answer_image, AnswerImageUploader
 

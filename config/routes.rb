@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:create, :show]
 
+  resources :tasks
+  resources :answers do
+    resources :comments, only: [:create]
+  end
+
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'welcome#about'
   get 'welcome/tasksThemes'

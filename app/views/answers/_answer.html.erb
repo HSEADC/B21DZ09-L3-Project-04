@@ -1,0 +1,28 @@
+<div id="<%= dom_id answer %>">
+  <div class="answerCard">
+    <%= image_tag answer.answer_image.url,  class: "answerImg" if answer.answer_image.url %>
+
+    <div class="answerBody">
+      <p>  <%= answer.user.email %> </p>
+      <h3>
+      <%= answer.name %>
+      </h3>
+
+      <p>
+        <%= answer.description %>
+      </p>
+    </div>
+
+    <% if can? :manage, answer %>
+      <div class="editButtons">
+        <%= link_to "Редактировать", edit_answer_path(answer), class:"button" %>
+        <%= button_to "Удалить", answer, method: :delete, class:"button" %>
+      </div>
+    <% end %>
+
+    <div class="commentsContainer">
+      <%= render 'comments/form', task: @task, answer: answer, comment: Comment.new %>
+      <%= render answer.comments, answer: answer, task: @task %>
+    </div>
+  </div>
+</div>

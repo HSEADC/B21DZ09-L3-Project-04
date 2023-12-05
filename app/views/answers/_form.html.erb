@@ -1,0 +1,27 @@
+ <%= form_with(model: [:task, answer]) do |form| %>
+  <% if answer.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+        <% answer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="field">
+		<%= form.label :description %><br />
+		<%= form.text_area :description %>
+	</div>
+
+  <div class="field">
+    <%= form.label :answer_image %><br />
+    <%= form.file_field :answer_image %>
+  </div>
+
+	<div class="actions">
+		<%= form.submit %>
+	</div>
+<% end %>

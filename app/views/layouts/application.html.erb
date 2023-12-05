@@ -12,7 +12,11 @@
 
   <body>
     <%= render 'menubar' %>
-    <%= yield %>
+
+    <section class = "contentArea">
+      <%= yield %>
+    </section>
+    
     <%= render 'footer' %>
   </body>
 </html>

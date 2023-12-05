@@ -1,5 +1,4 @@
-class Admin::TasksController < ApplicationController
-  load_and_authorize_resource
+class Admin::TasksController < Admin::ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
 
   # GET /tasks or /tasks.json

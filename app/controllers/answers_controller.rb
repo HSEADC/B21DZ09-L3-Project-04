@@ -1,4 +1,5 @@
-class Admin::AnswersController < Admin::ApplicationController
+class AnswersController < ApplicationController
+  load_and_authorize_resource
   before_action :set_answer, only: %i[ show edit update destroy ]
 
   # GET /answers or /answers.json
@@ -29,7 +30,7 @@ class Admin::AnswersController < Admin::ApplicationController
 
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to admin_task_url(@answer.task), notice: "answer was successfully created." }
+        format.html { redirect_to task_url(@answer.task), notice: "answer was successfully created." }
         format.json { render :show, status: :created, location: @answer }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -42,7 +43,7 @@ class Admin::AnswersController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @answer.update(answer_params)
-        format.html { redirect_to admin_task_url(@answer.task), notice: "answer was successfully updated." }
+        format.html { redirect_to task_url(@answer.task), notice: "answer was successfully updated." }
         format.json { render :show, status: :ok, location: @answer }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -57,7 +58,7 @@ class Admin::AnswersController < Admin::ApplicationController
     @answer.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_task_url(@task), notice: "answer was successfully destroyed." }
+      format.html { redirect_to task_url(@task), notice: "answer was successfully destroyed." }
       format.json { head :no_content }
     end
   end
