@@ -28,6 +28,10 @@ def reset_db
   Rake::Task['db:migrate'].invoke
 end
 
+def clean_content_folders
+  FileUtils.rw_rf('public/uploads')
+end
+
 def create_admin
   user_data = {
     email: "admin@email.com",

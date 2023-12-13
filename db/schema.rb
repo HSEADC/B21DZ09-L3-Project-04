@@ -10,18 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_05_205308) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_13_143809) do
   create_table "answers", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "answer_image"
-    t.string "answer_status"
-    t.boolean "best_answer"
     t.integer "user_id"
-    t.string "username"
     t.integer "task_id"
   end
 
@@ -64,11 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_05_205308) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status"
     t.boolean "active"
     t.datetime "ending_at"
     t.string "first_answer_image"
