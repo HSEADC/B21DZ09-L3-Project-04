@@ -8,12 +8,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
-  get 'welcome', to: 'welcome#index'
-  get 'about', to: 'welcome#about'
-  get 'welcome/tasksThemes'
-
-  root "welcome#index"
-
   # api
   namespace :api do
     namespace :v1 do
@@ -36,4 +30,11 @@ Rails.application.routes.draw do
 
     root "admin/tasks#index"
   end
+
+  get 'welcome', to: 'welcome#index'
+  get 'about', to: 'welcome#about'
+  get 'welcome/tasksThemes'
+
+  root "welcome#index"
+  
 end
