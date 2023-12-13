@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Reefs!</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <title>Refs</title>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -16,7 +18,7 @@
     <section class = "contentArea">
       <%= yield %>
     </section>
-    
+
     <%= render 'footer' %>
   </body>
 </html>
