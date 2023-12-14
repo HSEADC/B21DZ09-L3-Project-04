@@ -1,0 +1,15 @@
+<section class="container">
+<p style="color: green"><%= notice %></p>
+
+<%= render @task %>
+
+ <div class="answerContainer">
+   <div class="answerCreate">
+     <h3>Ответы</h3>
+     <%= link_to "Создать ответ", new_answer_path(@task), class: "button"%>
+   </div>
+
+   <%= render @task.answers, task: @task %>
+   <%#= render @answer.comments, answer: @answer %>
+ </div>
+</section>

@@ -1,0 +1,47 @@
+<%= form_with(model: task, url: url) do |form| %>
+  <% if task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %><br />
+    <%= form.select :type, ["ColourTask", "FontTask", "TextureTask", "RegularityTask", "ShapeTask"]%>
+  </div>
+
+  <div>
+    <%= form.label :colour_hex, style: "display: block" %>
+    <%= form.text_area :colour_hex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vector_font %><br />
+    <%= form.file_field :vector_font %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vector_regularity %><br />
+    <%= form.file_field :vector_regularity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vector_shape %><br />
+    <%= form.file_field :vector_shape %>
+  </div>
+
+  <div class="field">
+    <%= form.label :texture_image %><br />
+    <%= form.file_field :texture_image %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
