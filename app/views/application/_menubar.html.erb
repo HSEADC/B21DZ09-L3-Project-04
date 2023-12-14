@@ -2,17 +2,21 @@
     <%= link_to "", welcome_path, class:"logo" %>
 
     <div class="headerLinks">
-      <%= link_to "О нас", about_path %>
-      <a href="#subscribeEmail">Подписаться</a>
+      <%= link_to "Все задания", allTasks_path %>
+      <%= link_to "В поиске", searchTasks_path %>
+      <%= link_to "Как играть", howToPlay_path %>
+      <%= link_to "Подписки", admin_subscriptions_url %>
     </div>
 
-    <% if user_signed_in? && current_user.admin == true %>
-    <div class="adminLinks">
-      <%= link_to "Задания", admin_tasks_url %>
-      <%= link_to "Подписки", admin_subscriptions_url %>
-      <%= link_to "Темы заданий", welcome_tasksThemes_url %>
-    </div>
-    <% end%>
+    <%# <% if user_signed_in? && current_user.admin == true %>
+    <!-- <div class="adminLinks"> -->
+      <%#= link_to "Задания", admin_tasks_url %>
+      <%#= link_to "Все задания", allTasks_path %>
+      <%#= link_to "В поиске", searchTasks_path %>
+      <%#= link_to "Как играть", howToPlay_path %>
+      <%#= link_to "Подписки", admin_subscriptions_url %>
+    <!-- </div> -->
+    <%# end%>
 
 
   <% if user_signed_in? %>

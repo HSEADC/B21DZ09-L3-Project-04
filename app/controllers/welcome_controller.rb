@@ -6,7 +6,13 @@ class WelcomeController < ApplicationController
   def about
   end
 
-  def tasksThemes
-    @tasks = Task.all
+  def allTasks
+     @tasks = Task.all
+  end
+
+  def searchTasks
+  end
+
+  def howToPlay
   end
 end

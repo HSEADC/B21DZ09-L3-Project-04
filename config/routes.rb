@@ -33,8 +33,10 @@ Rails.application.routes.draw do
 
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'welcome#about'
-  get 'welcome/tasksThemes'
+  get 'allTasks', to: 'welcome#allTasks'
+  get 'searchTasks', to: 'welcome#searchTasks'
+  get 'howToPlay', to: 'welcome#howToPlay'
 
   root "welcome#index"
-  
+
 end
