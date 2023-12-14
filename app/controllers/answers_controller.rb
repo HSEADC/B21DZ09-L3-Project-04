@@ -75,6 +75,6 @@ class AnswersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def answer_params
-      params.require(:answer).permit(:description, :answer_image).merge(user_id: current_user.id)
+      params.require(:answer).permit(:answer_image).merge(user_id: current_user.id)
     end
 end

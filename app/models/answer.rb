@@ -8,7 +8,7 @@ class Answer < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
   mount_uploader :answer_image, AnswerImageUploader
 
-  validates :name, presence: true
-  validates :description, presence: true
+  # validates :name, presence: true
+  # validates :description, presence: true
   validates :answer_image, presence: true
 end

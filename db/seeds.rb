@@ -73,12 +73,6 @@ def upload_random_task_image
   uploader
 end
 
-def upload_random_ref_image
-  uploader = RefImageUploader.new(Task.new, :ref_image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
-  uploader
-end
-
 def upload_random_answer_image
   uploader = AnswerImageUploader.new(Answer.new, :answer_image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
@@ -87,10 +81,10 @@ end
 
 def create_tasks
   @task_names.each do |task_name|
-    task = Task.create(
-      first_answer_image: upload_random_task_image,
-      ref_image: upload_random_ref_image
-    )
+task = Task.create(
+
+  first_answer_image: upload_random_task_image
+)
     puts "Task with id #{task.id} just created"
   end
 end
@@ -103,7 +97,6 @@ def create_answers(quantity)
     user = User.all.sample
     answer = Answer.create(
       task_id: task.id,
-      avatar: upload_random_avatar,
       answer_image: upload_random_answer_image,
       user_id: user.id
     )

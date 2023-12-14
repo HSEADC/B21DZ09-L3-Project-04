@@ -28,13 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_13_143809) do
     t.integer "reply_to_comment_id"
   end
 
-  create_table "favourites", force: :cascade do |t|
-    t.integer "task_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "likes", force: :cascade do |t|
     t.integer "answer_id"
     t.integer "user_id"

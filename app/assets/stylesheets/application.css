@@ -14,5 +14,8 @@
   *= require_fonts
   *= require_basics
   *= require_reset
-    *= require_tree ./atoms
+  *= require_tree ./atoms
+  *= require_tree ./molecules
+  *= require_tree ./organisms
+  *= require_tree ./super-organisms
  */

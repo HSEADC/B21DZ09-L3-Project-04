@@ -4,13 +4,6 @@
 
     <div class="answerBody">
       <p>  <%= answer.user.email %> </p>
-      <h3>
-      <%= answer.name %>
-      </h3>
-
-      <p>
-        <%= answer.description %>
-      </p>
     </div>
 
     <% if can? :manage, answer %>
