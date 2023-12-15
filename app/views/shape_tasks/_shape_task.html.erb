@@ -1,11 +1,12 @@
 <div id="<%= dom_id shape_task %>">
   <div class="taskCard">
     <h3>
+      <%= shape_task.name %>
     </h3>
 
-    <div class="ref-container">
-      <%= image_tag shape_task.vector_shape.url, class: "refImg" if shape_task.vector_shape.url %>
-    </div>
+    <div class="ref-cont" style="background-image: url(<%= shape_task.vector_shape.url %>)"></div>
+
+    <%= image_tag shape_task.first_answer_image.url, class: "firstImg" if shape_task.first_answer_image.url %>
 
   </div>
 </div>

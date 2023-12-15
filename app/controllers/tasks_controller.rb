@@ -8,7 +8,11 @@ class TasksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id])
+      @task = Task.friendly.find(params[:id])
     end
+
+    # def to_param
+    #   "#{title.parameterise}"
+    # end
 
 end

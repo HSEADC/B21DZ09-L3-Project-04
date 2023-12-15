@@ -1,12 +1,19 @@
 <div id="<%= dom_id colour_task %>">
   <div class="taskCard">
     <h3>
-
+      <%= colour_task.name %>
     </h3>
+
+    <%= image_tag colour_task.first_answer_image.url, class: "firstImg" if colour_task.first_answer_image.url %>
 
     <div class="ref-container">
       <div class="refImg" style="background-color: <%= colour_task.colour_hex %>"></div>
     </div>
+
+  <p>
+    <strong>Type:</strong>
+    <%= colour_task.type %>
+  </p>
 
   </div>
 </div>

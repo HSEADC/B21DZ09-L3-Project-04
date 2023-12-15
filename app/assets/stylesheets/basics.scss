@@ -1,0 +1,62 @@
+body,
+p {
+  font-family: "Fugue";
+  font-weight: 400;
+}
+
+.ref-container {
+  width: 300px;
+  height: 300px;
+  background-color: #f3f2ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ref-cont {
+  width: 300px;
+  height: 300px;
+  background-color: #f3f2ed;
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.refImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.refVec {
+  width: 200px;
+  height: 200px;
+}
+
+.firstImg {
+  width: 300px;
+  height: 300px;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+.answerImg {
+  width: 200px;
+  height: 200px;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}

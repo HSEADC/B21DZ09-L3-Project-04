@@ -1,11 +1,13 @@
 <div id="<%= dom_id regularity_task %>">
   <div class="taskCard">
     <h3>
+      <%= regularity_task.name %>
     </h3>
 
-    <div class="ref-container">
-      <%= image_tag regularity_task.vector_regularity.url, class: "refImg" if regularity_task.vector_regularity.url %>
-    </div>
+    <div class="ref-cont" style="background-image: url(<%= regularity_task.vector_regularity.url %>)"></div>
+
+    <%= image_tag regularity_task.first_answer_image.url, class: "firstImg" if regularity_task.first_answer_image.url %>
+
 
   </div>
 </div>
