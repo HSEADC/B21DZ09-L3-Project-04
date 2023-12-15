@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_13_143809) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_15_085112) do
   create_table "answers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "answer_image"
     t.integer "user_id"
     t.integer "task_id"
+    t.boolean "winner"
+    t.boolean "has_complaints"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -62,6 +64,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_13_143809) do
     t.string "texture_image"
     t.string "type"
     t.string "colour_hex"
+    t.boolean "in_search"
+    t.boolean "task_of_day"
+    t.boolean "ref"
   end
 
   create_table "tasks_answers", id: false, force: :cascade do |t|
@@ -80,6 +85,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_13_143809) do
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "points"
+    t.integer "tasks_strike"
+    t.integer "complaints"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -7,10 +7,11 @@ class WelcomeController < ApplicationController
   end
 
   def allTasks
-     @tasks = Task.all
+     @tasks = Task.where(active: true)
   end
 
   def searchTasks
+    @tasks = Task.where(in_search: true)
   end
 
   def howToPlay

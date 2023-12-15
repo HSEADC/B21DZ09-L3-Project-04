@@ -1,22 +1,38 @@
 raw_text = 'К каждому заданию прилагаются специальные карточки, где описан художественный контекст челенджа и конкретные референсы. Это могут быть как фотографии Билла Каннингема, так и коллажи Сергея Параджанова. Это не только вспомогательный инструмент, но и отличный способ развить «насмотренность».'
 @words = raw_text.downcase.gsub(/[—.—,«»:()]/, '').gsub(/  /, ' ').split(' ')
 
-@task_names = [
-    "Colour",
-    "Shape",
-    "Font",
-    "Regularity",
-    "Texture"
+@task_types = [
+  "ColourTask",
+  "FontTask",
+  "TextureTask",
+  "RegularityTask",
+  "ShapeTask"
+]
+
+@colour_hexes = [
+  "#C77DFF",
+  "#F94144",
+  "#F2542D",
+  "#4361EE",
+  "#FFCA3A",
+  "#2196F3",
+  "#FF595E",
+  "#AB274F",
+  "#87B650",
+  "#542EFF",
+  "#444041",
+  "#511281"
 ]
 
 def seed
   reset_db
   create_admin
   create_users
-  create_tasks
+  create_active_tasks(2)
+  create_inactive_tasks(2)
   create_answers(10)
   create_comments(5)
-  create_comment_replies(100)
+  create_comment_replies(50)
 end
 
 def reset_db
@@ -67,25 +83,89 @@ def create_sentence(quantity)
   sentence = sentence_words.join(' ').capitalize
 end
 
-def upload_random_task_image
+def upload_random_image
   uploader = TaskImageUploader.new(Task.new, :first_answer_image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/answers', '*')).sample))
   uploader
 end
 
-def upload_random_answer_image
-  uploader = AnswerImageUploader.new(Answer.new, :answer_image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images', '*')).sample))
+def upload_random_shape_vector
+  uploader = TaskImageUploader.new(Task.new, :vector_shape)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/shapes', '*')).sample))
   uploader
 end
 
-def create_tasks
-  @task_names.each do |task_name|
-task = Task.create(
+def upload_random_font_vector
+  uploader = TaskImageUploader.new(Task.new, :vector_font)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/fonts', '*')).sample))
+  uploader
+end
 
-  first_answer_image: upload_random_task_image
-)
+def upload_random_regularity_vector
+  uploader = TaskImageUploader.new(Task.new, :vector_regularity)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/regularities', '*')).sample))
+  uploader
+end
+
+def upload_random_texture_image
+  uploader = TaskImageUploader.new(Task.new, :texture_image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/textures', '*')).sample))
+  uploader
+end
+
+
+
+def create_active_tasks(quantity)
+  @task_types.each do |task_type|
+  quantity.times do
+    task = Task.create(
+      type: task_type,
+      active: true,
+      in_search: true,
+      first_answer_image: upload_random_image,
+      colour_hex: @colour_hexes.sample,
+      vector_shape: upload_random_shape_vector,
+      vector_font: upload_random_font_vector,
+      vector_regularity: upload_random_regularity_vector,
+      texture_image: upload_random_texture_image,
+      ref: false
+  )
     puts "Task with id #{task.id} just created"
+    end
+  end
+end
+
+def create_inactive_tasks(quantity)
+  @task_types.each do |task_type|
+    quantity.times do
+
+    # p = nil
+    #
+    # if task_type == "ColourTask"
+    #   p = colour_hex: @colour_hexes.sample
+    # elsif task_type == "ShapeTask"
+    #   p = vector_shape: upload_random_shape_vector
+    # elsif task_type == "FontTask"
+    #   p = vector_font: upload_random_font_vector
+    # elsif task_type == "RegularityTask"
+    #   p = vector_regularity: upload_random_regularity_vector
+    # elsif task_type == "TextureTask"
+    #   p = texture_image: upload_random_texture_image
+
+    task = Task.create(
+      type: task_type,
+      active: false,
+      in_search: false,
+      first_answer_image: upload_random_image,
+      colour_hex: @colour_hexes.sample,
+      vector_shape: upload_random_shape_vector,
+      vector_font: upload_random_font_vector,
+      vector_regularity: upload_random_regularity_vector,
+      texture_image: upload_random_texture_image,
+      ref: true
+  )
+    puts "Task with id #{task.id} just created"
+    end
   end
 end
 
@@ -97,7 +177,7 @@ def create_answers(quantity)
     user = User.all.sample
     answer = Answer.create(
       task_id: task.id,
-      answer_image: upload_random_answer_image,
+      answer_image: upload_random_image,
       user_id: user.id
     )
 
