@@ -1,5 +1,5 @@
 class FontTask < Task
   validates :vector_font, presence: true
 
-  mount_uploader :vector_font, TaskImageUploader
+  mount_uploader :vector_font, TaskVectorUploader
 end

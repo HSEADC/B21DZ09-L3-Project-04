@@ -73,20 +73,6 @@ def create_users
   end
 end
 
-def create_task_name(quantity)
-  if @task_type == "ColourTask"
-    sentence = "C#{id}"
-  elsif @task_type == "FontTask"
-    sentence = "F#{id}"
-  elsif @task_type == "ShapeTask"
-    sentence = "S#{id}"
-  elsif @task_type == "RegularityTask"
-    sentence = "R#{id}"
-  elsif @task_type == "TextureTask"
-    sentence = "T#{id}"
-  end
-end
-
 def create_sentence(quantity)
   sentence_words = []
 
@@ -104,19 +90,19 @@ def upload_random_image
 end
 
 def upload_random_shape_vector
-  uploader = TaskImageUploader.new(Task.new, :vector_shape)
+  uploader = TaskVectorUploader.new(Task.new, :vector_shape)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/shapes', '*')).sample))
   uploader
 end
 
 def upload_random_font_vector
-  uploader = TaskImageUploader.new(Task.new, :vector_font)
+  uploader = TaskVectorUploader.new(Task.new, :vector_font)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/fonts', '*')).sample))
   uploader
 end
 
 def upload_random_regularity_vector
-  uploader = TaskImageUploader.new(Task.new, :vector_regularity)
+  uploader = TaskVectorUploader.new(Task.new, :vector_regularity)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/regularities', '*')).sample))
   uploader
 end
@@ -134,7 +120,6 @@ def create_active_tasks(quantity)
   quantity.times do
     task = Task.create(
       type: task_type,
-      name: create_task_name(1),
       active: true,
       in_search: true,
       first_answer_image: upload_random_image,
@@ -169,7 +154,6 @@ def create_inactive_tasks(quantity)
 
     task = Task.create(
       type: task_type,
-      name: create_task_name(1),
       active: false,
       in_search: false,
       first_answer_image: upload_random_image,

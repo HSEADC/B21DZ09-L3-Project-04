@@ -1,4 +1,4 @@
-class TaskImageUploader < CarrierWave::Uploader::Base
+class TaskVectorUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -13,31 +13,10 @@ class TaskImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :compressed do
-   resize_to_fit(928, nil)
-  end
-
-  version :large, :from_version => :compressed do
-   # process :crop_large
-   resize_to_fit(700, nil)
-  end
-
-  version :teaser, :from_version => :large do
-   resize_to_fit(640, 356)
-  end
-
-  version :thumb, :from_version => :large do
-   resize_to_fit(288, 160)
-  end
-
-  version :link, :from_version => :large do
-   resize_to_fit(63, 35)
-  end
-
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_allowlist
-    %w(jpg jpeg png)
+    %w(svg)
   end
 
 

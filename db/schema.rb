@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_15_160555) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_17_090158) do
   create_table "answers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -79,7 +79,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_15_160555) do
     t.boolean "task_of_day"
     t.boolean "ref"
     t.string "slug"
-    t.string "name"
     t.index ["slug"], name: "index_tasks_on_slug", unique: true
   end
 

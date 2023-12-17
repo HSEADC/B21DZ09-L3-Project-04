@@ -81,6 +81,6 @@ class Admin::TasksController < Admin::ApplicationController
         p = params.require(:texture_task)
       end
 
-      p.permit(:first_answer_image, :colour_hex, :vector_shape, :vector_font, :vector_regularity, :texture_image)
+      p.permit(:first_answer_image, :colour_hex, :vector_shape, :vector_font, :vector_regularity, :texture_image, :name)
     end
 end

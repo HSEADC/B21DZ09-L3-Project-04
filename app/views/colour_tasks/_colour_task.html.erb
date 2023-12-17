@@ -1,7 +1,7 @@
 <div id="<%= dom_id colour_task %>">
   <div class="taskCard">
     <h3>
-      <%= colour_task.name %>
+      <%= "C#{colour_task.id}" %>
     </h3>
 
     <%= image_tag colour_task.first_answer_image.url, class: "firstImg" if colour_task.first_answer_image.url %>

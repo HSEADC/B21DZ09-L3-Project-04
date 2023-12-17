@@ -1,7 +1,7 @@
 <div id="<%= dom_id texture_task %>">
   <div class="taskCard">
     <h3>
-      <%= texture_task.name %>
+      <%= "T#{texture_task.id}" %>
     </h3>
 
     <%= image_tag texture_task.first_answer_image.url, class: "firstImg" if texture_task.first_answer_image.url %>
