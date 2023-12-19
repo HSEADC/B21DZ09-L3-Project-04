@@ -1,7 +1,13 @@
 <h1>Все задание</h1>
 
-<div id="tasks">
-  <% @tasks.each do |task| %>
+<div id="vote_tasks">
+  <% @vote_tasks.each do |task| %>
+    <%= render task %>
+  <% end %>
+</div>
+
+<div class="all-tasks">
+  <% @active_tasks.each do |task| %>
     <%= render task %>
     <%= render task.answers %>
   <% end %>

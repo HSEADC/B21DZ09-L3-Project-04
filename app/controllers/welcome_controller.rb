@@ -7,7 +7,8 @@ class WelcomeController < ApplicationController
   end
 
   def allTasks
-     @tasks = Task.where(active: false)
+     @vote_tasks = Task.where(active: false).take(4)
+     @active_tasks = Task.where(active: true).take(10)
   end
 
   def searchTasks
