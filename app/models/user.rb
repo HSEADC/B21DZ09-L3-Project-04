@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :answers
   has_many :comments
   has_many :poly_comments, as: :commentable, dependent: :destroy
+
+  mount_uploader :avatar_image, AvatarImageUploader
 end

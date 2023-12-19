@@ -1,0 +1,42 @@
+.O_Task {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+
+  .Q_TaskImage {
+    &.small {
+      width: 400px;
+      height: 400px;
+      clip-path: var(--task-small-clip);
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .C_TaskCircles {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    .A_TaskType {
+      margin-left: -22px;
+    }
+  }
+
+  .M_Button {
+    position: absolute;
+    right: 0;
+    bottom: 44px;
+  }
+
+  .M_TitleCardTask {
+    margin-top: 8px;
+  }
+}

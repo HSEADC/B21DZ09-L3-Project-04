@@ -1,4 +1,4 @@
-class TaskImageUploader < CarrierWave::Uploader::Base
+class AvatarImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -19,24 +19,21 @@ class TaskImageUploader < CarrierWave::Uploader::Base
 
   version :large, :from_version => :compressed do
    # process :crop_large
-   resize_to_fit(680, 680)
+   resize_to_fit(190, 190)
   end
 
   version :medium, :from_version => :large do
-   resize_to_fit(540, 540)
+   resize_to_fit(56, 56)
   end
 
   version :small, :from_version => :large do
-   resize_to_fit(400, 400)
+   resize_to_fit(36, 36)
   end
 
   version :extrasmall, :from_version => :large do
-   resize_to_fit(294, 294)
+   resize_to_fit(28, 28)
   end
 
-  version :xxs, :from_version => :large do
-   resize_to_fit(144, 144)
-  end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:

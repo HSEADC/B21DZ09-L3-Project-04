@@ -1,0 +1,14 @@
+.M_ProfileInfoRec {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: flex-start;
+
+  .C_InfoNums {
+    display: flex;
+    flex-direction: row;
+    gap: 62px;
+    align-items: center;
+  }
+}

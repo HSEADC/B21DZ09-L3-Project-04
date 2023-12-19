@@ -1,32 +1,44 @@
 <nav>
-    <%= link_to "", welcome_path, class:"logo" %>
+  <div class="S_Menu">
+    <div class="O_Menu">
+    <%= link_to "", welcome_path, class:"A_Logo" %>
+    <% if user_signed_in? && current_user.admin == true %>
+    <div class="W_MenuRight">
+      <div class="C_MenuItems">
+        <%= link_to "все задания", allTasks_path, class: "A_MenuItem" %>
+        <%= link_to "банк рефов", howToPlay_path, class: "A_MenuItem" %>
+        <%= link_to "жалобы", profile_path, class: "A_MenuItem" %>
+      </div>
+      <div class="A_Notification"></div>
+      <%= link_to "", destroy_user_session_path, method: :delete, class: "A_LogOut" %>
+      </div>
 
-    <div class="headerLinks">
-      <%= link_to "Все задания", allTasks_path %>
-      <%= link_to "В поиске", searchTasks_path %>
-      <%= link_to "Как играть", howToPlay_path %>
-      <%= link_to "Подписки", admin_subscriptions_url %>
+    <% elsif user_signed_in? %>
+    <div class="W_MenuRight">
+      <div class="C_MenuItems">
+        <div class="A_MenuItem">
+          <%= link_to "все задания", allTasks_path, class: "Q_AllTasks" %>
+          <%= link_to "в поиске", searchTasks_path, class: "Q_InSearch" %>
+        </div>
+        <%= link_to "как играть", howToPlay_path, class: "A_MenuItem" %>
+        <%= link_to "профиль", profile_path, class: "A_MenuItem" %>
+      </div>
+      <div class="A_Notification"></div>
     </div>
+    <% else %>
+    <div class="W_MenuRight">
+      <div class="C_MenuItems">
+        <div class="A_MenuItem">
+          <%= link_to "все задания", allTasks_path, class: "Q_AllTasks" %>
+          <%= link_to "в поиске", searchTasks_path, class: "Q_InSearch" %>
+        </div>
+        <%= link_to "как играть", howToPlay_path, class: "A_MenuItem" %>
+        <%= link_to "профиль", profile_path, class: "A_MenuItem" %>
+      </div>
+      <div class="A_Notification"></div>
+      </div>
+    <% end %>
 
-    <%# <% if user_signed_in? && current_user.admin == true %>
-    <!-- <div class="adminLinks"> -->
-      <%#= link_to "Задания", admin_tasks_url %>
-      <%#= link_to "Все задания", allTasks_path %>
-      <%#= link_to "В поиске", searchTasks_path %>
-      <%#= link_to "Как играть", howToPlay_path %>
-      <%#= link_to "Подписки", admin_subscriptions_url %>
-    <!-- </div> -->
-    <%# end%>
-
-
-  <% if user_signed_in? %>
-  <%= link_to current_user.email, edit_user_registration_path %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-<% else %>
-<div class="adminLinks">
-  <%= link_to "Log in", new_user_session_path %>
-</div>
-  <%#= link_to "Register", new_user_registration_path %>
-<% end %>
-
+      </div>
+    </div>
 </nav>

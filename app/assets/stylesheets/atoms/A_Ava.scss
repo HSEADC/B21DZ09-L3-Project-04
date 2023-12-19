@@ -1,0 +1,22 @@
+.A_Ava {
+  width: 190px;
+  height: 190px;
+  border-radius: 100%;
+  overflow: hidden;
+
+  &.medium {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.xs {
+    width: 28px;
+    height: 28px;
+  }
+
+  .Q_Ava img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

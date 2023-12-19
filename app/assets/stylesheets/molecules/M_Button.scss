@@ -1,0 +1,16 @@
+.M_Button {
+  width: 200px;
+  padding: 12px 0;
+  font-size: 20px;
+  color: var(--main-blue);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 30px;
+  background: var(--white);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--white);
+    background: var(--main-blue);
+  }
+}

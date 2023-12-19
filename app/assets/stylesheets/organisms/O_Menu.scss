@@ -1,0 +1,26 @@
+.O_Menu {
+  width: 1660px;
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+
+  .W_MenuRight {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .C_MenuItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 14px;
+    width: 800px;
+    height: 82px;
+    clip-path: var(--opened);
+    background: var(--lightgray);
+  }
+}

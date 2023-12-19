@@ -49,7 +49,10 @@ def create_admin
   user_data = {
     email: "admin@email.com",
     password: 'testtest',
-    admin: true
+    admin: true,
+    avatar_image: upload_random_avatar,
+    points: 500,
+    tasks_strike: 4
   }
 
   user = User.create!(user_data)
@@ -63,7 +66,10 @@ def create_users
   10.times do
     user_data = {
       email: "user_#{i}@email.com",
-      password: 'testtest'
+      password: 'testtest',
+      avatar_image: upload_random_avatar,
+      points: 500,
+      tasks_strike: 4
     }
 
     user = User.create!(user_data)
@@ -83,7 +89,13 @@ def create_sentence(quantity)
   sentence = sentence_words.join(' ').capitalize
 end
 
-def upload_random_image
+def upload_random_avatar
+  uploader = AvatarImageUploader.new(User.new, :avatar_image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/avatars', '*')).sample))
+  uploader
+end
+
+def upload_random_task_image
   uploader = TaskImageUploader.new(Task.new, :first_answer_image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/answers', '*')).sample))
   uploader
@@ -113,6 +125,12 @@ def upload_random_texture_image
   uploader
 end
 
+def upload_random_answer_image
+  uploader = TaskImageUploader.new(Answer.new, :answer_image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/images/answers', '*')).sample))
+  uploader
+end
+
 
 
 def create_active_tasks(quantity)
@@ -122,7 +140,7 @@ def create_active_tasks(quantity)
       type: task_type,
       active: true,
       in_search: true,
-      first_answer_image: upload_random_image,
+      first_answer_image: upload_random_task_image,
       colour_hex: @colour_hexes.sample,
       vector_shape: upload_random_shape_vector,
       vector_font: upload_random_font_vector,
@@ -156,7 +174,7 @@ def create_inactive_tasks(quantity)
       type: task_type,
       active: false,
       in_search: false,
-      first_answer_image: upload_random_image,
+      first_answer_image: upload_random_task_image,
       colour_hex: @colour_hexes.sample,
       vector_shape: upload_random_shape_vector,
       vector_font: upload_random_font_vector,
@@ -177,7 +195,7 @@ def create_answers(quantity)
     user = User.all.sample
     answer = Answer.create(
       task_id: task.id,
-      answer_image: upload_random_image,
+      answer_image: upload_random_answer_image,
       user_id: user.id
     )
 
