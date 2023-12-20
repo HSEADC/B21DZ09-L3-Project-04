@@ -1,0 +1,48 @@
+.O_Suggestion {
+  grid-column: 1 / 13;
+  height: 800px;
+  margin-top: 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  .Q_Rect {
+    background: var(--white);
+    border-radius: 30px;
+    position: absolute;
+
+    &.first {
+      width: 100px;
+      height: 560px;
+      top: 100px;
+    }
+
+    &.second {
+      width: 1622px;
+      height: 740px;
+      left: 36px;
+    }
+
+    &.third {
+      width: 882px;
+      height: 100px;
+      right: 80px;
+      bottom: 0;
+    }
+  }
+
+  .W_RefPartial {
+    width: 680px;
+    height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lightgray);
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    margin-top: 44px;
+    margin-right: 140px;
+  }
+}

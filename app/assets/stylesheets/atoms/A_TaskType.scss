@@ -10,4 +10,10 @@
   color: var(--white);
   border-radius: 100%;
   background: var(--main-blue);
+
+  &.inactive {
+    color: var(--main-blue);
+    background: var(--white);
+    cursor: pointer;
+  }
 }

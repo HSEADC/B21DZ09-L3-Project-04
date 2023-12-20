@@ -1,0 +1,8 @@
+<div class="C_TaskCircles">
+  <div class="A_Ava medium">
+    <%= image_tag task.answers[1].user.avatar_image.medium.url, class: "Q_Ava" if task.answers[1].user.avatar_image.medium.url %>
+  </div>
+  <div class="A_TaskType">
+    <%= task.type[0]%>
+  </div>
+</div>

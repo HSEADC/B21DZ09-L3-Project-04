@@ -1,99 +1,43 @@
-<!-- <h1>Все задание</h1>
-
-<div id="vote_tasks">
-  <#% @vote_tasks.each do |task| %>
-    <#%= render task %>
-  <#% end %>
-</div>
-
-<div class="all-tasks">
-  <#% @active_tasks.each do |task| %>
-    <#%= render task %>
-    <#%= render task.answers %>
-  <#% end %>
-</div> -->
 <div class="Q_Grid">
   <% if user_signed_in? %>
-<a class="O_ProfileState" href="<%= profile_path %>">
-  <div class="M_ProfileRec">
-    <div class="M_AvatarName">
-      <div class="A_Ava">
-        <%= image_tag current_user.avatar_image.large.url, class: "Q_Ava" if current_user.avatar_image.large.url %>
-      </div>
-      <p>@<%= current_user.email.tr('_@email.com', '')%></p>
-    </div>
-
-    <div class="M_ProfileInfoRec">
-      <div class="C_InfoNums">
-        <div class="A_InfoNum">
-          <h2><%= current_user.points%></h2>
-          <p>баллов</p>
-        </div>
-        <div class="A_InfoNum">
-          <h2><%= current_user.answers.length%></h2>
-          <p>находок</p>
-        </div>
-      </div>
-      <div class="A_TasksStrike">
-        <p><%= current_user.tasks_strike%>/7 tasks strike</p>
-        <div class="C_TasksStrikeCircles">
-          <div class="Q_TasksStrikeCircle blue"></div>
-          <div class="Q_TasksStrikeCircle blue"></div>
-          <div class="Q_TasksStrikeCircle blue"></div>
-          <div class="Q_TasksStrikeCircle blue"></div>
-          <div class="Q_TasksStrikeCircle"></div>
-          <div class="Q_TasksStrikeCircle"></div>
-          <div class="Q_TasksStrikeCircle"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="C_UsersAnswers">
-      <% @profile_answers.each do |answer| %>
-      <div class="A_ProfileAnswerPreview">
-        <%= image_tag answer.answer_image.extrasmall.url, class: "Q_ProfileAnswerImage" if answer.answer_image.extrasmall.url %>
-        <div class="A_TaskType">
-          <%= answer.task.type[0]%>
-        </div>
-      </div>
-      <% end %>
-  </div>
-</a>
+  <%= render 'allTasksBanners/profile_state'%>
 <% end %>
 
 <section class="O_TasksOfDay">
   <h2 class="A_Title">идет голосование</h2>
   <div class="C_TasksOfDay">
   <% @vote_tasks.each do |task| %>
-  <div class="O_Task">
-    <%= image_tag task.first_answer_image.small.url, class: "Q_TaskImage small" if task.first_answer_image.small.url %>
-    <div class="C_TaskCircles">
-      <div class="A_Ava medium">
-        <%= image_tag task.answers[1].user.avatar_image.medium.url, class: "Q_Ava" if task.answers[1].user.avatar_image.medium.url %>
-      </div>
-      <div class="A_TaskType">
-        <%= task.type[0]%>
-      </div>
-    </div>
-    <a class="M_Button" href="<%=  %>">голосовать</a>
-    <div class="M_TitleCardTask">
-      <div class="A_TaskTitle"><%= "#{task.type[0]}#{task.id}" %></div>
-      <div class="M_Participants">
-        <div class="A_Ava xs">
-          <%= image_tag task.answers[2].user.avatar_image.extrasmall.url, class: "Q_Ava" if task.answers[2].user.avatar_image.extrasmall.url %>
-        </div>
-        <div class="A_Ava xs">
-          <%= image_tag task.answers[3].user.avatar_image.extrasmall.url, class: "Q_Ava" if task.answers[3].user.avatar_image.extrasmall.url %>
-        </div>
-        <div class="A_MoreParticipants">
-          <p>+<%=task.answers.length %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-    <%#= render task %>
+    <%= render 'task_cards/vote_task_card', task: task%>
   <% end %>
   </div>
 </section>
 
+<%= render 'SuggestionForm/suggestions', task: @random_task %>
+
+<section class="O_AllActiveTasks">
+  <div class="M_TitleWithFilters">
+    <div class="W_TitleCounter">
+      <div class="A_Title">все задания</div>
+      <div class="A_MoreCircle">
+        <p>+<%#=task.length %></p>
+      </div>
+    </div>
+    <div class="W_Fiters">
+      <div class="C_TasksTypes">
+        <div class="A_TaskType inactive">S</div>
+        <div class="A_TaskType inactive">C</div>
+        <div class="A_TaskType inactive">F</div>
+        <div class="A_TaskType inactive">R</div>
+        <div class="A_TaskType inactive">T</div>
+      </div>
+
+      <div class="A_Filter">
+        <p>сортировать по</p>
+      </div>
+    </div>
+  </div>
+  <% @active_tasks.each do |task| %>
+    <%= render 'task_cards/card_new_tasks', task: task%>
+  <% end %>
+</section>
 </div>

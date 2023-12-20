@@ -1,0 +1,26 @@
+.M_TextWithButton {
+  width: 420px;
+  margin-left: 140px;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  position: relative;
+  z-index: 2;
+
+  .W_TextBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--black);
+
+    h1 {
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+}

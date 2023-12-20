@@ -1,0 +1,19 @@
+.A_AswerWithAvatar {
+  width: 260px;
+  height: 260px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+
+  .Q_SmallAnswerImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .A_Ava {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+}

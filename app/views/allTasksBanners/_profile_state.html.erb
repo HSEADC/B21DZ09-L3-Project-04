@@ -1,0 +1,40 @@
+<a class="O_ProfileState" href="<%= profile_path %>">
+  <div class="M_ProfileRec">
+    <div class="M_AvatarName">
+      <div class="A_Ava">
+        <%= image_tag current_user.avatar_image.large.url, class: "Q_Ava" if current_user.avatar_image.large.url %>
+      </div>
+      <p>@<%= current_user.email.tr('_@email.com', '')%></p>
+    </div>
+
+    <div class="M_ProfileInfoRec">
+      <div class="C_InfoNums">
+        <div class="A_InfoNum">
+          <h2><%= current_user.points%></h2>
+          <p>баллов</p>
+        </div>
+        <div class="A_InfoNum">
+          <h2><%= current_user.answers.length%></h2>
+          <p>находок</p>
+        </div>
+      </div>
+      <div class="A_TasksStrike">
+        <p><%= current_user.tasks_strike%>/7 tasks strike</p>
+        <div class="C_TasksStrikeCircles">
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle"></div>
+          <div class="Q_TasksStrikeCircle"></div>
+          <div class="Q_TasksStrikeCircle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="C_UsersAnswers">
+      <% @profile_answers.each do |answer| %>
+      <%= render 'answers_cards/profile_preview_answer_card', answer: answer %>
+      <% end %>
+  </div>
+</a>

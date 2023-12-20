@@ -1,0 +1,25 @@
+.O_CardNewTask {
+  width: 100%;
+  height: 872px;
+  background: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 44px;
+  margin: 60px 0;
+  clip-path: var(--card-new-task-first);
+
+  .C_TaskAnswers {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 20px 20px;
+    flex-wrap: wrap;
+    margin-top: 110px;
+    margin-left: 58px;
+  }
+}
+
+.O_CardNewTask:first-child {
+  clip-path: var(--card-new-task-first);
+}

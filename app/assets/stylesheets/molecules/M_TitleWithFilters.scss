@@ -1,0 +1,21 @@
+.M_TitleWithFilters {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .W_TitleCounter {
+    display: flex;
+    gap: 10px;
+  }
+
+  .W_Fiters {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .C_TasksTypes {
+      display: flex;
+      gap: 14px;
+    }
+  }
+}
