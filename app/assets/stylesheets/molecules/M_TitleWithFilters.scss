@@ -1,7 +1,9 @@
 .M_TitleWithFilters {
   width: 100%;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .W_TitleCounter {
     display: flex;
@@ -11,7 +13,7 @@
   .W_Fiters {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 28px;
 
     .C_TasksTypes {
       display: flex;

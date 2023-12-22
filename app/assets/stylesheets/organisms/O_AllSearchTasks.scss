@@ -1,0 +1,12 @@
+.O_AllSearchTasks {
+  grid-column: 1 / 13;
+  margin-top: 60px;
+  position: relative;
+
+  .W_TaskCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 42px 20px;
+  }
+}

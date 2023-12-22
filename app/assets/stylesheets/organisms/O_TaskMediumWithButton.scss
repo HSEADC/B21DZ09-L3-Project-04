@@ -1,13 +1,13 @@
-.O_TaskWithButtons {
+.O_TaskMediumWithButton {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
 
   .Q_TaskImage {
-    width: 680px;
-    height: 680px;
-    clip-path: var(--task-with-two-buttons);
+    width: 540px;
+    height: 540px;
+    clip-path: var(--task-medium-clip);
 
     img {
       width: 100%;
@@ -28,12 +28,10 @@
     }
   }
 
-  .W_Buttons {
+  .M_Button {
     position: absolute;
     right: 0;
-    bottom: 190px;
-    display: flex;
-    gap: 12px;
+    bottom: 50px;
   }
 
   .M_TitleCardTask {

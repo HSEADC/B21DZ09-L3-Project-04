@@ -1,0 +1,14 @@
+<div class="M_TitleCardTask">
+  <div class="A_TaskTitle big"><%= "#{task.type[0]}#{task.id}" %></div>
+  <div class="M_Participants">
+    <div class="A_Ava small">
+      <%= image_tag task.answers[2].user.avatar_image.extrasmall.url, class: "Q_Ava" if task.answers[2].user.avatar_image.extrasmall.url %>
+    </div>
+    <div class="A_Ava small">
+      <%= image_tag task.answers[3].user.avatar_image.extrasmall.url, class: "Q_Ava" if task.answers[3].user.avatar_image.extrasmall.url %>
+    </div>
+    <div class="A_MoreCircle small">
+      <p>+<%=task.answers.length %></p>
+    </div>
+  </div>
+</div>

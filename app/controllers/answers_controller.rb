@@ -15,6 +15,7 @@ class AnswersController < ApplicationController
   def new
     @task = Task.find(params[:task_id])
     @answer = Answer.new
+    #@answer = @task.answers.build
   end
 
   # GET /answers/1/edit

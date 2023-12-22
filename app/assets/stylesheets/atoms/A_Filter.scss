@@ -1,0 +1,62 @@
+.A_Filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+  label {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  select {
+    appearance: none;
+    /*  safari  */
+    -webkit-appearance: none;
+    /*  other styles for aesthetics */
+    padding: 12px 40px 12px 14px;
+    border: none;
+    border-radius: 30px;
+    color: var(--main-blue);
+    font-family: "Fugue";
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &::after {
+    content: "";
+    width: 17px;
+    height: 22px;
+    background-image: url("assets/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 11px;
+    right: 14px;
+    pointer-events: none;
+  }
+
+  // select::before,
+  // select::after {
+  //   --size: 0.3rem;
+  //   content: "";
+  //   position: absolute;
+  //   right: 1rem;
+  //   pointer-events: none;
+  // }
+  //
+  // select::before {
+  //   border-left: var(--size) solid transparent;
+  //   border-right: var(--size) solid transparent;
+  //   border-bottom: var(--size) solid black;
+  //   top: 40%;
+  // }
+  //
+  // select::after {
+  //   border-left: var(--size) solid transparent;
+  //   border-right: var(--size) solid transparent;
+  //   border-top: var(--size) solid black;
+  //   top: 55%;
+  // }
+}

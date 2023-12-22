@@ -16,7 +16,8 @@ class WelcomeController < ApplicationController
   end
 
   def searchTasks
-    @tasks = Task.where(in_search: true)
+    @search_tasks = Task.where(in_search: true)
+    @expire_tasks = Task.where(in_search: true).take(2)
   end
 
   def howToPlay

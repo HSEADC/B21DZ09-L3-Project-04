@@ -3,4 +3,8 @@
   font-weight: 400;
   color: var(--black);
   text-decoration: none;
+
+  &.big {
+    font-size: 52px;
+  }
 }

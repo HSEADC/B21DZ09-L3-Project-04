@@ -19,25 +19,17 @@
     <div class="W_TitleCounter">
       <div class="A_Title">все задания</div>
       <div class="A_MoreCircle">
-        <p>+<%#=task.length %></p>
+        <p>+<%=@active_tasks.length %></p>
       </div>
     </div>
     <div class="W_Fiters">
-      <div class="C_TasksTypes">
-        <div class="A_TaskType inactive">S</div>
-        <div class="A_TaskType inactive">C</div>
-        <div class="A_TaskType inactive">F</div>
-        <div class="A_TaskType inactive">R</div>
-        <div class="A_TaskType inactive">T</div>
-      </div>
-
-      <div class="A_Filter">
-        <p>сортировать по</p>
-      </div>
+      <%= render 'utilities_partials/filters_with_types' %>
     </div>
   </div>
+  <div class="W_TaskCards">
   <% @active_tasks.each do |task| %>
     <%= render 'task_cards/card_new_tasks', task: task%>
   <% end %>
+</div>
 </section>
 </div>

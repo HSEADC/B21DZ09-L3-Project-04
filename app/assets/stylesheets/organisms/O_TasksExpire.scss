@@ -1,0 +1,65 @@
+.O_TasksExpire {
+  grid-column: 1 / 13;
+  height: 924px;
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  .Q_Rect {
+    background: var(--main-blue);
+    border-radius: 30px;
+    position: absolute;
+
+    &.first {
+      width: 1520px;
+      height: 924px;
+      top: 0px;
+    }
+
+    &.second {
+      width: 100px;
+      height: 790px;
+      right: 100px;
+      top: 0;
+    }
+
+    &.third {
+      width: 70px;
+      height: 660px;
+      right: 46px;
+      top: 68px;
+    }
+
+    &.fourth {
+      width: 70px;
+      height: 560px;
+      right: 0px;
+      top: 134px;
+    }
+  }
+
+  .W_TasksExpireColumn {
+    width: 100%;
+    padding: 44px 44px 60px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      color: var(--white);
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 100%;
+    }
+  }
+
+  .W_TasksExpireRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 44px;
+  }
+}

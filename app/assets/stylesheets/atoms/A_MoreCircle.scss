@@ -8,4 +8,10 @@
   text-align: center;
   border-radius: 100%;
   border: 1px solid var(--black);
+
+  &.small {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
 }

@@ -1,13 +1,14 @@
-.O_TaskWithButtons {
+.O_TaskBigWithButton {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+  color: var(--white);
 
   .Q_TaskImage {
     width: 680px;
     height: 680px;
-    clip-path: var(--task-with-two-buttons);
+    clip-path: var(--task-big-clip);
 
     img {
       width: 100%;
@@ -28,15 +29,19 @@
     }
   }
 
-  .W_Buttons {
+  .M_Button {
     position: absolute;
     right: 0;
-    bottom: 190px;
-    display: flex;
-    gap: 12px;
+    bottom: 62px;
   }
 
   .M_TitleCardTask {
     margin-top: 12px;
+    .A_TaskTitle {
+      color: var(--white);
+    }
+    .A_MoreCircle {
+      border-color: var(--white);
+    }
   }
 }

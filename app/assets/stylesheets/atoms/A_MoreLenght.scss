@@ -1,0 +1,30 @@
+.A_MoreLength {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 240px;
+
+  .Q_MoreCircle {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: solid 2px var(--white);
+    color: var(--white);
+  }
+
+  h3 {
+    font-size: 68px;
+  }
+
+  p {
+    font-size: 22px;
+    width: 86px;
+    text-align: center;
+    color: var(--white);
+  }
+}

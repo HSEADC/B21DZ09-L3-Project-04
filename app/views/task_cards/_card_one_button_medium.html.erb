@@ -1,0 +1,8 @@
+<div class="O_TaskMediumWithButton">
+  <%= image_tag task.first_answer_image.medium.url, class: "Q_TaskImage" if task.first_answer_image.medium.url %>
+    <%= render 'task_cards/task_circles', task: task %>
+
+    <%= link_to "загрузить находку", task_path(task), class: "M_Button xs primary" %>
+
+    <%= render 'task_cards/task_title', task: task%>
+</div>

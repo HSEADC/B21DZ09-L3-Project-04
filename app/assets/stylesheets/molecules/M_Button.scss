@@ -21,6 +21,11 @@
     background: var(--main-blue);
   }
 
+  &.primary.white {
+    color: var(--main-blue);
+    background: var(--white);
+  }
+
   &.primary:hover {
     color: var(--white);
     background: var(--black);
@@ -37,9 +42,15 @@
     font-size: 22px;
   }
 
+  &.xs {
+    padding: 12px 0px;
+    width: 200px;
+    font-size: 20px;
+  }
+
   &.m {
     width: 286px;
-    padding: 16px 0;
+    padding: 18px 0;
     font-size: 28px;
   }
 }
