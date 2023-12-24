@@ -1,6 +1,6 @@
-  <div class="A_AswerWithAvatar">
+<div class="A_AswerWithAvatar" href="<%#=answersGallery_path(task)%>">
     <%= image_tag answer.answer_image.extrasmall.url, class: "Q_SmallAnswerImage" if answer.answer_image.extrasmall.url %>
     <div class="A_Ava medium">
       <%= image_tag answer.user.avatar_image.medium.url, class: "Q_Ava" if answer.user.avatar_image.medium.url %>
     </div>
-  </div>
+</div>

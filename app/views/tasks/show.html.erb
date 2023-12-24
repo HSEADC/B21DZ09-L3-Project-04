@@ -1,17 +1,23 @@
-<section class="container">
-<p style="color: green"><%= notice %></p>
+<div class="Q_Grid">
+<div class="A_TaskPageTitles">
+  <h2 class="A_Title">Реферес</h2>
+  <h2 class="A_Title">Находки</h2>
+</div>
 
-<%= @task.id%>
-
-<%= render @task %>
-
- <div class="answerContainer">
-   <div class="answerCreate">
-     <h3>Ответы</h3>
-     <%= link_to "Создать ответ", new_answer_path(@task), class: "button"%>
-   </div>
-
-   <%= render @task.answers, task: @task %>
-   <%#= render @answer.comments, answer: @answer %>
- </div>
-</section>
+<div class="O_TaskWithAnswers">
+  <div class="Q_Rect first"></div>
+  <div class="Q_Rect second"></div>
+  <div class="Q_Rect third"></div>
+  <div class="Q_Rect fourth"></div>
+  <div class="W_TaskWithAnswers">
+    <%= render 'task_cards/card_one_button_big', task: @task%>
+    <div class="C_TaskAnswers">
+      <%@task.answers.each do |answer| %>
+      <a href="<%=answersGallery_path(@task)%>">
+      <%= render 'answers_cards/answer_avatar_only', task: @task, answer: answer%>
+      <% end %>
+      </a>
+    </div>
+  </div>
+</div>
+</div>

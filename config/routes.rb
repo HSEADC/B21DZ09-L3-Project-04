@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'searchTasks', to: 'welcome#searchTasks'
   get 'howToPlay', to: 'welcome#howToPlay'
   get 'profile', to: 'welcome#profile'
+  get 'answersGallery', to: 'tasks#answersGallery'
 
   root "welcome#index"
 

@@ -1,7 +1,7 @@
 <div class="O_CardNewTask">
   <div class="C_TaskAnswers">
     <%task.answers.each do |answer| %>
-    <%= render 'answers_cards/answer_avatar_only', answer: answer%>
+    <%= render 'answers_cards/answer_avatar_only', task: task, answer: answer%>
     <% end %>
   </div>
   <%= render 'task_cards/card_with_two_buttons', task: task %>

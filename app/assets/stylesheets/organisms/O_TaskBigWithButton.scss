@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  color: var(--white);
 
   .Q_TaskImage {
     width: 680px;
@@ -37,11 +36,18 @@
 
   .M_TitleCardTask {
     margin-top: 12px;
-    .A_TaskTitle {
-      color: var(--white);
-    }
-    .A_MoreCircle {
-      border-color: var(--white);
+  }
+
+  &.white {
+    color: var(--white);
+
+    .M_TitleCardTask {
+      .A_TaskTitle {
+        color: var(--white);
+      }
+      .A_MoreCircle {
+        border-color: var(--white);
+      }
     }
   }
 }
