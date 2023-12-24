@@ -23,6 +23,4 @@ class WelcomeController < ApplicationController
   def howToPlay
   end
 
-  def profile
-  end
 end

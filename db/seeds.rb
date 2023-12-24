@@ -30,7 +30,7 @@ def seed
   create_users
   create_active_tasks(2)
   create_inactive_tasks(2)
-  create_answers(5)
+  create_answers(5..10)
   create_comments(5)
   create_comment_replies(50)
 end
@@ -191,7 +191,7 @@ def create_answers(quantity)
   tasks = Task.all
 
   tasks.each do |task|
-  quantity.times do
+    quantity.to_a.sample.times do
     user = User.all.sample
     answer = Answer.create(
       task_id: task.id,

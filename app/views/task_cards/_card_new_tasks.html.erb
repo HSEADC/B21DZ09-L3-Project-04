@@ -1,6 +1,8 @@
+<% @random_answers =task.answers.sample(6) %>
+
 <div class="O_CardNewTask">
   <div class="C_TaskAnswers">
-    <%task.answers.each do |answer| %>
+    <%@random_answers.each do |answer| %>
     <%= render 'answers_cards/answer_avatar_only', task: task, answer: answer%>
     <% end %>
   </div>

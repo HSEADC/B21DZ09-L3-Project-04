@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_19_191615) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_24_082858) do
   create_table "answers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -55,6 +55,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_19_191615) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["commentable_type", "commentable_id"], name: "index_poly_comments_on_commentable"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "username"
+    t.string "avatar_image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|

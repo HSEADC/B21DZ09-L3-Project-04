@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :profiles, only: [:show, :edit, :update]
+
   namespace :admin do
     resources :tasks do
       resources :answers do
@@ -36,7 +38,7 @@ Rails.application.routes.draw do
   get 'allTasks', to: 'welcome#allTasks'
   get 'searchTasks', to: 'welcome#searchTasks'
   get 'howToPlay', to: 'welcome#howToPlay'
-  get 'profile', to: 'welcome#profile'
+  # get 'profile', to: 'profiles#show'
   get 'answersGallery', to: 'tasks#answersGallery'
 
   root "welcome#index"

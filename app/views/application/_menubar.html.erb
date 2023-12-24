@@ -7,7 +7,7 @@
       <div class="C_MenuItems">
         <%= link_to "все задания", allTasks_path, class: "A_MenuItem" %>
         <%= link_to "банк рефов", howToPlay_path, class: "A_MenuItem" %>
-        <%= link_to "жалобы", profile_path, class: "A_MenuItem" %>
+        <%= link_to "жалобы", profile_path(current_user.id), class: "A_MenuItem" %>
       </div>
       <div class="A_Notification"></div>
       <%= link_to "", destroy_user_session_path, method: :delete, class: "A_LogOut" %>
@@ -21,7 +21,7 @@
           <%= link_to "в поиске", searchTasks_path, class: "Q_InSearch" %>
         </div>
         <%= link_to "как играть", howToPlay_path, class: "A_MenuItem" %>
-        <%= link_to "профиль", profile_path, class: "A_MenuItem" %>
+        <%= link_to "профиль", profile_path(current_user.id), class: "A_MenuItem" %>
       </div>
       <div class="A_Notification"></div>
     </div>
@@ -33,7 +33,7 @@
           <%= link_to "в поиске", searchTasks_path, class: "Q_InSearch" %>
         </div>
         <%= link_to "как играть", howToPlay_path, class: "A_MenuItem" %>
-        <%= link_to "профиль", profile_path, class: "A_MenuItem" %>
+        <%#= link_to "профиль", profile_path, class: "A_MenuItem" %>
       </div>
       <div class="A_Notification"></div>
       </div>
