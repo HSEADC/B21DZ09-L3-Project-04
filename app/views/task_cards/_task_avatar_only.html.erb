@@ -1,0 +1,6 @@
+<div class="A_TaskWithAvatar">
+    <%= image_tag task.first_answer_image.extrasmall.url, class: "Q_SmallAnswerImage" if task.first_answer_image.extrasmall.url %>
+    <div class="A_Ava medium">
+        <%= image_tag task.answers[1].user.avatar_image.medium.url, class: "Q_Ava" if task.answers[1].user.avatar_image.medium.url %>
+    </div>
+  </div>
