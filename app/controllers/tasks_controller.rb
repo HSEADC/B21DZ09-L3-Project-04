@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show ]
+  before_action :set_task, only: %i[ show, answersGallery]
 
   def index
     @tasks = Task.all
@@ -7,10 +7,12 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @task = Task.find(params[:id])
+
   end
 
   def answersGallery
-    @task = Task.find(params[:id])
+   @answers =  Answer.where(task_id: @task.id)
   end
 
   private

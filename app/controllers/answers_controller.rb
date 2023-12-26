@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
   # GET /answers/new
   def new
     @task = Task.find(params[:task_id])
-    @answer = Answer.new
+     @answer = Answer.new
     #@answer = @task.answers.build
   end
 
@@ -26,7 +26,7 @@ class AnswersController < ApplicationController
   # POST /answers or /answers.json
   def create
     @task = Task.find(params[:task_id])
-    @answer = @task.answers.new(answer_params)
+      @answer = @task.answers.new(answer_params)
 
     respond_to do |format|
       if @answer.save

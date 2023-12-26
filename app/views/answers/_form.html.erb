@@ -1,4 +1,5 @@
- <%= form_with(model: [:task, answer]) do |form| %>
+ <%= form_with(model: [task, answer]) do |form| %>
+
   <% if answer.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(answer.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -11,6 +12,10 @@
     </div>
   <% end %>
 
+
+
+    <%#= render 'task_cards/card_one_button_big', task: task%>
+
   <div class="field">
     <%= form.label :answer_image %><br />
     <%= form.file_field :answer_image %>
@@ -18,5 +23,6 @@
 
 	<div class="actions">
 		<%= form.submit %>
+      <%= @task %>
 	</div>
 <% end %>

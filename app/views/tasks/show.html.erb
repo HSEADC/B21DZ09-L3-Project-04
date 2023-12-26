@@ -4,19 +4,21 @@
   <h2 class="A_Title">Находки</h2>
 </div>
 
+<%= @task.id%>
+
 <div class="O_TaskWithAnswers">
   <div class="Q_Rect first"></div>
   <div class="Q_Rect second"></div>
   <div class="Q_Rect third"></div>
   <div class="Q_Rect fourth"></div>
   <div class="W_TaskWithAnswers">
-    <%= render 'task_cards/card_one_button_big', task: @task%>
+    <%= render 'card_one_button_big', task: @task%>
     <div class="C_TaskAnswers">
       <%@task.answers.each do |answer| %>
-      <a href="<%=answersGallery_path(@task)%>">
+      <a href="<%=answersGallery_path(@task.id)%>">
       <%= render 'answers_cards/answer_avatar_only', task: @task, answer: answer%>
+    </a>
       <% end %>
-      </a>
     </div>
   </div>
 </div>

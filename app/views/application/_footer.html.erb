@@ -1,7 +1,26 @@
 <footer>
-  <%= link_to "О нас", about_path %>
-  <a href="#subscribeEmail">Подписаться</a>
-  <%= link_to "login", user_session %>
+  <div class="O_Footer">
+    <div class="Q_Rect first"></div>
+    <div class="Q_Rect second"></div>
+    <div class="Q_Rect third"></div>
 
+<div class="M_FooterBody">
+    <div class="C_FooterLinks">
+      <div class="W_LeftLinks">
+          <%= link_to "о нас", about_path, class: "A_FooterLink" %>
+        <div class="W_TwoLinks">
+          <%= link_to "как играть", about_path, class: "A_FooterLink" %>
+          <a href="#" class="A_FooterLink">помощь</a>
+        </div>
+      </div>
 
+      <div class="W_TwoLinks">
+        <a href="#" class="A_FooterLink">телеграм</a>
+        <a href="#" class="A_FooterLink">инста</a>
+      </div>
+    </div>
+
+    <%= link_to "", welcome_path, class: "A_Logo" %>
+  </div>
+  </div>
 </footer>
