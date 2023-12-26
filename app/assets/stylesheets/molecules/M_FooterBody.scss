@@ -1,0 +1,32 @@
+.M_FooterBody {
+  width: 1660px;
+  padding: 60px 40px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  position: relative;
+  z-index: 2;
+
+  .C_FooterLinks,
+  .W_LeftLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .W_LeftLinks {
+    width: 30%;
+  }
+
+  .W_TwoLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .A_Logo {
+    background-image: url("assets/A_Logo_white.svg");
+  }
+}
