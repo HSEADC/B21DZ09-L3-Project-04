@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # api
   namespace :api do
     namespace :v1 do
-      resources :tasks
+      resources :tasks, defaults: { format: :json }
     end
   end
 

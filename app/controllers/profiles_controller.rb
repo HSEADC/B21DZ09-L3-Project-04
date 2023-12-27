@@ -2,6 +2,8 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[ show edit update destroy ]
 
   def show
+    @user_answers = Answer.where(user_id: current_user.id)
+    @win_tasks = Task.where(active: false).take(4)
   end
 
   def edit

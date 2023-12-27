@@ -1,0 +1,12 @@
+.O_WinnerTasks {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+  overflow: hidden;
+
+  .C_WinTasks {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}

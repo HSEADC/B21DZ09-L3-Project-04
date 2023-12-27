@@ -36,6 +36,12 @@
     border: solid 1px var(--main-blue);
   }
 
+  &.secondary.blue {
+    color: var(--white);
+    background: transparent;
+    border: solid 1px var(--white);
+  }
+
   &.s {
     padding: 20px 0px;
     width: 250px;

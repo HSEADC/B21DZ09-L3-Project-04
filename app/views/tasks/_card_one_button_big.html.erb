@@ -5,7 +5,8 @@
     <%= render 'task_cards/task_circles', task: task %>
 
     <% if can? :create, Answer %>
-      <%= link_to "загрузить находку", new_answer_path(@task), class: "M_Button m primary" %>
+      <%#= link_to "загрузить находку", new_answer_path(@task), class: "M_Button m primary" %>
+      <%= link_to 'загрузить находку', [:new, answer.task, answer], class: "M_Button m primary" %> 
     <% end %>
 
 

@@ -1,0 +1,53 @@
+.O_Profile {
+  width: 340px;
+  height: 564px;
+  padding: 80px 30px 44px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  background: var(--white);
+  border-radius: 30px;
+
+  .M_AvatarName {
+    .A_Ava {
+      width: 240px;
+      height: 240px;
+    }
+
+    p {
+      font-size: 34px;
+      color: var(--main-blue);
+    }
+  }
+
+  .C_InfoNums {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    color: var(--main-blue);
+
+    .A_InfoNum {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  .A_TasksStrike {
+    margin-top: 54px;
+    gap: 10px;
+    align-items: center;
+    color: var(--main-blue);
+
+    .C_TasksStrikeCircles {
+      gap: 6px;
+    }
+
+    .Q_TasksStrikeCircle {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

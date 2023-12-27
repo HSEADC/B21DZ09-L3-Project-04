@@ -1,0 +1,46 @@
+.S_Profile {
+  grid-column: 1 / 13;
+  height: 870px;
+  margin-top: 60px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  gap: 44px;
+  flex-direction: row;
+
+  .Q_Rect {
+    background: var(--main-blue);
+    border-radius: 30px;
+    position: absolute;
+
+    &.first {
+      width: 100%;
+      height: 760px;
+      top: 0px;
+    }
+
+    &.second {
+      width: 80%;
+      height: 810px;
+      right: 0;
+      top: 0;
+    }
+
+    &.third {
+      width: 65%;
+      height: 870px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .O_Profile {
+    margin: 44px 0 0 44px;
+  }
+
+  .A_GalleryButtons {
+    position: absolute;
+    right: 44px;
+    bottom: 44px;
+  }
+}

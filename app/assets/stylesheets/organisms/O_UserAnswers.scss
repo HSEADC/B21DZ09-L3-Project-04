@@ -1,0 +1,22 @@
+.O_UserAnswers {
+  grid-column: 1 / 13;
+  margin-top: 80px;
+  position: relative;
+
+  .C_TasksTypes {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .M_TitleWithFilters {
+    margin-bottom: 20px;
+  }
+
+  .C_UserAnswers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

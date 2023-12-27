@@ -1,0 +1,20 @@
+.A_ProfileAnswer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+
+  .Q_ProfileAnswerImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .A_TaskType {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+  }
+}

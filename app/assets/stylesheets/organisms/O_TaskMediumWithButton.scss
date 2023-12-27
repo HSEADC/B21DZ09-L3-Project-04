@@ -31,10 +31,23 @@
   .M_Button {
     position: absolute;
     right: 0;
-    bottom: 50px;
+    bottom: 66px;
   }
 
   .M_TitleCardTask {
     margin-top: 12px;
+  }
+
+  &.white {
+    color: var(--white);
+
+    .M_TitleCardTask {
+      .A_TaskTitle {
+        color: var(--white);
+      }
+      .A_MoreCircle {
+        border-color: var(--white);
+      }
+    }
   }
 }

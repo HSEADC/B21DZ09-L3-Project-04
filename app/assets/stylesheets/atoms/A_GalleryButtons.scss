@@ -1,0 +1,23 @@
+.A_GalleryButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+
+  .Q_GalleryButton {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: solid 2px var(--white);
+    background-image: url("Q_GalleryButtonArrow.svg");
+    background-position: center;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &.right {
+      transform: rotate(180deg);
+    }
+  }
+}

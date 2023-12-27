@@ -1,0 +1,85 @@
+<div class="Q_Grid">
+  <div class="S_Profile">
+    <div class="Q_Rect first"></div>
+    <div class="Q_Rect second"></div>
+    <div class="Q_Rect third"></div>
+
+    <div class="O_Profile">
+      <!-- <div class="A_Edit"></div> -->
+      <div class="M_AvatarName">
+        <div class="A_Ava">
+          <%= image_tag current_user.avatar_image.large.url, class: "Q_Ava" if current_user.avatar_image.large.url %>
+        </div>
+        <p>@<%= current_user.email.tr('_@email.com', '')%></p>
+      </div>
+
+      <div class="C_InfoNums">
+        <div class="A_InfoNum">
+          <h2><%= current_user.points%></h2>
+          <p>баллов</p>
+        </div>
+        <div class="A_InfoNum">
+          <h2><%= current_user.answers.length%></h2>
+          <p>находок</p>
+        </div>
+      </div>
+
+      <div class="A_TasksStrike">
+        <p><%= current_user.tasks_strike%>/7 tasks strike</p>
+        <div class="C_TasksStrikeCircles">
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle blue"></div>
+          <div class="Q_TasksStrikeCircle"></div>
+          <div class="Q_TasksStrikeCircle"></div>
+          <div class="Q_TasksStrikeCircle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="O_WinnerTasks">
+      <div class="W_TitleCounter">
+        <div class="A_Title">все задания</div>
+        <div class="A_MoreCircle">
+          <p><%=@win_tasks.length %></p>
+        </div>
+      </div>
+
+      <div class="C_WinTasks">
+        <% @win_tasks.each do |task| %>
+        <%= render 'task_cards/card_one_button_medium_blue', task: task%>
+        <% end %>
+      </div>
+  </div>
+  <div class="A_GalleryButtons">
+    <div class="Q_GalleryButton left"></div>
+    <div class="Q_GalleryButton right"></div>
+  </div>
+</div>
+
+<div class="O_UserAnswers">
+  <div class="M_TitleWithFilters">
+    <div class="W_TitleCounter">
+      <div class="A_Title">твои находки</div>
+      <div class="A_MoreCircle">
+        <p>+<%=@user_answers.length %></p>
+      </div>
+      </div>
+
+    <div class="C_TasksTypes">
+      <div class="A_TaskType small inactive">S</div>
+      <div class="A_TaskType small inactive">C</div>
+      <div class="A_TaskType small inactive">F</div>
+      <div class="A_TaskType small inactive">R</div>
+      <div class="A_TaskType small inactive">T</div>
+    </div>
+  </div>
+
+  <div class="C_UserAnswers">
+    <% @user_answers.each do |answer| %>
+    <%= render 'answers_cards/profile_answer_card', answer: answer%>
+    <% end %>
+  </div>
+
+</div>
