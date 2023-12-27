@@ -4,7 +4,7 @@
   <div class="W_Buttons">
     <%= link_to "смотреть ответы", task_path(task), class: "M_Button m secondary" %>
     <%#= link_to "загрузить находку", task_path(task), class: "M_Button m primary" %>
-    <%= link_to "загрузить находку", new_answer_path(task.id), class: "M_Button m primary", task: task %>
+    <%= link_to "загрузить находку", new_task_answer_path(task.id), class: "M_Button m primary", task: task %>
 
   </div>
     <%= render 'task_cards/task_title_big', task: task%>

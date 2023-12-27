@@ -3,10 +3,11 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:create, :show]
 
-  resources :tasks
+  resources :tasks do
   resources :answers do
     resources :comments, only: [:create]
   end
+end
 
   # api
   namespace :api do
