@@ -1,6 +1,6 @@
-<div class="A_ProfileAnswer">
+<a class="A_ProfileAnswer" href="<%=task_path(answer.task)%>">
   <%= image_tag answer.answer_image.small.url, class: "Q_ProfileAnswerImage" if answer.answer_image.small.url %>
   <div class="A_TaskType">
     <%= answer.task.type[0]%>
   </div>
-</div>
+</a>
