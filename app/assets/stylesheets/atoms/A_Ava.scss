@@ -25,3 +25,25 @@
     object-position: center;
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 700px) {
+  .A_Ava {
+    width: 136px;
+    height: 136px;
+
+    &.medium {
+      width: 56px;
+      height: 56px;
+    }
+
+    &.small {
+      width: 40px;
+      height: 40px;
+    }
+
+    &.xs {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

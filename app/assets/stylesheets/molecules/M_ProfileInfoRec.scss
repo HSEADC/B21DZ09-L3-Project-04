@@ -12,3 +12,24 @@
     align-items: center;
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 700px) {
+  .M_ProfileInfoRec {
+    position: relative;
+    width: auto;
+    flex-direction: column;
+    gap: 32px;
+
+    .C_InfoNums {
+      width: 100px;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .A_TasksStrike {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+    }
+  }
+}
