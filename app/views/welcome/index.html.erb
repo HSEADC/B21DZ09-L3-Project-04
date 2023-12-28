@@ -1,11 +1,106 @@
 <body id="main">
-
-      <h2>МЕДИА ДЛЯ ПОИСКА РЕФОВ</h2>
-
-  <section id="subscribeEmail">
-    <div class="containerSubscribtion">
-      <h1>Узнай о нашем запуске</h1>
-      <%= render 'subscriptions/form', subscription: @subscription%>
+<div id="gallery_main">
+  <div class="gallery_container">
+    <div class="gallery_rail">
+      <div class="gallery_slide first">
+        <h1>Развивай свою креативность с refs</h1>
+        <div class="gallery_first_img"> </div>
+      </div>
+      <div class="gallery_slide second">
+        <h1>участвуй в поисках рефов</h1>
+        <div class="gallery_second_img"> </div>
+      </div>
+      <div class="gallery_slide third">
+        <h1>выигрывай и получай быллы активности</h1>
+        <div class="gallery_third_img"> </div>
+      </div>
     </div>
-  </section>
+    <div class="gallery_counter">
+      <div class="counter">
+        <p>1</p>
+      </div>
+      <div class="all_count">
+        <p>3</p>
+      </div>
+    </div>
+    <div class="progress_line">
+      <div class="current_progress_line"></div>
+    </div>
+    </div>
+  <div class="wrapper">
+    <div class="button">назад</div>
+    <div class="button primary">далее</div>
+  </div>
+</div>
+
+<div id="task_types">
+  <div class="types_container">
+    <div class="types_content">
+      <h1>5 типов заданий</h1>
+      <div class="wrapper">
+        <div class="type">
+          <div class="circle">
+            <p>C</p>
+          </div>
+          <h3>color</h3>
+          <p>цвет</p>
+        </div>
+        <div class="type">
+          <div class="circle">
+            <p>S</p>
+          </div>
+          <h3>Shape</h3>
+          <p>форма</p>
+        </div>
+        <div class="type">
+          <div class="circle">
+            <p>F</p>
+          </div>
+          <h3>Font</h3>
+          <p>шрифт</p>
+        </div>
+        <div class="type">
+          <div class="circle">
+            <p>R</p>
+          </div>
+          <h3>regularity</h3>
+          <p>закономерность</p>
+        </div>
+        <div class="type">
+          <div class="circle">
+            <p>T</p>
+          </div>
+          <h3>Texture</h3>
+          <p>текстура</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="types_image"> </div>
+</div>
+
+<div id="how_to_play">
+  <div class="shape">
+    <div class="shape_first"></div>
+    <div class="shape_second"></div>
+    <div class="wrapper">
+      <h1>Как играть?</h1>
+      <a class="button" href="<%= howToPlay_path%>">посмотреть</a>
+    </div>
+  </div>
+</div>
+
+<div id="collection">
+  <div class="answers_container">
+    <div class="answers_rail">
+      <% @random_answers.each do |answer| %>
+      <%= render 'answers_cards/profile_answer_card', answer: answer%>
+      <% end %>
+    </div>
+  </div>
+  <div class="wrapper">
+    <h1>собери свою коллекцию рефененсов!</h1>
+    <p>И искать вдохновение на пинтересте больше не понадобится</p>
+  </div>
+</div>
 </body>

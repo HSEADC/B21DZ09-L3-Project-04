@@ -1,6 +1,4 @@
 <div class="O_TaskBigWithButton">
-
-  <%= task%>
   <%= image_tag task.first_answer_image.large.url, class: "Q_TaskImage" if task.first_answer_image.large.url %>
     <%= render 'task_cards/task_circles', task: task %>
 
