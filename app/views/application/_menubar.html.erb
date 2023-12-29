@@ -1,32 +1,47 @@
 <nav>
   <div class="S_Menu">
+    <div class="Q_Rect first"></div>
+    <div class="Q_Rect second"></div>
     <div class="O_Menu">
+
     <%= link_to "", welcome_path, class:"A_Logo" %>
     <% if user_signed_in? && current_user.admin == true %>
     <div class="W_MenuRight">
-      <div class="C_MenuItems">
-        <%= link_to "все задания", allTasks_path, class: "A_MenuItem" %>
-        <%= link_to "банк рефов", howToPlay_path, class: "A_MenuItem" %>
-        <%= link_to "жалобы", profile_path(current_user.id), class: "A_MenuItem" %>
+        <div class="Q_Rect third"></div>
+      <div class="W_MenuParts">
+        <div class="Q_MenuPart"></div>
+        <div class="C_MenuItems">
+          <%= link_to "все задания", allTasks_path, class: "A_MenuItem" %>
+          <%= link_to "банк рефов", howToPlay_path, class: "A_MenuItem" %>
+          <%= link_to "жалобы", profile_path(current_user.id), class: "A_MenuItem" %>
+        </div>
+        <div class="Q_MenuPart second"></div>
       </div>
+
       <div class="A_Notification"></div>
       <%= link_to "", destroy_user_session_path, method: :delete, class: "A_LogOut" %>
       </div>
 
     <% elsif user_signed_in? %>
     <div class="W_MenuRight">
+        <div class="Q_Rect third"></div>
       <div class="C_MenuItems">
+          <div class="Q_MenuPart"></div>
         <div class="A_MenuItem">
           <%= link_to "все задания", allTasks_path, class: "Q_AllTasks" %>
           <%= link_to "в поиске", searchTasks_path, class: "Q_InSearch" %>
         </div>
         <%= link_to "как играть", howToPlay_path, class: "A_MenuItem" %>
         <%= link_to "профиль", profile_path(current_user.id), class: "A_MenuItem" %>
+            <div class="Q_MenuPart second"></div>
       </div>
       <div class="A_Notification"></div>
     </div>
     <% else %>
     <div class="W_MenuRight">
+      <div class="Q_Rect third"></div>
+      <div class="W_MenuParts">
+        <div class="Q_MenuPart"></div>
       <div class="C_MenuItems">
         <div class="A_MenuItem">
           <%= link_to "все задания", allTasks_path, class: "Q_AllTasks" %>
@@ -35,6 +50,8 @@
         <%= link_to "как играть", howToPlay_path, class: "A_MenuItem" %>
         <%#= link_to "профиль", profile_path, class: "A_MenuItem" %>
       </div>
+      <div class="Q_MenuPart second"></div>
+    </div>
       <div class="A_Notification"></div>
       </div>
     <% end %>

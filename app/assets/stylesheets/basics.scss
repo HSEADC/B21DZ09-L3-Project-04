@@ -86,18 +86,11 @@ h1 {
 // стили для страницы о нас
 
 #about {
-  width: 100vw;
-  height: 120vw;
-  // opacity: 0.5;
-  // background-image: url("assets/about.png");
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  .S_Menu {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .w_align {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .firstBlock {
@@ -567,13 +560,12 @@ h1 {
 // стили для страницы как играть
 
 #how {
-  width: 100vw;
-  height: 76vw;
-  // opacity: 0.5;
-  // background-image: url("assets/how.png");
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  .w_align {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
   .playCard {
     width: 97vw;
@@ -906,20 +898,6 @@ h1 {
     opacity: 0.5;
     margin-top: -1.5vw;
     margin-left: 10vw;
-  }
-
-  .new {
-    width: 10vw;
-    height: 2px;
-    background-color: var(--white);
-    margin-top: -0.1vw;
-    margin-left: 10vw;
-  }
-
-  .S_Menu {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   .O_Footer {
@@ -1350,26 +1328,5 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     margin: 84px auto;
-  }
-}
-
-.S_Menu {
-  width: 100vw;
-  height: 5.7vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  background: var(--white);
-
-  .O_Menu {
-    width: 1660px;
-    height: 96px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: space-between;
   }
 }

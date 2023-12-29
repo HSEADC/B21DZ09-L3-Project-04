@@ -7,5 +7,20 @@
   position: fixed;
   z-index: 20;
   top: 0;
-  background: var(--white);
+
+  .Q_Rect {
+    height: 100%;
+    position: absolute;
+    background: var(--white);
+
+    &.first {
+      width: 48vw;
+      left: 0;
+    }
+
+    &.second {
+      width: 9vw;
+      right: 0;
+    }
+  }
 }
