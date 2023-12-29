@@ -636,7 +636,6 @@ h1 {
             margin-top: 1.8vw;
           }
         }
-
       }
 
       .p1 {
@@ -785,10 +784,8 @@ h1 {
             position: relative;
             margin-top: 0.9vw;
           }
-
         }
       }
-
 
       .row2 {
         width: 65vw;
@@ -900,8 +897,6 @@ h1 {
         }
       }
     }
-
-
   }
 
   .timeline {
@@ -920,7 +915,6 @@ h1 {
     margin-top: -0.1vw;
     margin-left: 10vw;
   }
-
 
   .S_Menu {
     position: absolute;
@@ -955,7 +949,6 @@ h1 {
     left: 40vw;
     width: 38vw;
   }
-<<<<<<< HEAD
 }
 
 /// главная страница
@@ -1359,27 +1352,24 @@ h1 {
     margin: 84px auto;
   }
 }
-=======
 
-  //  .S_Menu {
-  //   width: 100vw;
-  //   height: 5.7vw;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   position: fixed;
-  //   z-index: 20;
-  //   top: 0;
-  //   background: var(--white);
+.S_Menu {
+  width: 100vw;
+  height: 5.7vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  background: var(--white);
 
-  //   .O_Menu {
-  //     width: 1660px;
-  //     height: 96px;
-  //     display: flex;
-  //     flex-direction: row;
-  //     position: relative;
-  //     justify-content: space-between;
-  //   }
-  // }
+  .O_Menu {
+    width: 1660px;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+  }
 }
->>>>>>> b7eeb42f1c51bf56333aef317bbfa43f1edf92c2
