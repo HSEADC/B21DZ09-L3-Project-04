@@ -31,7 +31,7 @@
   .M_Button {
     position: absolute;
     right: 0;
-    bottom: 66px;
+    bottom: 48px;
   }
 
   .M_TitleCardTask {
@@ -48,6 +48,16 @@
       .A_MoreCircle {
         border-color: var(--white);
       }
+    }
+  }
+}
+
+.C_WinTasks {
+  .O_TaskMediumWithButton {
+    .M_Button {
+      position: absolute;
+      right: 0;
+      bottom: 66px;
     }
   }
 }
