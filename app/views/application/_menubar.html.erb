@@ -2,12 +2,12 @@
   <div class="S_Menu">
     <div class="Q_Rect first"></div>
     <div class="Q_Rect second"></div>
+    <div class="Q_Rect third"></div>
     <div class="O_Menu">
 
     <%= link_to "", welcome_path, class:"A_Logo" %>
     <% if user_signed_in? && current_user.admin == true %>
     <div class="W_MenuRight">
-        <div class="Q_Rect third"></div>
       <div class="W_MenuParts">
         <div class="Q_MenuPart"></div>
         <div class="C_MenuItems">
@@ -24,7 +24,6 @@
 
     <% elsif user_signed_in? %>
     <div class="W_MenuRight">
-        <div class="Q_Rect third"></div>
       <div class="C_MenuItems">
           <div class="Q_MenuPart"></div>
         <div class="A_MenuItem">
@@ -39,7 +38,6 @@
     </div>
     <% else %>
     <div class="W_MenuRight">
-      <div class="Q_Rect third"></div>
       <div class="W_MenuParts">
         <div class="Q_MenuPart"></div>
       <div class="C_MenuItems">

@@ -18,3 +18,10 @@
     top: 12px;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .A_ProfileAnswerPreview {
+    width: 220px;
+    height: 220px;
+  }
+}

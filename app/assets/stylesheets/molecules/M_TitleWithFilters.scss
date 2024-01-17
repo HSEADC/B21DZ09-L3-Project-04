@@ -11,6 +11,7 @@
 
   .W_TitleCounter {
     display: flex;
+    align-items: center;
     gap: 10px;
   }
 
@@ -22,6 +23,25 @@
     .C_TasksTypes {
       display: flex;
       gap: 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .M_TitleWithFilters {
+    margin-bottom: 24px;
+
+    .W_TitleCounter {
+      gap: 16px;
+    }
+
+    .W_Fiters {
+      gap: 4px;
+
+      .C_TasksTypes {
+        gap: 12px;
+        margin-right: 24px;
+      }
     }
   }
 }

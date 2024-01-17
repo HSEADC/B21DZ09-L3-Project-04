@@ -24,3 +24,19 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .M_TextWithButton {
+    width: 386px;
+    margin-left: 80px;
+    margin-top: 80px;
+    gap: 44px;
+
+    .W_TextBlock {
+      h1 {
+        font-size: 32px;
+        width: 70%;
+      }
+    }
+  }
+}

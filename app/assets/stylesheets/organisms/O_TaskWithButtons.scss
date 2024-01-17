@@ -40,3 +40,37 @@
     margin-top: 12px;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .O_TaskWithButtons {
+    .Q_TaskImage {
+      width: 540px;
+      height: 540px;
+      clip-path: none;
+      border-radius: 30px;
+    }
+
+    .C_TaskCircles {
+      .A_Ava {
+        width: 56px;
+        height: 56px;
+      }
+      .A_TaskType {
+        width: 56px;
+        height: 56px;
+        font-size: 48px;
+        margin-left: -10px;
+      }
+    }
+
+    .W_Buttons {
+      position: relative;
+      display: flex;
+      gap: 12px;
+    }
+
+    .M_TitleCardTask {
+      margin-top: 12px;
+    }
+  }
+}

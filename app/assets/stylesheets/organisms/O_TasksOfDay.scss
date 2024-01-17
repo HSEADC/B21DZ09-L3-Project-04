@@ -12,3 +12,14 @@
     justify-content: space-between;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .O_TasksOfDay {
+    .C_TasksOfDay {
+      width: 100%;
+      gap: 20px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
+}

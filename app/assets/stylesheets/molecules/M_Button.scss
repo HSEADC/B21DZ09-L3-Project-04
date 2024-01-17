@@ -96,3 +96,17 @@
     font-size: 28px;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .M_Button {
+    width: 200px;
+    padding: 12px 0;
+    font-size: 20px;
+
+    &.m {
+      width: 185px;
+      padding: 12px 0;
+      font-size: 20px;
+    }
+  }
+}

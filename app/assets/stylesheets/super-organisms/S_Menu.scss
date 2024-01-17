@@ -22,5 +22,28 @@
       width: 9vw;
       right: 0;
     }
+
+    &.third {
+      width: 100vw;
+      height: 14px;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .S_Menu {
+    height: 96px;
+
+    .Q_Rect {
+      &.first {
+        width: 14vw;
+      }
+
+      &.second {
+        width: 12vw;
+      }
+    }
   }
 }

@@ -46,3 +46,38 @@
     margin-right: 140px;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .O_Suggestion {
+    height: 586px;
+    margin-top: 60px;
+
+    .Q_Rect {
+      &.first {
+        width: 100px;
+        height: 448px;
+        top: 36px;
+      }
+
+      &.second {
+        width: 928px;
+        height: 534px;
+        left: 36px;
+      }
+
+      &.third {
+        width: 470px;
+        height: 100px;
+        right: 30px;
+        bottom: 0;
+      }
+    }
+
+    .W_RefPartial {
+      width: 356px;
+      height: 356px;
+      margin-top: 80px;
+      margin-right: 80px;
+    }
+  }
+}

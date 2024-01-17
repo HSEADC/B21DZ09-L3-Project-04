@@ -63,3 +63,19 @@
     top: 22px;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .O_Menu {
+    width: 964px;
+
+    .Q_MenuPart {
+      width: 83px;
+    }
+
+    .C_MenuItems {
+      gap: 12px;
+      width: 800px;
+      height: 82px;
+    }
+  }
+}

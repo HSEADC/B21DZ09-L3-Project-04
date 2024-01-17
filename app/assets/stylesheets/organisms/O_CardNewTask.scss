@@ -37,3 +37,52 @@
     padding-top: 50px;
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .O_CardNewTask {
+    height: 670px;
+    padding-top: 44px;
+    margin-bottom: 0px;
+    gap: 28px;
+    border-radius: 30px;
+
+    .C_TaskAnswers {
+      width: 50%;
+      padding-top: 44px;
+      gap: 20px 20px;
+    }
+  }
+
+  .O_CardNewTask:nth-child(even) {
+    clip-path: none;
+    flex-direction: row-reverse;
+
+    .C_TaskAnswers {
+      margin-right: 44px;
+    }
+
+    .O_TaskWithButtons {
+      margin-left: 44px;
+    }
+  }
+
+  .O_CardNewTask:nth-child(odd) {
+    clip-path: none;
+
+    .C_TaskAnswers {
+      margin-left: 44px;
+    }
+
+    .O_TaskWithButtons {
+      margin-right: 44px;
+    }
+  }
+
+  .O_CardNewTask:first-child {
+    clip-path: none;
+
+    .C_TaskAnswers {
+      padding-top: 50px;
+    }
+  }
+}
