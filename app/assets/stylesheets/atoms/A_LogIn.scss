@@ -1,0 +1,15 @@
+.A_Log {
+  width: 36px;
+  height: 36px;
+  margin-right: 40px;
+  background-position: center;
+  background-size: contain;
+
+  &.in {
+    background-image: url("assets/Q_LogIn");
+  }
+
+  &.out {
+    background-image: url("assets/Q_LogOut");
+  }
+}

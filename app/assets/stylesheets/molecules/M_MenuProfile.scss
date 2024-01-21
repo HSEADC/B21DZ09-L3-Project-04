@@ -1,0 +1,17 @@
+.M_MenuProfile {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  padding: 0 40px;
+  border-radius: 100px;
+  background: var(--white);
+  text-decoration: none;
+
+  p {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--black);
+  }
+}
