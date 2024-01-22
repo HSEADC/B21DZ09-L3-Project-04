@@ -7,7 +7,7 @@
   .Q_TaskImage {
     width: 680px;
     height: 680px;
-    clip-path: var(--task-with-two-buttons);
+    border-radius: 40px;
 
     img {
       width: 100%;
@@ -28,10 +28,14 @@
     }
   }
 
+  .W_BottomPart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+
   .W_Buttons {
-    position: absolute;
-    right: 0;
-    bottom: 190px;
     display: flex;
     gap: 12px;
   }

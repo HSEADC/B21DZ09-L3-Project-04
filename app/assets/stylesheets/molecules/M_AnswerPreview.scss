@@ -1,0 +1,39 @@
+.M_AnswerPreview {
+  width: 260px;
+  height: 260px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .A_Ava {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .A_TaskType {
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+    top: 12px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+  .M_AnswerPreview {
+    width: 144px;
+    height: 144px;
+    border-radius: 12px;
+
+    .A_Ava {
+      bottom: 6px;
+      right: 6px;
+    }
+  }
+}

@@ -7,8 +7,8 @@
   overflow: hidden;
   padding: 44px;
   border-radius: 30px;
-  background: var(--main-blue);
-  color: var(--main-blue);
+  background: var(--white);
+  color: var(--black);
   text-decoration: none;
 
   p {
@@ -20,6 +20,14 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
+
+    .A_TaskType {
+      display: none;
+    }
+
+    .A_Ava {
+      display: none;
+    }
   }
 }
 

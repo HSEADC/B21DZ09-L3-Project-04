@@ -1,11 +1,11 @@
 <div class="O_TaskWithButtons">
   <%= image_tag task.first_answer_image.large.url, class: "Q_TaskImage" if task.first_answer_image.large.url %>
     <%= render 'task_cards/task_circles', task: task %>
-  <div class="W_Buttons">
-    <%= link_to "смотреть ответы", task_path(task), class: "M_Button m secondary" %>
-    <%#= link_to "загрузить находку", task_path(task), class: "M_Button m primary" %>
-    <%= link_to "загрузить находку", new_task_answer_path(task.id), class: "M_Button m primary", task: task %>
-
+  <div class="W_BottomPart">
+      <%= render 'task_cards/task_title_big', task: task%>
+    <div class="W_Buttons">
+      <%= link_to "искать", task_path(task), class: "M_Button m secondary" %>
+      <%= link_to "загрузить фото", new_task_answer_path(task.id), class: "M_Button m primary", task: task %>
+    </div>
   </div>
-    <%= render 'task_cards/task_title_big', task: task%>
 </div>

@@ -8,7 +8,7 @@
     &.small {
       width: 400px;
       height: 400px;
-      clip-path: var(--task-small-clip);
+      border-radius: 30px;
     }
 
     img {
@@ -30,13 +30,10 @@
     }
   }
 
-  .M_Button {
-    position: absolute;
-    right: 0;
-    bottom: 44px;
-  }
-
-  .M_TitleCardTask {
-    margin-top: 8px;
+  .W_BottomPart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 10px;
   }
 }

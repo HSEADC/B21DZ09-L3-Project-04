@@ -45,6 +45,10 @@
     align-items: flex-start;
     gap: 44px;
     padding: 44px 70px 28px 44px;
+
+    .secondary {
+      display: none;
+    }
   }
 
   .C_TaskAnswers {
@@ -52,5 +56,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
+
+    .A_TaskType {
+      display: none;
+    }
   }
 }

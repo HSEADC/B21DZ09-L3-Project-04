@@ -10,10 +10,10 @@
   <div class="Q_Rect third"></div>
   <div class="Q_Rect fourth"></div>
   <div class="W_TaskWithAnswers">
-    <%= render 'card_one_button_big', task: @task%>
+    <%= render 'task_cards/card_with_two_buttons', task: @task%>
     <div class="C_TaskAnswers">
       <%@task.answers.each do |answer| %>
-      <%= render 'answers_cards/answer_avatar_only', task: @task, answer: answer%>
+      <%= render 'answers_cards/preview_answer_card', task: @task, answer: answer%>
       <% end %>
     </div>
   </div>

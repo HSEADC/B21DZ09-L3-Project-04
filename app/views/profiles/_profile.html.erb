@@ -48,7 +48,7 @@
 
       <div class="C_WinTasks">
         <% @win_tasks.each do |task| %>
-        <%= render 'task_cards/card_one_button_medium_blue', task: task%>
+        <%= render 'task_cards/card_with_two_buttons', task: task%>
         <% end %>
       </div>
   </div>
@@ -78,7 +78,7 @@
 
   <div class="C_UserAnswers">
     <% @user_answers.each do |answer| %>
-    <%= render 'answers_cards/profile_answer_card', answer: answer%>
+    <%= render 'answers_cards/answer_card', answer: answer%>
     <% end %>
   </div>
 

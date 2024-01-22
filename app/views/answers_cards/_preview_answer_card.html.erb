@@ -1,0 +1,9 @@
+<div class="M_AnswerPreview">
+  <%= image_tag answer.answer_image.extrasmall.url, class: "Q_PreviewAnswerImage" if answer.answer_image.extrasmall.url %>
+  <div class="A_Ava medium">
+    <%= image_tag answer.user.avatar_image.medium.url, class: "Q_Ava" if answer.user.avatar_image.medium.url %>
+  </div>
+  <div class="A_TaskType">
+    <%= answer.task.type[0]%>
+  </div>
+</div>

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 10px;
   justify-content: flex-start;
+  color: var(--main-blue);
 
   .C_TasksStrikeCircles {
     display: flex;
@@ -15,7 +16,7 @@
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background: var(--lightgray);
+    background: var(--white-click);
 
     &.blue {
       background: var(--main-blue);

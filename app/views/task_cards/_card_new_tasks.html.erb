@@ -3,7 +3,7 @@
 <div class="O_CardNewTask">
   <div class="C_TaskAnswers">
     <%@random_answers.each do |answer| %>
-    <%= render 'answers_cards/answer_avatar_only', task: task, answer: answer%>
+    <%= render 'answers_cards/preview_answer_card', task: task, answer: answer%>
     <% end %>
   </div>
   <%= render 'task_cards/card_with_two_buttons', task: task %>

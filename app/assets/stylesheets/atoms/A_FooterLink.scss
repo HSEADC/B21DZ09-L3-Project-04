@@ -1,5 +1,9 @@
 .A_FooterLink {
   font-size: 22px;
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
+
+  &:hover {
+    color: var(--main-blue);
+  }
 }

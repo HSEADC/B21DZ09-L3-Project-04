@@ -8,5 +8,14 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+
+    .Q_TaskImage {
+      width: 540px;
+      height: 540px;
+    }
+
+    .secondary {
+      display: none;
+    }
   }
 }
