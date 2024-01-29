@@ -645,7 +645,7 @@ h1 {
       height: 130px;
       border: solid 2px var(--white);
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     .counter_p {
@@ -661,16 +661,21 @@ h1 {
       font-size: 42px;
       border: solid 2px var(--gray);
       color: var(--gray);
+      position: relative;
+      z-index: 2;
     }
   }
 
   .how_gallery_rail {
+    width: max-content;
     display: flex;
     flex-direction: row;
+    transform: translate(-0px);
+    transition: all ease-in-out 1s;
   }
 
   .how_slide {
-    width: 100%;
+    width: 1620px;
     display: flex;
     flex-direction: row;
   }
@@ -690,10 +695,66 @@ h1 {
 
     p {
       font-size: 22px;
+      width: 70%;
     }
   }
 
   .content_block {
+    position: relative;
+  }
+
+  .image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.how1,
+    &.how2,
+    &.how6 {
+      width: 680px;
+      height: 680px;
+      border-radius: 30px;
+      position: absolute;
+      top: -110px;
+    }
+
+    &.how1 {
+      background-image: url("assets/how1.gif");
+    }
+
+    &.how2 {
+      background-image: url("assets/how2.png");
+    }
+
+    &.how6 {
+      background-image: url("assets/how6.png");
+    }
+
+    &.how3 {
+      width: 992px;
+      height: 749px;
+      position: absolute;
+      top: -130px;
+      left: -36px;
+      background-image: url("assets/how3.gif");
+    }
+
+    &.how4 {
+      width: 680px;
+      height: 680px;
+      position: absolute;
+      top: -110px;
+      left: 276px;
+      background-image: url("assets/how4.png");
+    }
+
+    &.how5 {
+      width: 591px;
+      height: 212px;
+      position: absolute;
+      top: 30px;
+      background-image: url("assets/how5.png");
+    }
   }
 
   .types {
@@ -773,7 +834,7 @@ h1 {
     background: var(--lightgray);
 
     .current_progress_line {
-      width: 15%;
+      width: 16.6%;
       height: 1px;
       border-radius: 3px;
       background: var(--white);
