@@ -4,18 +4,18 @@
 
 <h3>Comments</h3>
 
-<%= render "comments/form", answer: @answers, comment: Comment.new %>
+<%= render "comments/form", task: @task, answer: @answers, comment: Comment.new %>
 <%= render @answer.comments, answer: @answers %>
 
-# <%= link_to "New comment", new_answer_comment_path(@answer) %>
+# <%= link_to "New comment", new_task_answer_comment_path(@task, @answer) %>
 
 <br>
 <br>
 
 <% if can? :manage, @answer %>
 <div>
-  <%= link_to "Edit this answer", edit_answer_path(@answer) %> |
-  <%= link_to "Back to answers", answers_path %>
+  <%= link_to "Edit this answer", edit_task_answer_path(@answer) %> |
+  <%= link_to "Back to answers", task_answers_path %>
 
   <%= button_to "Destroy this answer", @answer, method: :delete %>
 </div>

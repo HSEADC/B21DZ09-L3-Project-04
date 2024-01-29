@@ -8,7 +8,7 @@
 
     <% if can? :manage, answer %>
       <div class="editButtons">
-        <%= link_to "Редактировать", edit_answer_path(answer), class:"button" %>
+        <%= link_to "Редактировать", edit_task_answer_path(answer), class:"button" %>
         <%= button_to "Удалить", answer, method: :delete, class:"button" %>
       </div>
     <% end %>

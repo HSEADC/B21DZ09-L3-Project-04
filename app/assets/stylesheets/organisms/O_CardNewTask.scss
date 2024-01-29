@@ -1,13 +1,13 @@
 .O_CardNewTask {
   width: 100%;
-  height: 872px;
+  height: 812px;
   padding-top: 60px;
-  margin-bottom: -100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 44px;
   position: relative;
+  border-radius: 28px;
   background: var(--white);
 
   .C_TaskAnswers {
@@ -26,20 +26,7 @@
 }
 
 .O_CardNewTask:nth-child(even) {
-  clip-path: var(--card-new-task-even);
   flex-direction: row-reverse;
-}
-
-.O_CardNewTask:nth-child(odd) {
-  clip-path: var(--card-new-task-odd);
-}
-
-.O_CardNewTask:first-child {
-  clip-path: var(--card-new-task-first);
-
-  .C_TaskAnswers {
-    padding-top: 50px;
-  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1700px) {

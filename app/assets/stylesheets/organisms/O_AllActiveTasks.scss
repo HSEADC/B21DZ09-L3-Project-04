@@ -2,12 +2,10 @@
   grid-column: 1 / 13;
   margin-top: 60px;
   position: relative;
-}
 
-@media only screen and (min-width: 1024px) and (max-width: 1700px) {
   .W_TaskCards {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
   }
 }
