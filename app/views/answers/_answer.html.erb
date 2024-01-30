@@ -8,13 +8,14 @@
 
     <% if can? :manage, answer %>
       <div class="editButtons">
-        <%= link_to "Редактировать", edit_task_answer_path(answer), class:"button" %>
-        <%= button_to "Удалить", answer, method: :delete, class:"button" %>
+        <%= link_to "Редактировать", edit_task_answer_path(answer.task, answer), class:"button" %>
+        <%= button_to "Удалить", task_answer_path(answer.task, answer), method: :delete, class:"button" %>
       </div>
     <% end %>
-
+    <%= @task%>
+    <%= @answer%>
     <div class="commentsContainer">
-      <%= render 'comments/form', task: @task, answer: answer, comment: Comment.new %>
+      <%#= render 'comments/form', task: @task, answer: answer, comment: Comment.new %>
       <%= render answer.comments, answer: answer, task: @task %>
     </div>
   </div>

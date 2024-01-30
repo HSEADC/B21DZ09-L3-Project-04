@@ -8,6 +8,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/1 or /answers/1.json
   def show
+    @task = Task.find(params[:task_id])
     @comment = Comment.new
   end
 
@@ -26,7 +27,8 @@ class AnswersController < ApplicationController
   # POST /answers or /answers.json
   def create
     @task = Task.find(params[:task_id])
-      @answer = @task.answers.new(answer_params)
+      # @answer = @task.answers.new(answer_params)
+      @answer = @task.answers.new(answer_image: params[:answer_image], user_id: current_user.id)
 
     respond_to do |format|
       if @answer.save

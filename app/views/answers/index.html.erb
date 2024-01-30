@@ -7,12 +7,11 @@
   <% end %>
 </div>
 
-
 <div id="answers">
   <% @answers.each do | answer | %>
     <%= render answer %>
     <p>
-      <%= link_to "Show this answer", answer %>
+      <%= link_to "Show this answer", task_answer_path(answer.task, answer) %>
     </p>
   <% end %>
 </div>

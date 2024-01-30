@@ -1,4 +1,4 @@
- <%= form_with(model: [task, answer]) do |form| %>
+ <%= form_with(url: task_answers_path(task)) do |form| %>
  <%#= form_for  [@task, @answer] do |f| %>
 
   <% if answer.errors.any? %>

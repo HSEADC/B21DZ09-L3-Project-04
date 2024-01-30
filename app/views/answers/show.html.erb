@@ -3,11 +3,12 @@
 <%= render @answer %>
 
 <h3>Comments</h3>
-
-<%= render "comments/form", task: @task, answer: @answers, comment: Comment.new %>
+<%= @task.to_json%>
+<%= @answer%>
+<%= render "comments/form", task: @task, answer: @answer, comment: Comment.new %>
 <%= render @answer.comments, answer: @answers %>
 
-# <%= link_to "New comment", new_task_answer_comment_path(@task, @answer) %>
+ <%= link_to "New comment", new_task_answer_comment_path(@task, @answer) %>
 
 <br>
 <br>

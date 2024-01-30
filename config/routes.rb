@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :subscriptions, only: [:create, :show]
 
   resources :tasks do
-  resources :answers do
-    resources :comments, only: [:create]
+    resources :answers do
+      resources :comments
+    end
   end
-end
 
   # api
   namespace :api do
