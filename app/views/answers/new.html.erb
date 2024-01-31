@@ -1,5 +1,11 @@
-<h1>New answer</h1>
-
-<%= render "form", task: @task, answer: @answer %>
-
-<br>
+<div class="Q_Grid">
+<div class="O_AnswerForm">
+  <div class="Q_Rect first"></div>
+  <div class="Q_Rect second"></div>
+  <div class="Q_Rect third"></div>
+  <div class="W_AnswerFormContainer">
+    <%= render 'task_cards/card_with_two_buttons', task: @task%>
+    <%= render "form", task: @task, answer: @answer %>
+  </div>
+</div>
+</div>

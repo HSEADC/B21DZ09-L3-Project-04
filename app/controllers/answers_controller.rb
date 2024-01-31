@@ -28,7 +28,7 @@ class AnswersController < ApplicationController
   def create
     @task = Task.find(params[:task_id])
       # @answer = @task.answers.new(answer_params)
-      @answer = @task.answers.new(answer_image: params[:answer_image], user_id: current_user.id)
+      @answer = @task.answers.new(answer_image: params[:answer_image], user_id: current_user.id, description:params[:description])
 
     respond_to do |format|
       if @answer.save

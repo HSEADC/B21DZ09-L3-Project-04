@@ -1,9 +1,10 @@
  <%= form_with(url: task_answers_path(task)) do |form| %>
- <%#= form_for  [@task, @answer] do |f| %>
+
+  <div class="W_AnswerForm">
 
   <% if answer.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this comment from being saved:</h2>
+      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
 
       <ul>
         <% answer.errors.each do |error| %>
@@ -13,17 +14,29 @@
     </div>
   <% end %>
 
+  <div class="M_Uploader">
+   <label for="A_UploadButton">
+     <span class="A_UploadButtonText">Перетащите сюда фотку</span>
+   </label>
+   <%= form.file_field :answer_image, id:"A_UploadButton" %>
+ </div>
 
+<div class="W_Description">
 
-    <%#= render 'task_cards/card_one_button_big', task: task%>
-
-  <div class="field">
-    <%= form.label :answer_image %><br />
-    <%= form.file_field :answer_image %>
+  <div class="W_UserInfo">
+    <div class="A_Ava xs">
+      <%= image_tag current_user.avatar_image.extrasmall.url, class: "Q_Ava" if current_user.avatar_image.extrasmall.url %>
+    </div>
+    <p>@<%= current_user.email.tr('_@email.com', '')%></p>
   </div>
 
-	<div class="actions">
-		<%= form.submit %>
-      <%= @task %>
+  <%= form.text_area :description, placeholder: "Добавьте описание", class: "A_Description" %>
+
+</div>
+
+	<div class="W_AnswerSaveButton">
+		<%= form.submit "Опубликовать", :class => "M_Button primary"%>
 	</div>
+
+</div>
 <% end %>

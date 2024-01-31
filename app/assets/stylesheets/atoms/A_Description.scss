@@ -1,0 +1,23 @@
+.A_Description {
+  display: block;
+  width: 540px;
+  border: none;
+  border-bottom: solid 1px var(--gray);
+  background: transparent;
+  color: var(--main-blue);
+  font-size: 26px;
+  font-family: "Fugue";
+  font-style: normal;
+  font-weight: 700;
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
