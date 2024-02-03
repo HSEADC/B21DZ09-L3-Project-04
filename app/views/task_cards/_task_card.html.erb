@@ -5,7 +5,6 @@
 
   <div class="W_BottomPart">
     <%= render 'task_cards/task_title', task: task %>
-    <%= link_to "голосовать", task_path(task), class: "M_Button" %>
-    <%#= content_tag 'div', "hi", class: "M_Button" %>
+    <%= link_to "голосовать", task_answers_path(task), class: "M_Button" %>
   </div>
 </div>

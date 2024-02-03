@@ -1,6 +1,8 @@
 <div class="Q_Grid">
   <% if user_signed_in? %>
-  <%= render 'allTasksBanners/profile_state'%>
+    <%= render 'allTasksBanners/profile_state'%>
+  <% else %>
+    <%= render 'allTasksBanners/welcome_state'%>
 <% end %>
 
 <section class="O_TasksOfDay">
