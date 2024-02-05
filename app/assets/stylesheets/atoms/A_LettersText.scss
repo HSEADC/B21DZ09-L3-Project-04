@@ -1,0 +1,30 @@
+.A_LettersText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+
+  .Q_LetterCyrcle {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-blue);
+    border-radius: 100%;
+    border: solid 2px var(--white);
+
+    h1 {
+      font-size: 110px;
+      font-weight: 400;
+    }
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
