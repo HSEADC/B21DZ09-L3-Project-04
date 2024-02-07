@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   # api
   namespace :api do
     namespace :v1 do
-      resources :tasks, defaults: { format: :json }
+      resources :tasks, defaults: { format: :json } do
+        resources :answers, defaults: { format: :json }
+      end
       devise_scope :user do
         post "sign_up", to: "registrations#create"
         post "sign_in", to: "sessions#create"
