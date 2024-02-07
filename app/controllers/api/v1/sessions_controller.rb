@@ -15,7 +15,7 @@ class Api::V1::SessionsController < Devise::SessionsController
       render json: {
         messages: "Signed In Successfully",
         is_success: true,
-        data: {user: @user}
+        jwt: encrypt_payload
       }, status: :ok
     else
       render json: {
@@ -31,8 +31,7 @@ class Api::V1::SessionsController < Devise::SessionsController
     puts "SIGN OUT FROM FRONTEND"
     puts "=========================="
 
-    jti = request.headers["Authorization"]
-    user = User.find_by_jti(jti)
+    user = User.find_by_jti(decrypt_payload[0]['jti'])
 
     if user && user.update_column(:jti, SecureRandom.uuid)
       render json: {
@@ -66,5 +65,15 @@ class Api::V1::SessionsController < Devise::SessionsController
         data: {}
       }, status: :failure
     end
+  end
+
+  def encrypt_payload
+    payload = @user.as_json(only: [:email, :jti])
+    token = JWT.encode payload, Rails.application.credentials.devise_jwt_secret_key!, 'HS256'
+  end
+
+   def decrypt_payload
+    jwt = request.headers["Authorization"]
+    payload = JWT.decode jwt, Rails.application.credentials.devise_jwt_secret_key!, true, { algorithm: 'HS256' }
   end
 end
