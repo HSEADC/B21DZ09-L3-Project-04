@@ -3,16 +3,27 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+
+    # Meta
+    set_meta_tags(
+      title: "Все задания",
+      description: "Здесь собраны все задания команды refs",
+      keywords: "refs, reference, creative, tasks"
+    )
+    # end
   end
 
   # GET /tasks/1 or /tasks/1.json
   def show
     @task = Task.find(params[:id])
 
-  end
-
-  def answersGallery
-   @answers =  Answer.where(task_id: @task.id)
+    # Meta
+    set_meta_tags(
+      title: "Задание",
+      description: "Зацени это задание от refs!",
+      keywords: "refs, reference, creative, task"
+    )
+    # end
   end
 
   private

@@ -4,12 +4,28 @@ class AnswersController < ApplicationController
   # GET /answers or /answers.json
   def index
     @answers = Answer.all
+
+    # Meta
+    set_meta_tags(
+      title: "Ответы",
+      description: "Здесь собраны все ответы пользователей refs",
+      keywords: "refs, reference, creative, answers"
+    )
+    # end
   end
 
   # GET /answers/1 or /answers/1.json
   def show
     @task = Task.find(params[:task_id])
     @comment = Comment.new
+
+    # Meta
+    set_meta_tags(
+      title: "Ответ",
+      description: "Зацени этот ответ на задание в refs",
+      keywords: "refs, reference, creative, answer"
+    )
+    # end
   end
 
   # GET /answers/new

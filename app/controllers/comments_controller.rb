@@ -5,6 +5,14 @@ class CommentsController < ApplicationController
   # GET /comments or /comments.json
   def index
     @comments = Comment.all
+
+    # Meta
+    set_meta_tags(
+      title: "Все комментарии",
+      description: "Здесь собраны все комментарии пользователей refs",
+      keywords: "refs, reference, creative, comments"
+    )
+    # end
   end
 
   # GET /comments/1 or /comments/1.json

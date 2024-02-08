@@ -4,6 +4,14 @@ class ProfilesController < ApplicationController
   def show
     @user_answers = Answer.where(user_id: current_user.id)
     @win_tasks = Task.where(active: false).take(4)
+
+    # Meta
+    set_meta_tags(
+      title: "Профиль",
+      description: "Мои достижения с refs",
+      keywords: "refs, reference, creative, profile"
+    )
+    # end
   end
 
   def edit

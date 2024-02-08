@@ -6,7 +6,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <title>Refs</title>
+    <%= display_meta_tags site: "Refs",
+      # reverse: true,
+      og: {
+        title: :title,
+        image: request.base_url + "/shared/index_share.png",
+        url: request.base_url + request.path
+      }
+    %>
+
+    <%= favicon_link_tag asset_path('favicon.png') %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
