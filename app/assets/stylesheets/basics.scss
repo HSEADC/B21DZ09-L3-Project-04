@@ -2,6 +2,11 @@ body {
   background: var(--lightgray);
 }
 
+// убирает полосу горизонтальной прокрутки
+* ::-webkit-scrollbar {
+  display: none;
+}
+
 body,
 p {
   font-family: "Fugue";
