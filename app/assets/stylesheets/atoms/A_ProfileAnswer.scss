@@ -1,0 +1,44 @@
+.A_ProfileAnswer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+
+  .Q_ProfileAnswerImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .A_TaskType {
+    width: 56px;
+    height: 56px;
+    font-size: 48px;
+    position: absolute;
+    z-index: 2;
+    right: 12px;
+    top: 12px;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1700px) {
+  .A_ProfileAnswer {
+    width: 294px;
+    height: 294px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 740px) {
+  .A_ProfileAnswer {
+    width: 226px;
+    height: 226px;
+    border-radius: 16px;
+
+    .A_TaskType {
+      width: 36px;
+      height: 36px;
+      font-size: 30px;
+    }
+  }
+}
