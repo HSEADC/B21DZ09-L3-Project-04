@@ -1,5 +1,4 @@
 class SubscriptionsController < ApplicationController
-
   def show
   end
 
@@ -18,10 +17,6 @@ class SubscriptionsController < ApplicationController
   end
 
   private
-    def set_subscription
-      @subscription = Subscription.find(params[:id])
-    end
-
     def subscription_params
       params.require(:subscription).permit(:email)
     end

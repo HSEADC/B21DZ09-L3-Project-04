@@ -2,6 +2,8 @@ class WelcomeController < ApplicationController
   def index
     @subscription = Subscription.new
     @random_answers = Answer.take(8)
+    #@onboarding = Onboarding.where(id: current_user.id).take(1)
+    #@onboarding = Onboarding.where(passed: false)
 
     # Meta
     set_meta_tags(
