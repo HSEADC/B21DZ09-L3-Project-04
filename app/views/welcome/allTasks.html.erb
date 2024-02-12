@@ -6,7 +6,7 @@
 <% end %>
 
 <section class="O_TasksOfDay">
-  <h2 class="A_Title">идет голосование</h2>
+  <h2 class="A_Title">задания дня</h2>
   <div class="C_TasksOfDay">
   <% @vote_tasks.each do |task| %>
     <%= render 'task_cards/task_card', task: task%>

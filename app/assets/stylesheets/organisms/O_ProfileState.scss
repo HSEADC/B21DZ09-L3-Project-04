@@ -8,7 +8,7 @@
   padding: 44px;
   border-radius: 30px;
   background: var(--white);
-  color: var(--black);
+  color: var(--main-blue);
   text-decoration: none;
 
   p {
@@ -31,7 +31,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
   .O_ProfileState {
     gap: 20px;
 

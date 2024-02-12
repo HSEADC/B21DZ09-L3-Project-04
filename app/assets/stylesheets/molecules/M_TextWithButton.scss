@@ -21,11 +21,23 @@
 
     p {
       font-size: 22px;
+      width: 492px;
+    }
+  }
+
+  .W_Buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 492px;
+
+    .M_Button {
+      width: 50%;
     }
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
   .M_TextWithButton {
     width: 386px;
     margin-left: 80px;
