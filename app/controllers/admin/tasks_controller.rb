@@ -21,10 +21,8 @@ class Admin::TasksController < Admin::ApplicationController
 
   # POST /tasks or /tasks.json
   def create
-    #@task = Task.new(type: params[:task][:type], ref: params[:task][:ref], task_of_day: params[:task][:task_of_day], in_search: params[:task][:in_search], active: params[:task][:active], task_of_day: params[:task][:task_of_day], ending_at: params[:task][:ending_at])
-    @task = Task.new(type: params[:task][:type], texture_image: params[:task][:texture_image], colour_task: params[:task][:colour_task], vector_font: params[:task][:vector_font], vector_regularity: params[:task][:vector_regularity], vector_shape: params[:task][:vector_shape])
 
-    #@task = Task.new(sti_task_params)
+    @task = Task.new(params.require(:task).permit(:type, :created_at, :colour_hex, :vector_shape, :vector_regularity, :vector_font, :texture_image))
 
     respond_to do |format|
       if @task.save
@@ -41,7 +39,7 @@ class Admin::TasksController < Admin::ApplicationController
   def update
 
     respond_to do |format|
-      if @task.update(sti_task_params)
+      if @task.update(task_params)
         format.html { redirect_to admin_task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
       else
@@ -67,33 +65,9 @@ class Admin::TasksController < Admin::ApplicationController
       @task = Task.find(params[:id])
     end
 
-    # def task_params
-    #   params.require(:task).permit(:type, :created_at )
-    # end
-
-    # def colour_task_params
-    #   params.require(:colour_task).permit(:type, :created_at, :colour_hex)
-    # end
-
-    # def shape_task_params
-    #   params.require(:shape_task).permit(:type, :created_at, :vector_shape)
-    # end
-
-    # def regularity_task_params
-    #   params.require(:regularity_task).permit(:type, :created_at, :vector_regularity)
-    # end
-
-    # def font_task_params
-    #   params.require(:font_task).permit(:type, :created_at, :vector_font)
-    # end
-
-    # def texture_task_params
-    #   params.require(:texture_task).permit(:type, :created_at, :texture_image)
-    # end
-
-      #p.permit(:type, :created_at)
-      #p.permit(:type, :colour_hex, :vector_shape, :vector_font, :vector_regularity, :texture_image)
-    #end
+    def task_params
+      params.require(:task).permit(:type, :created_at, :colour_hex, :vector_shape, :vector_regularity, :vector_font, :texture_image)
+    end
 
     def sti_task_params
       p = nil
@@ -112,11 +86,7 @@ class Admin::TasksController < Admin::ApplicationController
         p = params.to_unsafe_h.require(:texture_task)
       end
 
-      p.permit!(:type, :active, :ending_at, :in_search, :task_of_day, :ref, :texture_image, :colour_hex, :vector_font, :vector_regularity, :vector_shape)
+      p.permit(:type, :created_at, :colour_hex, :vector_shape, :vector_regularity, :vector_font, :texture_image)
       #p.permit!(:type)
-    end
-
-    def default_params
-
     end
 end
