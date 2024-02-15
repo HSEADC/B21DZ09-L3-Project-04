@@ -3,7 +3,9 @@ class AnswersController < ApplicationController
 
   # GET /answers or /answers.json
   def index
-    @answers = Answer.all
+    #@answers = Answer.all
+    @task = Task.find(params[:task_id])
+    @answers = Answer.where(task_id: @task.id)
 
     # Meta
     set_meta_tags(
@@ -37,7 +39,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/1/edit
   def edit
-    # @task = @answer.task
+     @task = @answer.task
   end
 
   # POST /answers or /answers.json
@@ -59,6 +61,7 @@ class AnswersController < ApplicationController
 
   # PATCH/PUT /answers/1 or /answers/1.json
   def update
+    @task = Task.find(params[:task_id])
     respond_to do |format|
       if @answer.update(answer_params)
         format.html { redirect_to task_url(@answer.task), notice: "answer was successfully updated." }
@@ -93,6 +96,6 @@ class AnswersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def answer_params
-      params.require(:answer).permit(:answer_image).merge(user_id: current_user.id)
+      params.require(:answer).permit(:answer_image, :description).merge(user_id: current_user.id)
     end
 end

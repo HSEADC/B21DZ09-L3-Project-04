@@ -2,6 +2,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @task %>
+<%= @task.id %>
 
 <div class="editButtons">
   <%= link_to "Назад к заданиям", admin_tasks_path, class:"button" %>

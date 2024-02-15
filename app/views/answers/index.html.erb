@@ -7,6 +7,8 @@
   <% end %>
 </div>
 
+<h1><%= @answers.count%></h1>
+
 <div id="answers">
   <% @answers.each do | answer | %>
     <%= render answer %>

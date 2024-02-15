@@ -3,21 +3,18 @@
 <%= render @answer %>
 
 <h3>Comments</h3>
-<%= @task.to_json%>
-<%= @answer%>
 <%= render "comments/form", task: @task, answer: @answer, comment: Comment.new %>
 <%= render @answer.comments, answer: @answers %>
 
- <%= link_to "New comment", new_task_answer_comment_path(@task, @answer) %>
+ <%#= link_to "New comment", new_task_answer_comment_path(@task, @answer) %>
 
 <br>
 <br>
 
-<% if can? :manage, @answer %>
-<div>
-  <%= link_to "Edit this answer", edit_task_answer_path(@answer) %> |
-  <%= link_to "Back to answers", task_answers_path %>
-
-  <%= button_to "Destroy this answer", @answer, method: :delete %>
-</div>
-<% end %>
+  <% if can? :manage, @answer %>
+      <div class="editButtons">
+        <%= link_to "Редактировать", edit_task_answer_path(@answer.task, @answer), class:"button" %>
+        <%= link_to "Back to answers", task_answers_path %>
+        <%= button_to "Удалить", task_answer_path(@answer.task, @answer), method: :delete, class:"button" %>
+      </div>
+  <% end %>

@@ -1,7 +1,6 @@
-<% @task = answer.task %>
+<%= form_with(url: task_answer_path(task)) do |form| %>
 
- <%= form_with(url: task_answers_path(@task)) do |form| %>
-
+<h1>EDITTTT</h1>
   <div class="W_AnswerForm">
 
   <% if answer.errors.any? %>

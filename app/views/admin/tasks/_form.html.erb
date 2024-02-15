@@ -1,4 +1,5 @@
-<%= form_with(model: [:admin, task], url: url) do |form| %>
+<%#= form_with(model: [:admin, task], url: url) do |form| %>
+<%= form_with(url: admin_tasks_path(@task)) do |form| %>
   <% if task.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -12,6 +13,18 @@
   <% end %>
 
   <div class="field">
+   <br>
+    <br>
+    <br>
+    <br>
+     <br>
+    <br>
+    <br>
+    <br>
+     <br>
+    <br>
+    <br>
+    <br>
     <%= form.label :type %><br />
     <%= form.select :type, ["ColourTask", "FontTask", "TextureTask", "RegularityTask", "ShapeTask"]%>
   </div>
@@ -42,6 +55,6 @@
   </div>
 
   <div>
-    <%= form.submit :"Create" %>
+    <%= form.submit %>
   </div>
 <% end %>
