@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'support/request_support'
   devise_for :users
 
   resources :subscriptions, only: [:create, :show]
