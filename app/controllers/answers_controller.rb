@@ -33,7 +33,7 @@ class AnswersController < ApplicationController
   # GET /answers/new
   def new
     @task = Task.find(params[:task_id])
-     @answer = Answer.new
+    @answer = Answer.new
     #@answer = @task.answers.build
   end
 

@@ -1,4 +1,6 @@
- <%= form_with(model: [:admin, task, answer]) do |form| %>
+ <%#= form_with(model: [:admin, task, answer]) do |form| %>
+
+ <%= form_with(model: @answer, url: admin_task_answers_path(@task)) do |form| %>
   <% if answer.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(answer.errors.count, "error") %> prohibited this comment from being saved:</h2>

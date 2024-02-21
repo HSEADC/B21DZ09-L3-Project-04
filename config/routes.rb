@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:create, :show]
 
-  resources :onboarding do
-    put '/set_passed', to: 'onboardings#set_passed'
-  end
+  get 'onboarding-passed', to: 'onboardings#set_passed', as: 'onboarding_passed'
+
+  # resources :onboarding do
+  #   put '/set_passed', to: 'onboardings#set_passed'
+  # end
 
   #resources :onboarding
 

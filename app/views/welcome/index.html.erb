@@ -1,6 +1,8 @@
 <body id="main">
   <%#= @onboarding%>
-<%= render 'onboardings/onboarding', onboarding: @onboarding%>
+<%#= render 'onboardings/onboarding', onboarding: @onboarding%>
+
+<%= render 'onboardings/onboarding' if current_user && !current_user.onboarding.passed%>
 
 <div id="gallery_main">
   <div class="gallery_container">

@@ -14,7 +14,7 @@
     <% end %>
 
     <div class="commentsContainer">
-      <%= render 'admin/comments/form', task: @task, answer: answer, comment: Comment.new %>
+      <%= render partial: 'admin/comments/form', locals: { task: @task, answer: answer, comment: Comment.new } %>
       <%= render answer.comments, answer: answer, task: @task %>
     </div>
   </div>

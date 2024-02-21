@@ -6,7 +6,7 @@
 
 <div class="editButtons">
   <%= link_to "Назад к заданиям", admin_tasks_path, class:"button" %>
-  <%= link_to "Редактировать", edit_admin_tasks_path([:admin, @task]), class:"button" %>
+  <%= link_to "Редактировать", edit_admin_task_path(@task), class:"button" %>
   <%= button_to "Удалить задание", admin_task_path(@task), method: :delete, class:"button" %>
 </div>
 
