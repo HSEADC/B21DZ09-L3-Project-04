@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_20_124639) do
   end
 
   create_table "onboardings", force: :cascade do |t|
-    t.boolean "passed"
+    t.boolean "passed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

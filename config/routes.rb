@@ -3,9 +3,13 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :subscriptions, only: [:create, :show]
+
   resources :onboarding do
     put '/set_passed', to: 'onboardings#set_passed'
   end
+
+  #resources :onboarding
+
 
   resources :tasks do
     resources :answers do

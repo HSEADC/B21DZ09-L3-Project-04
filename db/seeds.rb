@@ -26,6 +26,7 @@ raw_text = 'К каждому заданию прилагаются специа
 
 def seed
   reset_db
+  create_onboarding
   create_admin
   create_users
   create_active_tasks(2)
@@ -131,7 +132,13 @@ def upload_random_answer_image
   uploader
 end
 
-
+def create_onboarding
+  onboarding_data = {
+    passed: false
+  }
+  onboarding = Onboarding.create!(onboarding_data)
+  puts "Onboarding created with id #{onboarding.id}"
+end
 
 def create_active_tasks(quantity)
   @task_types.each do |task_type|

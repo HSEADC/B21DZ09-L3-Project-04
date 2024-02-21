@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :poly_comments, as: :commentable, dependent: :destroy
   has_one :profile
-  has_one :onboarding
+  #has_one :onboarding
 
   after_create :create_profile
 
