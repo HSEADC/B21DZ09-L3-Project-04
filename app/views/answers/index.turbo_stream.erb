@@ -1,0 +1,2 @@
+<%= turbo_stream.append 'answers', partial: 'answers_page', locals: { answers: @answers } %>
+<%= turbo_stream.update 'answers_pagination', partial: 'answers_next_page_button', locals: { answers: @answers } %>

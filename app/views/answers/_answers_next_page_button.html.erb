@@ -1,0 +1,3 @@
+<% if answers.next_page %>
+  <%= link_to 'Загрузить ещё', task_answers_path(page: answers.next_page), data: {turbo_stream: true, answers_target: 'nextButton' } %>
+<% end %>

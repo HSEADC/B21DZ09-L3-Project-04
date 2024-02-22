@@ -9,7 +9,7 @@ body {
 
 body,
 p {
-  font-family: "Fugue";
+  font-family: 'Fugue';
   font-weight: 400;
 }
 
@@ -29,6 +29,19 @@ h1 {
   column-gap: 20px;
   margin: 160px auto;
   position: relative;
+}
+
+#answers {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  .answerCard {
+    width: 500px;
+  }
 }
 
 .new_user {
@@ -145,7 +158,7 @@ h1 {
   .firstBlock {
     width: 97vw;
     height: 42.5vw;
-    background-image: url("assets/shape1.svg");
+    background-image: url('assets/shape1.svg');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -183,7 +196,7 @@ h1 {
         .photo {
           height: 14vw;
           width: 14vw;
-          background-image: url("assets/Ellipse990.png");
+          background-image: url('assets/Ellipse990.png');
           background-size: cover;
           margin-top: 2.5vw;
         }
@@ -207,7 +220,7 @@ h1 {
           .tg {
             height: 1.65vw;
             width: 2.6vw;
-            background-image: url("assets/tg_icon.png");
+            background-image: url('assets/tg_icon.png');
             background-size: contain;
             margin-left: 5.2vw;
             margin-top: 5.4vw;
@@ -237,7 +250,7 @@ h1 {
         .photo {
           height: 14vw;
           width: 14vw;
-          background-image: url("assets/Ellipse991.png");
+          background-image: url('assets/Ellipse991.png');
           background-size: cover;
           margin-top: 2.5vw;
         }
@@ -261,7 +274,7 @@ h1 {
           .tg {
             height: 1.65vw;
             width: 2.6vw;
-            background-image: url("assets/tg_icon.png");
+            background-image: url('assets/tg_icon.png');
             background-size: contain;
             margin-left: 4.25vw;
             margin-top: 5.4vw;
@@ -291,7 +304,7 @@ h1 {
         .photo {
           height: 14vw;
           width: 14vw;
-          background-image: url("assets/Ellipse992.png");
+          background-image: url('assets/Ellipse992.png');
           background-size: cover;
           margin-top: 2.5vw;
         }
@@ -315,7 +328,7 @@ h1 {
           .tg {
             height: 1.65vw;
             width: 2.6vw;
-            background-image: url("assets/tg_icon.png");
+            background-image: url('assets/tg_icon.png');
             background-size: contain;
             margin-left: 6vw;
             margin-top: 5.4vw;
@@ -337,7 +350,7 @@ h1 {
   .secondBlock {
     width: 97vw;
     height: 18vw;
-    background-image: url("assets/shape2.svg");
+    background-image: url('assets/shape2.svg');
     background-size: cover;
     display: flex;
     flex-direction: row;
@@ -546,7 +559,7 @@ h1 {
   .thirdBlock {
     width: 87vw;
     height: 12vw;
-    background-image: url("assets/shape3.svg");
+    background-image: url('assets/shape3.svg');
     background-size: cover;
     display: flex;
     flex-direction: row;
@@ -592,7 +605,7 @@ h1 {
     .hseLogo {
       width: 12vw;
       height: 5vw;
-      background-image: url("assets/hse_logo.png");
+      background-image: url('assets/hse_logo.png');
       background-size: cover;
       margin-left: 2.9vw;
       margin-top: -3vw;
@@ -724,15 +737,15 @@ h1 {
     }
 
     &.how1 {
-      background-image: url("assets/how1.gif");
+      background-image: url('assets/how1.gif');
     }
 
     &.how2 {
-      background-image: url("assets/how2.png");
+      background-image: url('assets/how2.png');
     }
 
     &.how6 {
-      background-image: url("assets/how6.png");
+      background-image: url('assets/how6.png');
     }
 
     &.how3 {
@@ -741,7 +754,7 @@ h1 {
       position: absolute;
       top: -130px;
       left: -36px;
-      background-image: url("assets/how3.gif");
+      background-image: url('assets/how3.gif');
     }
 
     &.how4 {
@@ -750,7 +763,7 @@ h1 {
       position: absolute;
       top: -110px;
       left: 276px;
-      background-image: url("assets/how4.png");
+      background-image: url('assets/how4.png');
     }
 
     &.how5 {
@@ -758,7 +771,7 @@ h1 {
       height: 212px;
       position: absolute;
       top: 30px;
-      background-image: url("assets/how5.png");
+      background-image: url('assets/how5.png');
     }
   }
 
@@ -876,8 +889,9 @@ h1 {
       width: 1660px;
       height: 845px;
       background: var(--main-blue);
-      clip-path: path("M1380 30C1380 13.4315 1366.57 0 1350 0H310C293.431 0 280 13.4315 280 30V49C280 65.5685 266.569 79 250 79H30C13.4315 79 0 92.4315 0 109V733C0 749.569 13.4315 763 30 763H250C266.569 763 280 776.431 280 793V815C280 831.569 293.431 845 310 845H1350C1366.57 845 1380 831.569 1380 815V793C1380 776.431 1393.43 763 1410 763H1630C1646.57 763 1660 749.569 1660 733V109C1660 92.4315 1646.57 79 1630 79H1410C1393.43 79 1380 65.5685 1380 49V30Z"
-        );
+      clip-path: path(
+        'M1380 30C1380 13.4315 1366.57 0 1350 0H310C293.431 0 280 13.4315 280 30V49C280 65.5685 266.569 79 250 79H30C13.4315 79 0 92.4315 0 109V733C0 749.569 13.4315 763 30 763H250C266.569 763 280 776.431 280 793V815C280 831.569 293.431 845 310 845H1350C1366.57 845 1380 831.569 1380 815V793C1380 776.431 1393.43 763 1410 763H1630C1646.57 763 1660 749.569 1660 733V109C1660 92.4315 1646.57 79 1630 79H1410C1393.43 79 1380 65.5685 1380 49V30Z'
+      );
       overflow: hidden;
       position: relative;
     }
@@ -908,7 +922,7 @@ h1 {
       .gallery_first_img {
         width: 1200px;
         height: 626px;
-        background-image: url("assets/main-gallery-1.png");
+        background-image: url('assets/main-gallery-1.png');
         background-position: center;
         background-repeat: no-repeat;
       }
@@ -917,7 +931,7 @@ h1 {
         margin-top: 44px;
         width: 900px;
         height: 626px;
-        background-image: url("assets/main-gallery-2.png");
+        background-image: url('assets/main-gallery-2.png');
         background-position: center;
         background-repeat: no-repeat;
       }
@@ -926,7 +940,7 @@ h1 {
         margin-left: 140px;
         width: 1400px;
         height: 466px;
-        background-image: url("assets/main-gallery-3.png");
+        background-image: url('assets/main-gallery-3.png');
         background-position: center;
         background-repeat: no-repeat;
       }
@@ -1014,8 +1028,9 @@ h1 {
       width: 1380px;
       height: 310px;
       background: var(--white);
-      clip-path: path("M960 30C960 13.4315 946.569 0 930 0H450C433.431 0 420 13.4315 420 30V45C420 61.5685 406.569 75 390 75H30C13.4315 75 0 88.4315 0 105V281C0 297.569 13.4315 311 30 311H1350C1366.57 311 1380 297.569 1380 281V105C1380 88.4315 1366.57 75 1350 75H990C973.431 75 960 61.5685 960 45V30Z"
-        );
+      clip-path: path(
+        'M960 30C960 13.4315 946.569 0 930 0H450C433.431 0 420 13.4315 420 30V45C420 61.5685 406.569 75 390 75H30C13.4315 75 0 88.4315 0 105V281C0 297.569 13.4315 311 30 311H1350C1366.57 311 1380 297.569 1380 281V105C1380 88.4315 1366.57 75 1350 75H990C973.431 75 960 61.5685 960 45V30Z'
+      );
     }
 
     .types_content {
@@ -1091,7 +1106,7 @@ h1 {
       margin-top: 25px;
       width: 1410px;
       height: 615px;
-      background-image: url("assets/main-types.png");
+      background-image: url('assets/main-types.png');
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -1108,14 +1123,15 @@ h1 {
       width: 826px;
       height: 460px;
       background: var(--main-blue);
-      clip-path: path("M579 29.3089C579 13.122 592.122 0 608.309 0H797.691C813.878 0 827 13.122 827 29.3089V218.691C827 234.878 813.878 248 797.691 248H717V315C717 331.569 703.569 345 687 345H248V431.691C248 447.878 234.878 461 218.691 461H29.3089C13.122 461 0 447.878 0 431.691V242.309C0 226.122 13.122 213 29.3089 213H89V146C89 129.431 102.431 116 119 116H579V29.3089Z"
-        );
+      clip-path: path(
+        'M579 29.3089C579 13.122 592.122 0 608.309 0H797.691C813.878 0 827 13.122 827 29.3089V218.691C827 234.878 813.878 248 797.691 248H717V315C717 331.569 703.569 345 687 345H248V431.691C248 447.878 234.878 461 218.691 461H29.3089C13.122 461 0 447.878 0 431.691V242.309C0 226.122 13.122 213 29.3089 213H89V146C89 129.431 102.431 116 119 116H579V29.3089Z'
+      );
       position: relative;
 
       .shape_first {
         width: 198px;
         height: 198px;
-        background-image: url("assets/main-play-1.svg");
+        background-image: url('assets/main-play-1.svg');
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
@@ -1126,7 +1142,7 @@ h1 {
       .shape_second {
         width: 198px;
         height: 198px;
-        background-image: url("assets/main-play-2.png");
+        background-image: url('assets/main-play-2.png');
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;

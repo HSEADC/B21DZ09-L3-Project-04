@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="answerCreate">
   <h1>Answers</h1>
   <% if can? :create, Answer %>
@@ -10,10 +8,10 @@
 <h1><%= @answers.count%></h1>
 
 <div id="answers">
-  <% @answers.each do | answer | %>
-    <%= render answer %>
-    <p>
-      <%= link_to "Show this answer", task_answer_path(answer.task, answer) %>
-    </p>
+  <%= turbo_frame_tag 'answers' do %>  
+    <%= render partial: 'answers_page', locals: { answers: @answers } %>
+  <% end %>
+  <%= turbo_frame_tag 'answers_pagination' do %>
+    <%= render partial: 'answers_next_page_button', locals: { answers: @answers } %>
   <% end %>
 </div>

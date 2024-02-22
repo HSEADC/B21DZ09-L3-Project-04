@@ -5,7 +5,7 @@ class AnswersController < ApplicationController
   def index
     #@answers = Answer.all
     @task = Task.find(params[:task_id])
-    @answers = Answer.where(task_id: @task.id)
+    @answers = Answer.where(task_id: @task.id).paginate(page: params[:page])
 
     # Meta
     set_meta_tags(

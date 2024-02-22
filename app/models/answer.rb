@@ -7,6 +7,8 @@ class Answer < ApplicationRecord
 
   mount_uploader :answer_image, TaskImageUploader
 
+  self.per_page = 4
+
   # validates :name, presence: true
   # validates :description, presence: true
   validates :answer_image, presence: true
