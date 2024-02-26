@@ -620,8 +620,26 @@ h1 {
 }
 
 // стили для страницы как играть
+#onboarding {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 15;
+}
 
-#how {
+#how,
+#onboarding {
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background: var(--lightgray);
+    opacity: 0.5;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    position: absolute;
+    z-index: -1;
+  }
+
   .how_container {
     width: 1660px;
     height: 770px;
@@ -670,6 +688,7 @@ h1 {
       font-size: 68px;
       font-weight: 400;
       text-align: center;
+      color: var(--white);
     }
 
     .all_count {
@@ -678,9 +697,13 @@ h1 {
       margin-left: -25px;
       font-size: 42px;
       border: solid 2px var(--gray);
-      color: var(--gray);
+
       position: relative;
       z-index: 2;
+
+      p {
+        color: var(--gray);
+      }
     }
   }
 
@@ -714,6 +737,7 @@ h1 {
     p {
       font-size: 22px;
       width: 70%;
+      color: var(--white);
     }
   }
 
@@ -794,6 +818,7 @@ h1 {
 
     p {
       font-size: 34px;
+      color: var(--white);
     }
 
     .circle {
