@@ -1,0 +1,44 @@
+<div class="O_AnswerReelsCard">
+  <%= image_tag answer.answer_image.large.url, class: "Q_AnswerImage big" if answer.answer_image.large.url %>
+
+  <%= render 'task_cards/task_circles', task: task %>
+
+  <div class="W_RightPart">
+    <div class="A_ButtonsTape">
+      <div class="Q_Icon like"></div>
+      <p class="Q_Count">24</p>
+    </div>
+    <div class="A_ButtonsTape">
+      <div class="Q_Icon comment"></div>
+      <p class="Q_Count"><%=answer.comments.count%></p>
+    </div>
+    <div class="A_ButtonsTape">
+      <div class="Q_Icon share"></div>
+    </div>
+    <div class="A_ButtonMore">
+      <div class="Q_Icon more"></div>
+    </div>
+  </div>
+
+  <div class="O_Comments"> 
+     <div class="Q_Rect first"></div>
+     <div class="Q_Rect second"></div>
+     <div class="M_Comments"> 
+      <div class="W_TopLine">
+        <div class="A_CommentsTitle">
+          <h2>комментарии</h2>
+          <div class="Q_Circle"> 
+            <%=answer.comments.count%>
+          </div>
+        </div>
+        <div class="Q_Cross"> </div>
+      </div>
+      <div class="C_Comments"> 
+        <%=render answer.comments%>
+      </div>
+      <% if user_signed_in? %>
+        <%= render "comments/form", task: @task, answer: answer, comment: Comment.new %>
+      <% end %>
+     </div>
+  </div>
+</div>

@@ -1,17 +1,27 @@
-<div class="answerCreate">
-  <h1>Answers</h1>
+<div class="Q_Grid">
+
+<div class="W_TopRow"> 
+  <%= link_to '', :back, class: "A_ArrowBack" %>
+  <div class="W_Filters">
+    <p class="active">новые</p> 
+    <p class="inactive">популярные</p> 
+  </div>
+</div>
+
+<div class="M_TaskHintInReel">
+  <%= render 'task_cards/task_card', task: @task%>
+  <div class="M_TimeLeft">осталось 3 ч</div>
   <% if can? :create, Answer %>
-    <%= link_to "New answer", new_task_answer_path, class: "button" %>
+    <%= link_to "загрузить находку", new_task_answer_path(@task.id), class: "M_Button m primary", task: @task %>
   <% end %>
 </div>
 
-<h1><%= @answers.count%></h1>
-
-<div id="answers">
+<div id="answers" class="C_AnswersReels">
   <%= turbo_frame_tag 'answers' do %>  
     <%= render partial: 'answers_page', locals: { answers: @answers } %>
   <% end %>
   <%= turbo_frame_tag 'answers_pagination' do %>
     <%= render partial: 'answers_next_page_button', locals: { answers: @answers } %>
   <% end %>
+</div>
 </div>
