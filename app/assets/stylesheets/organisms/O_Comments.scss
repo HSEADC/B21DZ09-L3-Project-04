@@ -1,9 +1,15 @@
 .O_Comments {
   width: 490px;
   height: 100%;
-  right: -490px;
+  // right: -490px;
+  right: 0px;
+  transition: all 1s ease-in-out;
   position: absolute;
   z-index: -1;
+
+  &.active {
+    right: -490px;
+  }
 
   .Q_Rect {
     background: var(--white);
