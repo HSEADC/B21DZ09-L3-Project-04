@@ -1,11 +1,18 @@
 <div class="O_AnswerReelsCard">
-  <%= image_tag answer.answer_image.large.url, class: "Q_AnswerImage big" if answer.answer_image.large.url %>
+  <%= image_tag answer.answer_image.large.url, class: "Q_AnswerImage large" if answer.answer_image.large.url %>
 
-  <%= render 'task_cards/task_circles', task: task %>
+  <div class="C_TaskCircles">
+    <div class="A_Ava medium">
+      <%= image_tag answer.user.avatar_image.medium.url, class: "Q_Ava" if answer.user.avatar_image.medium.url %>
+    </div>
+    <div class="A_TaskType">
+      <%= @task.type[0]%>
+    </div>
+  </div>
 
   <div class="W_RightPart">
     <div class="A_ButtonsTape">
-      <div class="Q_Icon like"></div>
+      <div class="Q_Icon like active"></div>
       <p class="Q_Count">24</p>
     </div>
     <div class="A_ButtonsTape">
@@ -15,9 +22,7 @@
     <div class="A_ButtonsTape">
       <div class="Q_Icon share"></div>
     </div>
-    <div class="A_ButtonMore">
-      <div class="Q_Icon more"></div>
-    </div>
+    <div class="A_ButtonMore"></div>
   </div>
 
   <div class="O_Comments"> 
@@ -31,14 +36,16 @@
             <%=answer.comments.count%>
           </div>
         </div>
-        <div class="Q_Cross"> </div>
+        <div class="A_Close"></div>
       </div>
+      <div class="W_Comments">
       <div class="C_Comments"> 
         <%=render answer.comments%>
       </div>
       <% if user_signed_in? %>
         <%= render "comments/form", task: @task, answer: answer, comment: Comment.new %>
       <% end %>
+     </div>
      </div>
   </div>
 </div>

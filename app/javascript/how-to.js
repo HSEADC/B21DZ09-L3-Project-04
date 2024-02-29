@@ -43,7 +43,7 @@ function gallerySlide() {
   });
 }
 
-addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   if (document.body.id == 'how' || document.body.id == 'main') {
     gallerySlide();
   }

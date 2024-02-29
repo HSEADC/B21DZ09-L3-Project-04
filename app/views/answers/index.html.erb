@@ -1,6 +1,6 @@
 <div class="Q_Grid">
 
-<div class="W_TopRow"> 
+<div class="A_TopRow"> 
   <%= link_to '', :back, class: "A_ArrowBack" %>
   <div class="W_Filters">
     <p class="active">новые</p> 
@@ -10,13 +10,13 @@
 
 <div class="M_TaskHintInReel">
   <%= render 'task_cards/task_card', task: @task%>
-  <div class="M_TimeLeft">осталось 3 ч</div>
+  <div class="A_TimeLeft">осталось 3 ч</div>
   <% if can? :create, Answer %>
     <%= link_to "загрузить находку", new_task_answer_path(@task.id), class: "M_Button m primary", task: @task %>
   <% end %>
 </div>
 
-<div id="answers" class="C_AnswersReels">
+<div id="answers" class="S_AnswersReels">
   <%= turbo_frame_tag 'answers' do %>  
     <%= render partial: 'answers_page', locals: { answers: @answers } %>
   <% end %>

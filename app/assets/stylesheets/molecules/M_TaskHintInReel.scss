@@ -1,0 +1,43 @@
+.M_TaskHintInReel {
+  grid-column: 1 / 4;
+  margin-top: 62px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 3;
+
+  .O_Task {
+    width: 260px;
+    margin-bottom: 44px;
+
+    .Q_TaskImage.small {
+      width: 260px;
+      height: 260px;
+    }
+
+    .C_TaskCircles {
+      top: 12px;
+      right: 12px;
+
+      .A_Ava {
+        width: 36px;
+        height: 36px;
+      }
+
+      .A_TaskType {
+        margin-left: -10px;
+        width: 36px;
+        height: 36px;
+        font-size: 30px;
+      }
+    }
+
+    .W_BottomPart {
+      display: none;
+    }
+  }
+
+  .A_TimeLeft {
+    margin-bottom: 12px;
+  }
+}

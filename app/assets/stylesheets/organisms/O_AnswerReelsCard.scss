@@ -1,0 +1,47 @@
+.O_AnswerReelsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+
+  .Q_AnswerImage {
+    &.large {
+      width: 680px;
+      height: 680px;
+      border-radius: 30px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .C_TaskCircles {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    .A_TaskType {
+      margin-left: -22px;
+    }
+  }
+
+  .W_RightPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+
+    .A_ButtonMore {
+      margin-top: 32px;
+    }
+  }
+}

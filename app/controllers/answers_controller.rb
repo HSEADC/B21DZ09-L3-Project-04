@@ -44,9 +44,8 @@ class AnswersController < ApplicationController
 
   # POST /answers or /answers.json
   def create
-    @task = Task.find(params[:task_id])
-      # @answer = @task.answers.new(answer_params)
-      @answer = @task.answers.new(answer_image: params[:answer_image], user_id: current_user.id, description:params[:description])
+   @task = Task.find(params[:task_id])
+    @answer = @task.answers.new(answer_params)
 
     respond_to do |format|
       if @answer.save
@@ -95,7 +94,7 @@ class AnswersController < ApplicationController
    end
 
     # Only allow a list of trusted parameters through.
-    def answer_params
-      params.require(:answer).permit(:answer_image, :description).merge(user_id: current_user.id)
+     def answer_params
+      params.require(:answer).permit(:answer_image).merge(user_id: current_user.id)
     end
 end

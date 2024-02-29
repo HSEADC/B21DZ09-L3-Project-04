@@ -1,6 +1,4 @@
-<% @task = answer.task %>
-
- <%= form_with(url: task_answers_path(@task)) do |form| %>
+  <%= form_with(model: @answer, url: task_answers_path(@task)) do |form| %>
 
   <div class="W_AnswerForm">
 

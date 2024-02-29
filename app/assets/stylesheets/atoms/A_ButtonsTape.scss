@@ -1,0 +1,67 @@
+.A_ButtonsTape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+
+  .Q_Icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    background-color: var(--white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 42px;
+
+    &:hover {
+      background-color: var(--white-hover);
+    }
+
+    &:active {
+      background-color: var(--white-click);
+    }
+
+    &.like {
+      background-image: url('assets/Q_HeartBlue.svg');
+    }
+
+    &.comment {
+      background-image: url('assets/Q_CommentBlue.svg');
+    }
+
+    &.share {
+      background-image: url('assets/Q_ShareBlue.svg');
+    }
+
+    &.active {
+      background-color: var(--main-blue);
+
+      &:hover {
+        background-color: var(--blue-hover);
+      }
+
+      &:active {
+        background-color: var(--blue-click);
+      }
+
+      &.like {
+        background-image: url('assets/Q_HeartWhite.svg');
+      }
+
+      &.comment {
+        background-image: url('assets/Q_CommentWhite.svg');
+      }
+
+      &.share {
+        background-image: url('assets/Q_ShareWhite.svg');
+      }
+    }
+  }
+
+  .Q_Count {
+    font-size: 20px;
+    color: white;
+  }
+}

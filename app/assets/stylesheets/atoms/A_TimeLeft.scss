@@ -1,0 +1,17 @@
+.A_TimeLeft {
+  width: max-content;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  color: var(--main-blue);
+  font-size: 20px;
+  border-radius: 40px;
+
+  &::before {
+    content: '●';
+    color: var(--main-blue);
+    margin-right: 6px;
+  }
+}

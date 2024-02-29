@@ -1,0 +1,18 @@
+.A_ArrowBack {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--white);
+  background-image: url('assets/Q_Arrow');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.A_ArrowBack:hover {
+  background-color: var(--white-hover);
+}
+
+.A_ArrowBack:active {
+  background-color: var(--white-click);
+}

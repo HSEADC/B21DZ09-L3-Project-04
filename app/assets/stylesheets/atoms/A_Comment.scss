@@ -1,0 +1,19 @@
+.A_Comment {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+
+  p {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    background: var(--lightgray);
+  }
+
+  .Q_Ava {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+}

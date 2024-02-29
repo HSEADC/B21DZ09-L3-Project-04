@@ -1,0 +1,33 @@
+.O_Comments {
+  width: 490px;
+  height: 100%;
+  right: -490px;
+  position: absolute;
+  z-index: -1;
+
+  .Q_Rect {
+    background: var(--white);
+    border-radius: 30px;
+    position: absolute;
+    z-index: -1;
+
+    &.first {
+      width: 540px;
+      height: 582px;
+      top: 0px;
+      right: 0px;
+    }
+
+    &.second {
+      width: 430px;
+      height: 170px;
+      bottom: 0px;
+      right: 130px;
+    }
+  }
+
+  .M_Comments {
+    padding-right: 28px;
+    margin-left: 28px;
+  }
+}

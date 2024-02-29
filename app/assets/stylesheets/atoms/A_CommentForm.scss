@@ -1,0 +1,16 @@
+.A_CommentForm {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 20px;
+
+  .Q_Ava {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+  }
+
+  .xs {
+    width: 200px;
+  }
+}

@@ -1,12 +1,7 @@
-<div class="comment" id="<%= dom_id comment %>">
-	<div class="commentBody">
-		<p>
-			<b>Написал:</b>
-			<%= comment.user.email %>
-		</p>
+<div class="A_Comment" id="<%= dom_id comment %>">
+		 <%= image_tag comment.user.avatar_image.small.url, class: "Q_Ava" if comment.user.avatar_image.small.url %>
 
 		<p>
-			<b>Коммент:</b>
 			<%= comment.body %>
 		</p>
 
@@ -19,8 +14,7 @@
 
 		 <div class="commentReplies">
 			 <% comment.replies.each do |reply| %>
-		 	<%= render reply, partial: "comments/comment", comment: reply, answer: answer %>
+		 	<%#= render reply, partial: "comments/comment", comment: reply, answer: answer %>
 			<% end %>
 		 </div>
-	</div>
 </div>

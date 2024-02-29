@@ -11,13 +11,12 @@
     </div>
   <% end %>
 
+  <div class="M_CommentForm">
 
-	<div class="field">
-		<%= form.label :body %><br />
-		<%= form.text_area :body %>
+	<div class="A_CommentForm">
+  <%= image_tag current_user.avatar_image.small.url, class: "Q_Ava" if current_user.avatar_image.small.url %>
+		<%= form.text_area :body, placeholder: "Оставить комментарий",  class: "A_CommentField" %>
 	</div>
-
-	<div class="actions">
-		<%= form.submit %>
-	</div>
+		<%= form.submit "", :class => "A_Send" %>
+  </div>
 <% end %>
