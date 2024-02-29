@@ -136,7 +136,6 @@ def create_active_tasks(quantity)
   quantity.times do
     task = Task.create(
       type: task_type,
-      active: true,
       in_search: true,
       first_answer_image: upload_random_task_image,
       colour_hex: @colour_hexes.sample,
@@ -144,6 +143,7 @@ def create_active_tasks(quantity)
       vector_font: upload_random_font_vector,
       vector_regularity: upload_random_regularity_vector,
       texture_image: upload_random_texture_image,
+      ending_at: Time.now + 3.days,
       ref: false
   )
     puts "Task with id #{task.id} just created"
@@ -194,6 +194,7 @@ def create_answers(quantity)
     answer = Answer.create(
       task_id: task.id,
       answer_image: upload_random_answer_image,
+      description: create_sentence(4..14),
       user_id: user.id
     )
 
@@ -210,7 +211,7 @@ def create_comments(quantity)
     user = User.all.sample
     comment = Comment.create(
       answer_id: answer.id,
-      body: create_sentence(4..20),
+      body: create_sentence(4..14),
       user_id: user.id
     )
 
@@ -225,7 +226,7 @@ def create_comment_replies(quantity)
     user = User.all.sample
     reply = comment.replies.create(
       answer_id: comment.answer.id,
-      body: create_sentence(4..20),
+      body: create_sentence(4..14),
       user_id: user.id
     )
 

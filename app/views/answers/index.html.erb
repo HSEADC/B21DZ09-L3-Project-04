@@ -11,7 +11,7 @@
 
 <div class="M_TaskHintInReel">
   <%= render 'task_cards/task_card', task: @task%>
-  <div class="A_TimeLeft">осталось 3 ч</div>
+  <div class="A_TimeLeft"><%= distance_of_time_in_words_to_now(@task.created_at + 3.days) %></div>
   <% if can? :create, Answer %>
     <%= link_to "загрузить находку", new_task_answer_path(@task.id), class: "M_Button m primary", task: @task %>
   <% end %>
