@@ -1,0 +1,49 @@
+.M_DeviseForm {
+  padding: 62px 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  border-radius: 20px;
+  background: var(--white-hover);
+
+  .A_Logo {
+    width: 160px;
+    height: 88px;
+  }
+
+  .W_DeviseFields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .Q_RememberMe {
+    display: flex;
+    input {
+      border: none;
+      outline: var(--white);
+      background: var(--white);
+      width: 16px;
+      height: 16px;
+    }
+
+    label {
+      font-size: 16px;
+      color: var(--gray);
+    }
+  }
+
+  .W_DeviseButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .M_Button {
+      border: none;
+      width: 328px;
+      margin-bottom: 20px;
+    }
+  }
+}
