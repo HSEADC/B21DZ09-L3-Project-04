@@ -22,7 +22,9 @@
 }
 
 .email,
-.password {
+.password,
+.name,
+.nickname {
   background-position: 16px center;
   background-repeat: no-repeat;
   background-size: 24px 24px;
@@ -34,4 +36,12 @@
 
 .password {
   background-image: url('assets/Q_Password.svg');
+}
+
+.name {
+  background-image: url('assets/Q_Name.svg');
+}
+
+.nickname {
+  background-image: url('assets/Q_Nickname.svg');
 }

@@ -5,12 +5,6 @@
       <div class="W_DeviseFields">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Почта", :class => "A_DeviseField email" %>
         <%= f.password_field :password, autocomplete: "current-password", placeholder: "Пароль", :class => "A_DeviseField password" %>
-      <% if devise_mapping.rememberable? %>
-        <div class="Q_RememberMe">
-          <%#= f.check_box :remember_me %>
-          <%#= f.label "Запомнить меня" %>
-        </div>
-      <% end %>
       </div>
 
     <div class="W_DeviseButtons">
