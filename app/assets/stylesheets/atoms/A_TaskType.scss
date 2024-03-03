@@ -22,6 +22,11 @@
     height: 36px;
     font-size: 30px;
   }
+
+  :hover {
+    background: var(--main-blue);
+    color: var(--white);
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1660px) {
@@ -30,4 +35,81 @@
     height: 36px;
     font-size: 30px;
   }
+}
+
+
+
+
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer
+}
+
+.hide {
+  opacity: 1;
+  animation-name: a1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes a1 {
+  to {
+    opacity: 0;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+
+
+.box {
+  min-height: 140px;
+  min-width: calc(22% - 28px);
+  padding: 0 10px;
+  margin: 15px;
+  float: left
+}
+
+.box.alizarin {
+  border: 3px solid red;
+}
+
+.box.wisteria {
+  border: 3px solid pink;
+}
+
+.box.belizehole {
+  border: 3px solid blue;
+}
+
+.box.sunflower {
+  border: 3px solid yellow;
+}
+
+.box.emerland {
+  border: 3px solid green;
+}
+
+.text-alizarin {
+  color: red;
+}
+
+.text-wisteria {
+  color: pink;
+}
+
+.text-belizehole {
+  color: blue;
+}
+
+.text-sunflower {
+  color: yellow;
+}
+
+.text-emerland {
+  color: green;
 }
