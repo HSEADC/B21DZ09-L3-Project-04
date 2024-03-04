@@ -26,6 +26,7 @@
   &:hover {
     background: var(--main-blue);
     color: var(--white);
+    transition: all 0.5s ease-out;
   }
 }
 
@@ -66,6 +67,7 @@
     &:hover {
       background: var(--main-blue);
       color: var(--white);
+      transition: all 0.5s ease-out;
     }
   }
 }
