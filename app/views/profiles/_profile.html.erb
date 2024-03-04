@@ -67,12 +67,13 @@
       </div>
       </div>
 
+
     <div class="C_TasksTypes">
-      <div class="A_TaskType small inactive S">S</div>
-      <div class="A_TaskType small inactive C">C</div>
-      <div class="A_TaskType small inactive F">F</div>
-      <div class="A_TaskType small inactive R">R</div>
-      <div class="A_TaskType small inactive T">T</div>
+      <div class="A_TaskType small" data-id="S">S</div>
+      <div class="A_TaskType small" data-id="C">C</div>
+      <div class="A_TaskType small" data-id="F">F</div>
+      <div class="A_TaskType small" data-id="R">R</div>
+      <div class="A_TaskType small" data-id="T">T</div>
     </div>
   </div>
 
@@ -80,27 +81,6 @@
     <% @user_answers.each do |answer| %>
     <%= render 'answers_cards/answer_card', answer: answer%>
     <% end %>
-  </div>
-
-  <div class="container">
-      <nav>
-        <ul>
-          <li data-f="all">ALL</li>
-          <li data-f="alizarian" class="text-alizarin">ALIZARIN</li>
-          <li data-f="awisteria" class="text-wisteria">WISTERIA</li>
-          <li data-f="emerland" class="text-emerland">EMERLAND</li>
-          <li data-f="sunflower" class="text-sunflower">SUNFLOWER</li>
-        </ul>
-      </nav>
-
-      <div class="block-cover">
-        <div class="col-auto box alizarin"></div>
-        <div class="col-auto box emerland"></div>
-        <div class="col-auto box sunflower"></div>
-        <div class="col-auto box awisteria"></div>
-        <div class="col-auto box alizarin"></div>
-        <div class="col-auto box alizarin"></div>
-      </div>
   </div>
 
 </div>

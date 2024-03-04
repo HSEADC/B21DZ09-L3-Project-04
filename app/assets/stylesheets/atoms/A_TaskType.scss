@@ -23,7 +23,7 @@
     font-size: 30px;
   }
 
-  :hover {
+  &:hover {
     background: var(--main-blue);
     color: var(--white);
   }
@@ -37,79 +37,35 @@
   }
 }
 
+.C_TasksTypes {
+  .A_TaskType {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--main-blue);
+    border-radius: 100%;
+    background: var(--white);
+    cursor: pointer;
 
+    &.active {
+      color: var(--white);
+      background: var(--main-blue);
+    }
 
+    &.small {
+      width: 36px;
+      height: 36px;
+      font-size: 30px;
+    }
 
-
-nav ul li {
-  display: inline-block;
-  padding: 10px;
-  cursor: pointer
-}
-
-.hide {
-  opacity: 1;
-  animation-name: a1;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes a1 {
-  to {
-    opacity: 0;
-    min-height: 0;
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
+    &:hover {
+      background: var(--main-blue);
+      color: var(--white);
+    }
   }
-}
-
-
-.box {
-  min-height: 140px;
-  min-width: calc(22% - 28px);
-  padding: 0 10px;
-  margin: 15px;
-  float: left
-}
-
-.box.alizarin {
-  border: 3px solid red;
-}
-
-.box.wisteria {
-  border: 3px solid pink;
-}
-
-.box.belizehole {
-  border: 3px solid blue;
-}
-
-.box.sunflower {
-  border: 3px solid yellow;
-}
-
-.box.emerland {
-  border: 3px solid green;
-}
-
-.text-alizarin {
-  color: red;
-}
-
-.text-wisteria {
-  color: pink;
-}
-
-.text-belizehole {
-  color: blue;
-}
-
-.text-sunflower {
-  color: yellow;
-}
-
-.text-emerland {
-  color: green;
 }
