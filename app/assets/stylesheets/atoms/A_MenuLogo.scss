@@ -8,4 +8,9 @@
   background-size: 80%;
   background-position: center 22px;
   background-repeat: no-repeat;
+
+  &:hover {
+    background-color: var(--main-blue);
+    transition: all 0.5s ease-out;
+  }
 }

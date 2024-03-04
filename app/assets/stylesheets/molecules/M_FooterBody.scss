@@ -28,5 +28,10 @@
 
   .A_Logo {
     background-image: url("assets/A_Logo.svg");
+
+    &:hover {
+      background-image: url("assets/A_Logo_blue.svg");
+      transition: all 0.5s ease-out;
+    }
   }
 }

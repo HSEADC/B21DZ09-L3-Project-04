@@ -1,7 +1,7 @@
-const tags = document.querySelector('.C_TasksTypes'),
+const tags = document.querySelector('.M_TitleWithFilters'),
   items = document.querySelectorAll('.A_AnswerCard'),
   allItems = document.querySelectorAll('.O_CardNewTask'),
-  listItems = document.querySelectorAll('.A_TaskType small')
+  listItems = document.querySelectorAll('.small')
 
 // фильтр в профиле
 function filter() {
@@ -14,9 +14,9 @@ function filter() {
     // target.classList.add('active')
 
     switch (targetId) {
-      // кнопка все
-      // case 'all':
-      //   getItems('A_AnswerCard')
+      case 'all':
+        getItems('A_AnswerCard')
+        break
 
       case 'F':
         getItems(targetId)
@@ -62,6 +62,10 @@ function allFilter() {
     const target = event.target
 
     switch (targetId) {
+      case 'all':
+        getAllItems('O_CardNewTask')
+        break
+
       case 'F':
         getAllItems(targetId)
         break

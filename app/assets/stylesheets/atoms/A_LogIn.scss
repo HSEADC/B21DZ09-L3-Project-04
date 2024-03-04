@@ -7,9 +7,19 @@
 
   &.in {
     background-image: url("assets/Q_LogIn");
+
+    &:hover {
+      background-image: url("assets/Q_LogIn_Blue");
+      transition: all 0.5s ease-out;
+    }
   }
 
   &.out {
     background-image: url("assets/Q_LogOut");
+
+    &:hover {
+      background-image: url("assets/Q_LogOut_Blue");
+      transition: all 0.5s ease-out;
+    }
   }
 }

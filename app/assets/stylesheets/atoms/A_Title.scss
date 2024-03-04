@@ -4,6 +4,14 @@
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 18px;
+
+  &.small {
+    &:hover {
+      color: var(--main-blue);
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1660px) {
