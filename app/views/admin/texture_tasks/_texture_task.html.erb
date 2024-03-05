@@ -1,11 +1,14 @@
 <div id="<%= dom_id texture_task %>">
-  <div class="taskCard">
-    <h3>
-    </h3>
-
-    <div class="ref-container">
-      <%= image_tag texture_task.texture_image.url, class: "refImg" if texture_task.texture_image.url %>
+    <div class="O_Task">
+    <%= image_tag texture_task.texture_image.url, class: "Q_TaskImage small" if texture_task.texture_image.url %>
+    <div class="C_TaskCircles">
+      <div class="A_TaskType">T</div>
     </div>
-
+    <div class="W_BottomPart">
+      <div class="M_TitleCardTask">
+      <div class="A_TaskTitle"><%= "T#{texture_task.id}" %></div>
+      </div>
+      <%= link_to "редактировать", edit_admin_task_path(texture_task), class: "M_Button secondary" %>
+    </div>
   </div>
 </div>

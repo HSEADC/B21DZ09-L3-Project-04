@@ -1,11 +1,15 @@
 <div id="<%= dom_id regularity_task %>">
-  <div class="taskCard">
-    <h3>
-    </h3>
-
-    <div class="ref-container">
-      <%= image_tag regularity_task.vector_regularity.url, class: "refImg" if regularity_task.vector_regularity.url %>
+    <div class="O_Task">
+    <%= image_tag regularity_task.vector_regularity.url, class: "Q_RefImage" if regularity_task.vector_regularity.url %>
+   
+    <div class="C_TaskCircles">
+      <div class="A_TaskType">R</div>
     </div>
-
+    <div class="W_BottomPart">
+      <div class="M_TitleCardTask">
+      <div class="A_TaskTitle"><%= "R#{regularity_task.id}" %></div>
+      </div>
+      <%= link_to "редактировать", edit_admin_task_path(regularity_task), class: "M_Button secondary" %>
+    </div>
   </div>
 </div>

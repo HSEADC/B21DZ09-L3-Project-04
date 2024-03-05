@@ -1,12 +1,16 @@
 <div id="<%= dom_id colour_task %>">
-  <div class="taskCard">
-    <h3>
-
-    </h3>
-
-    <div class="ref-container">
-      <div class="refImg" style="background-color: <%= colour_task.colour_hex %>"></div>
+  <div class="O_Task">
+    <div class="Q_RefImage">
+      <div class="Q_ColorRef" style="background-color: <%= colour_task.colour_hex %>"></div>
     </div>
-
+    <div class="C_TaskCircles">
+      <div class="A_TaskType">C</div>
+    </div>
+    <div class="W_BottomPart">
+      <div class="M_TitleCardTask">
+      <div class="A_TaskTitle"><%= "C#{colour_task.id}" %></div>
+      </div>
+      <%= link_to "редактировать", edit_admin_task_path(colour_task), class: "M_Button secondary" %>
+    </div>
   </div>
 </div>

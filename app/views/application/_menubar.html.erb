@@ -6,7 +6,7 @@
               <%= link_to "", welcome_path, class:"A_MenuLogo" %>
               <% if user_signed_in? && current_user.admin == true %>
               <%= link_to "все задания", allTasks_path, class: "A_MenuLink" %>
-              <%= link_to "банк рефов", howToPlay_path, class: "A_MenuLink" %>
+              <%= link_to "банк рефов", admin_tasks_path, class: "A_MenuLink" %>
               <%= link_to "жалобы", profile_path(current_user.id), class: "A_MenuLink" %>
               <% else %>
               <%= link_to "все задания", allTasks_path, class: "A_MenuLink" %>

@@ -1,11 +1,15 @@
 <div id="<%= dom_id shape_task %>">
-  <div class="taskCard">
-    <h3>
-    </h3>
-
-    <div class="ref-container">
-      <%= image_tag shape_task.vector_shape.url, class: "refImg" if shape_task.vector_shape.url %>
+  <div class="O_Task">
+    <%= image_tag shape_task.vector_shape.url, class: "Q_RefImage" if shape_task.vector_shape.url %>
+   
+    <div class="C_TaskCircles">
+      <div class="A_TaskType">S</div>
     </div>
-
+    <div class="W_BottomPart">
+      <div class="M_TitleCardTask">
+      <div class="A_TaskTitle"><%= "S#{shape_task.id}" %></div>
+      </div>
+      <%= link_to "редактировать", edit_admin_task_path(shape_task), class: "M_Button secondary" %>
+    </div>
   </div>
 </div>

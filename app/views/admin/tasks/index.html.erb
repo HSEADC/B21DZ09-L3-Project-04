@@ -1,21 +1,25 @@
-<section class="container">
-<div class="title">
-    <h1>Задания</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-     <br>
-    <br>
-    <br>
-    <br>
-    <%= link_to "Новое задание", new_admin_task_path, class: "button" %>
+<div class="Q_Grid">
+<%= render "form", task: Task.new, url: admin_tasks_path %>
+  <div class="O_Refs">
+  <div class="W_NewRefs">
+    <div class="M_TitleWithFilters">
+    <div class="W_TitleCounter">
+      <div class="A_Title">Свежие</div>
+      <div class="A_MoreCircle">
+        <p>+<%=@tasks.length %></p>
+      </div>
+    </div>
+    <div class="W_Fiters">
+      <%= render 'utilities_partials/filters_with_types' %>
+    </div>
   </div>
-  
+  <div class="C_RefTasks">
   <% @tasks.each do |task| %>
       <%= render task %>
   <% end %>
-</section>
+  </div>
+  </div>
+  </div>
+</div>
 
  
