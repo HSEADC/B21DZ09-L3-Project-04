@@ -1,47 +1,50 @@
-<div class="Q_Grid">
-  <% if user_signed_in? %>
+<body id="search">
+  <div class="Q_Grid">
+    <% if user_signed_in? %>
 
-<div class="O_TasksExpire">
-  <div class="Q_Rect first"></div>
-  <div class="Q_Rect second"></div>
-  <div class="Q_Rect third"></div>
-  <div class="Q_Rect fourth"></div>
+  <div class="O_TasksExpire">
+    <div class="Q_Rect first"></div>
+    <div class="Q_Rect second"></div>
+    <div class="Q_Rect third"></div>
+    <div class="Q_Rect fourth"></div>
 
-  <div class="W_TasksExpireColumn">
-    <h1>истекающие</h1>
-    <div class="W_TasksExpireRow">
-      <% @expire_tasks.each do |task| %>
-        <%= render 'task_cards/card_with_two_buttons', task: task%>
-      <% end %>
+    <div class="W_TasksExpireColumn">
+      <h1>истекающие</h1>
+      <div class="W_TasksExpireRow">
+        <% @expire_tasks.each do |task| %>
+          <%= render 'task_cards/card_with_two_buttons', task: task%>
+        <% end %>
 
-      <div class="A_MoreLength">
-        <div class="Q_MoreCircle">
-          <h3>+<%= @expire_tasks.length%></h3>
+        <a href="<%= expireTasks_path%>"><div class="A_MoreLength">
+          <div class="Q_MoreCircle">
+            <h3>+<%= @expire_tasks.length%></h3>
+          </div>
+          <p>меньше 30 минут</p>
         </div>
-        <p>меньше 30 минут</p>
+        </a>
       </div>
     </div>
   </div>
-</div>
 
-<section class="O_AllSearchTasks">
-  <div class="M_TitleWithFilters">
-    <div class="W_TitleCounter">
-      <div class="A_Title">все задания</div>
-      <div class="A_MoreCircle">
-        <p><%=@search_tasks.length %></p>
+  <section class="O_AllSearchTasks">
+    <div class="M_TitleWithFilters">
+      <div class="W_TitleCounter">
+        <div class="A_Title">все задания</div>
+        <div class="A_MoreCircle">
+          <p><%=@search_tasks.length %></p>
+        </div>
+      </div>
+      <div class="W_Fiters">
+        <%= render 'utilities_partials/filters' %>
       </div>
     </div>
-    <div class="W_Fiters">
-      <%= render 'utilities_partials/filters' %>
-    </div>
+    <div class="W_TaskCards">
+    <% @search_tasks.each do |task| %>
+      <%= render 'task_cards/task_card', task: task%>
+    <% end %>
   </div>
-  <div class="W_TaskCards">
-  <% @search_tasks.each do |task| %>
-    <%= render 'task_cards/task_card', task: task%>
+  </section>
+
   <% end %>
-</div>
-</section>
-
-<% end %>
-</div>
+  </div>
+</body>

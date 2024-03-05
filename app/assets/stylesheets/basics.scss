@@ -7,6 +7,10 @@ body {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body,
 p {
   font-family: "Fugue";
@@ -26,6 +30,16 @@ select,
 input {
   border: 0;
   outline: 0;
+}
+
+ul {
+  li {
+    list-style-type: disc;
+    font-size: 28px;
+    line-height: 33px;
+    width: 80%;
+    margin: 0 0 20px 28px;
+  }
 }
 
 .Q_Grid {
@@ -708,8 +722,8 @@ input {
     }
 
     p {
-      font-size: 22px;
-      width: 70%;
+      font-size: 28px;
+      width: 80%;
     }
   }
 
@@ -801,6 +815,15 @@ input {
       border-radius: 100%;
       border: solid 3px var(--white);
 
+      &:hover {
+        background-color: var(--white);
+        transition: all 0.3s ease-out;
+
+        p {
+          color: var(--main-blue);
+        }
+      }
+
       p {
         font-size: 172px;
       }
@@ -859,6 +882,28 @@ input {
 /// главная страница
 
 #main {
+
+  .type_example {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    margin-top: 55px;
+
+    .ex {
+      display: flex;
+      flex-direction: row;
+      gap: 28px;
+    }
+
+    .ex_2 {
+      width: 390px;
+      height: 390px;
+      ;
+      background-image: url(assets/A_TaskExample.svg);
+    }
+  }
+
   h1 {
     color: var(--black);
     text-align: center;

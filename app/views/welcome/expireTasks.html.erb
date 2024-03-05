@@ -1,0 +1,26 @@
+<body id="expireSearch">
+  <div class="Q_Grid">
+    <% if user_signed_in? %>
+
+  <section class="O_AllSearchTasks">
+    <div class="M_TitleWithFilters">
+      <div class="W_TitleCounter">
+        <div class="A_Title">истекающие</div>
+        <div class="A_MoreCircle">
+          <p><%= @expire_tasks.length%></p>
+        </div>
+      </div>
+      <div class="W_Fiters">
+        <%= render 'utilities_partials/filters' %>
+      </div>
+    </div>
+    <div class="W_TaskCards">
+    <% @expire_tasks.each do |task| %>
+      <%= render 'task_cards/task_card', task: task%>
+    <% end %>
+  </div>
+  </section>
+
+  <% end %>
+  </div>
+</body>

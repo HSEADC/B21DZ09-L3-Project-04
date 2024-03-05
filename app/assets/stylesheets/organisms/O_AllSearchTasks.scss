@@ -10,3 +10,11 @@
     gap: 42px 20px;
   }
 }
+
+#expireSearch {
+  .O_AllSearchTasks {
+    grid-column: 1 / 13;
+    margin-top: 0;
+    position: relative;
+  }
+}
