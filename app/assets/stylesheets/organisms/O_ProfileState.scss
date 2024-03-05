@@ -16,10 +16,12 @@
   }
 
   .Q_BannerScroll {
+    margin-left: -60px;
     position: relative;
     overflow-x: scroll;
 
     .C_UsersAnswers {
+      padding-left: 60px;
       right: 20px;
       display: flex;
       flex-direction: row;
