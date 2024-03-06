@@ -4,39 +4,56 @@
   flex-direction: row;
   align-items: center;
   gap: 36px;
-  overflow: hidden;
-  padding: 44px;
+  padding: 44px 0 44px 44px;
   border-radius: 30px;
   background: var(--white);
-  color: var(--black);
+  color: var(--main-blue);
   text-decoration: none;
+  margin-bottom: 40px;
 
   p {
     font-size: 22px;
   }
 
-  .C_UsersAnswers {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
+  .Q_BannerScroll {
+    margin-left: -60px;
+    position: relative;
+    overflow-x: scroll;
 
-    .A_TaskType {
-      display: none;
-    }
+    .C_UsersAnswers {
+      padding-left: 60px;
+      right: 20px;
+      display: flex;
+      flex-direction: row;
+      width: max-content;
+      gap: 20px;
+      padding-right: 44px;
+      align-items: center;
 
-    .A_Ava {
-      display: none;
+
+      .A_TaskType {
+        display: none;
+      }
+
+      .A_Ava {
+        display: none;
+      }
     }
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
   .O_ProfileState {
     gap: 20px;
 
     .C_UsersAnswers {
       gap: 12px;
+
+      .M_AnswerPreview {
+        width: 176px;
+        height: 176px;
+        border-radius: 12px;
+      }
     }
   }
 }
@@ -49,6 +66,7 @@
     padding: 16px;
 
     .C_UsersAnswers {
+      height: 294px;
       gap: 12px;
     }
   }

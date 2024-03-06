@@ -1,0 +1,30 @@
+.A_EditButton {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background-color: var(--white-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+
+  .Q_Circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--main-blue);
+    margin: 3px;
+  }
+
+  &:hover {
+    background-color: var(--main-blue);
+    transition: all 0.5s ease-out;
+
+    .Q_Circle {
+      background-color: var(--white);
+    }
+  }
+}

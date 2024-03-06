@@ -6,6 +6,10 @@
   border-radius: 30px;
   overflow: hidden;
 
+  &.hidden {
+    display: none;
+  }
+
   .Q_ProfileAnswerImage {
     width: 100%;
     object-fit: cover;

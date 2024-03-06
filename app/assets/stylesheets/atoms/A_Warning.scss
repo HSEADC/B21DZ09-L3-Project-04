@@ -1,0 +1,20 @@
+.A_Warning {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 645px;
+
+  .Q_Circle {
+    width: 43px;
+    height: 43px;
+    background-color: var(--main-blue);
+
+    :nth-child(3) {
+      background-color: var(--grey);
+    }
+  }
+
+  h1 {
+    color: var(--main-blue);
+  }
+}

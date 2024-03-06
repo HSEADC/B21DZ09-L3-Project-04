@@ -6,6 +6,17 @@
 
     <div class="O_Profile">
       <!-- <div class="A_Edit"></div> -->
+
+      <div class="A_EditButton">
+        <div class="Q_Circle"></div>
+        <div class="Q_Circle"></div>
+        <div class="Q_Circle"></div>
+      </div>
+      
+      <div class="A_WinTape">
+        <p><%= @win_tasks.length %><p>
+      </div>
+
       <div class="M_AvatarName">
         <div class="A_Ava">
           <%= image_tag current_user.avatar_image.large.url, class: "Q_Ava" if current_user.avatar_image.large.url %>
@@ -39,12 +50,7 @@
     </div>
 
     <div class="O_WinnerTasks">
-      <div class="W_TitleCounter">
-        <div class="A_Title">все задания</div>
-        <div class="A_MoreCircle">
-          <p><%=@win_tasks.length %></p>
-        </div>
-      </div>
+        <h2>свежие находки</h2>
 
       <div class="C_WinTasks">
         <% @win_tasks.each do |task| %>
@@ -52,27 +58,24 @@
         <% end %>
       </div>
   </div>
-  <div class="A_GalleryButtons">
-    <div class="Q_GalleryButton left"></div>
-    <div class="Q_GalleryButton right"></div>
-  </div>
 </div>
 
 <div class="O_UserAnswers">
   <div class="M_TitleWithFilters">
     <div class="W_TitleCounter">
-      <div class="A_Title">твои находки</div>
+      <div class="A_Title small" data-id="all">твои находки</div>
       <div class="A_MoreCircle">
-        <p>+<%=@user_answers.length %></p>
+        <p><%=@user_answers.length %></p>
       </div>
       </div>
 
+
     <div class="C_TasksTypes">
-      <div class="A_TaskType small inactive">S</div>
-      <div class="A_TaskType small inactive">C</div>
-      <div class="A_TaskType small inactive">F</div>
-      <div class="A_TaskType small inactive">R</div>
-      <div class="A_TaskType small inactive">T</div>
+      <div class="A_TaskType small" data-id="S">S</div>
+      <div class="A_TaskType small" data-id="C">C</div>
+      <div class="A_TaskType small" data-id="F">F</div>
+      <div class="A_TaskType small" data-id="R">R</div>
+      <div class="A_TaskType small" data-id="T">T</div>
     </div>
   </div>
 

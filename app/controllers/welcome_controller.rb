@@ -2,6 +2,8 @@ class WelcomeController < ApplicationController
   def index
     @subscription = Subscription.new
     @random_answers = Answer.take(8)
+    @random_examples = Answer.take(2)
+    @random_task = Task.where(active: false).sample
 
     # Meta
     set_meta_tags(
@@ -27,7 +29,7 @@ class WelcomeController < ApplicationController
      @active_tasks = Task.active.sample(5)
      @random_task = Task.where(active: false).sample
      if user_signed_in?
-     @profile_answers = Answer.where(user_id: current_user.id).take(4)
+     @profile_answers = Answer.where(user_id: current_user.id).take(5)
     end
 
     # Meta
@@ -47,6 +49,18 @@ class WelcomeController < ApplicationController
     set_meta_tags(
       title: "В поиске",
       description: "Здесь тебя ждут все задания от refs, на которые ты откликнулся",
+      keywords: "refs, reference, creative"
+    )
+    # end
+  end
+
+    def expireTasks
+    @expire_tasks = Task.where(in_search: true).take(4)
+
+    # Meta
+    set_meta_tags(
+      title: "Истекающие задания",
+      description: "Здесь можно посмотреть все истекающие задания от refs, на которые ты откликнулся",
       keywords: "refs, reference, creative"
     )
     # end

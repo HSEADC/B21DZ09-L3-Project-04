@@ -16,7 +16,7 @@
         <div class="gallery_second_img"> </div>
       </div>
       <div class="gallery_slide third">
-        <h1>выигрывай и получай баллы активности</h1>
+        <h1>выигрывай и получай Баллы активности</h1>
         <div class="gallery_third_img"> </div>
       </div>
     </div>
@@ -81,7 +81,21 @@
       </div>
     </div>
   </div>
-  <div class="types_image"> </div>
+  
+  <div class="type_example">
+    <div class="ex ex_1">
+       <% @random_examples.each do |answer| %>
+        <%= render 'answers_cards/answer_avatar_only', answer: answer%>
+      <% end %>
+    </div>
+    <div class="ex_2"></div>
+    <div class="ex ex_3">
+       <% @random_examples.each do |answer| %>
+        <%= render 'answers_cards/answer_avatar_only', answer: answer%>
+      <% end %>
+    </div>
+  </div>
+
 </div>
 
 <div id="how_to_play">

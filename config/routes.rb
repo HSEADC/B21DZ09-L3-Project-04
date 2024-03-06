@@ -65,6 +65,7 @@ Rails.application.routes.draw do
   get 'about', to: 'welcome#about'
   get 'allTasks', to: 'welcome#allTasks'
   get 'searchTasks', to: 'welcome#searchTasks'
+  get 'expireTasks', to: 'welcome#expireTasks'
   get 'howToPlay', to: 'welcome#howToPlay'
   # get 'profile', to: 'profiles#show'
   get 'answersGallery', to: 'tasks#answersGallery'

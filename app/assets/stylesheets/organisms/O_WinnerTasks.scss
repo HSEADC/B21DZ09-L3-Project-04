@@ -18,4 +18,18 @@
       display: none;
     }
   }
+
+  .W_Buttons {
+    display: none;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 44px 0 18px 0;
+    color: var(--black);
+    z-index: 100;
+  }
 }

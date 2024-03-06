@@ -10,9 +10,12 @@
   transition: all 0.3s ease;
   user-select: none;
   cursor: pointer;
+  font-family: "Fugue";
+  font-weight: 400;
 
   &:hover {
     background: var(--white-hover);
+    transition: all 0.5s ease-out;
   }
 
   &:active {
@@ -25,6 +28,7 @@
 
     &:hover {
       background: var(--blue-hover);
+      transition: all 0.5s ease-out;
     }
 
     &:active {
@@ -38,6 +42,7 @@
 
     &:hover {
       background: var(--white-hover);
+      transition: all 0.5s ease-out;
     }
 
     &:active {
@@ -52,6 +57,7 @@
     &:hover {
       background: var(--white-hover);
       border: solid 1px var(--white-hover);
+      transition: all 0.5s ease-out;
     }
 
     &:active {
@@ -69,6 +75,7 @@
       color: var(--main-blue);
       background: var(--white-hover);
       border: none;
+      transition: all 0.5s ease-out;
     }
 
     &:active {
@@ -97,7 +104,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
   .M_Button {
     // width: 200px;
     padding: 12px 0;

@@ -32,9 +32,11 @@
       </div>
     </div>
   </div>
-  <div class="C_UsersAnswers">
+  <div class="Q_BannerScroll">
+    <div class="C_UsersAnswers">
       <% @profile_answers.each do |answer| %>
       <%= render 'answers_cards/preview_answer_card', answer: answer %>
       <% end %>
+    </div>
   </div>
 </a>

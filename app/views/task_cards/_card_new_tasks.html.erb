@@ -1,6 +1,6 @@
 <% @random_answers =task.answers.sample(6) %>
 
-<div class="O_CardNewTask">
+<div class="O_CardNewTask <%= task.type[0]%>">
   <div class="C_TaskAnswers">
     <%@random_answers.each do |answer| %>
     <%= render 'answers_cards/preview_answer_card', task: task, answer: answer%>

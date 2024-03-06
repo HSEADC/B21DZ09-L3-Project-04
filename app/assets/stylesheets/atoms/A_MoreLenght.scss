@@ -5,6 +5,7 @@
   align-items: center;
   gap: 18px;
   margin-top: 240px;
+  cursor: pointer;
 
   .Q_MoreCircle {
     width: 130px;
@@ -26,5 +27,20 @@
     width: 86px;
     text-align: center;
     color: var(--white-click);
+  }
+
+  &:hover {
+
+    .Q_MoreCircle {
+      color: var(--main-blue);
+      background-color: var(--white-hover);
+      border: solid 2px var(--white-hover);
+      transition: all 0.5s ease-out;
+    }
+
+    p {
+      color: var(--main-blue);
+      transition: all 0.5s ease-out;
+    }
   }
 }

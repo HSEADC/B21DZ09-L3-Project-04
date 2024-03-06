@@ -23,6 +23,7 @@
     &:hover {
       border: solid 2px var(--white-click);
       background-color: var(--white-click);
+      transition: all 0.5s ease-out;
     }
   }
 }

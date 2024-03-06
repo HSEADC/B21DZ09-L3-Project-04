@@ -22,12 +22,52 @@
     height: 36px;
     font-size: 30px;
   }
+
+  &:hover {
+    background: var(--main-blue);
+    color: var(--white);
+    transition: all 0.5s ease-out;
+  }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1700px) {
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
   .A_TaskType {
     width: 36px;
     height: 36px;
     font-size: 30px;
+  }
+}
+
+.C_TasksTypes {
+  .A_TaskType {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--main-blue);
+    border-radius: 100%;
+    background: var(--white);
+    cursor: pointer;
+
+    &.active {
+      color: var(--white);
+      background: var(--main-blue);
+    }
+
+    &.small {
+      width: 36px;
+      height: 36px;
+      font-size: 30px;
+    }
+
+    &:hover {
+      background: var(--main-blue);
+      color: var(--white);
+      transition: all 0.5s ease-out;
+    }
   }
 }
