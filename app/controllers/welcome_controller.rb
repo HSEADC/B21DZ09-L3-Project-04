@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
     @subscription = Subscription.new
     @random_answers = Answer.take(8)
-    @random_examples = Answer.take(2)
+    @random_examples = Answer.take(4)
     @random_task = Task.where(active: false).sample
 
     # Meta

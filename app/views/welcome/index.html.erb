@@ -1,6 +1,4 @@
 <body id="main">
-  <%#= @onboarding%>
-<%#= render 'onboardings/onboarding', onboarding: @onboarding%>
 
 <%= render 'onboardings/onboarding' if current_user && !current_user.onboarding.passed%>
 
@@ -83,19 +81,13 @@
   </div>
   
   <div class="type_example">
-    <div class="ex ex_1">
-       <% @random_examples.each do |answer| %>
-        <%= render 'answers_cards/answer_avatar_only', answer: answer%>
+    <% @random_examples.each_with_index do |answer, index| %>
+      <%= render 'answers_cards/answer_avatar_only', answer: answer%>
+      <% if index == 1 %>
+        <div class="ex_2"></div>
       <% end %>
-    </div>
-    <div class="ex_2"></div>
-    <div class="ex ex_3">
-       <% @random_examples.each do |answer| %>
-        <%= render 'answers_cards/answer_avatar_only', answer: answer%>
-      <% end %>
-    </div>
+    <% end %>
   </div>
-
 </div>
 
 <div id="how_to_play">
