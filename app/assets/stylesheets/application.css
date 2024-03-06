@@ -13,6 +13,8 @@
  *= require vars
  *= require fonts
  *= require basics
+ *= require index
+ *= require how
  *= require reset
  *= require_tree ./atoms
  *= require_tree ./molecules
