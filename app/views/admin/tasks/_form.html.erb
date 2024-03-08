@@ -11,50 +11,62 @@
       </ul>
     </div>
   <% end %>
+  <div class="O_RefForm">
+  <div class="Q_Rect first"></div>
+  <div class="Q_Rect second"></div>
+  <div class="Q_Rect third"></div>
 
-  <div class="field">
-   <br>
-    <br>
-    <br>
-    <br>
-     <br>
-    <br>
-    <br>
-    <br>
-     <br>
-    <br>
-    <br>
-    <br>
-    <%= form.label :type %><br />
-    <%= form.select :type, ["ColourTask", "FontTask", "TextureTask", "RegularityTask", "ShapeTask"]%>
-  </div>
+  <div class="W_Left">
+    <div class="W_Description">
+      <h2>Загрузить реф в БАНК рефов</h2>
+      <p>Перед тем, как загрузить реф в банк, проверь нет ли его или чего-то очень близкого уже в нашей копилочке</p>
+    </div>
+      <div class="W_Category">
+      <h3>Категория</h3>
+      <div class="C_TaskTypes">
+      <div class="A_TaskType colour active">C</div>
+      <div class="A_TaskType font inactive">F</div>
+      <div class="A_TaskType regularity inactive">R</div>
+      <div class="A_TaskType shape inactive">S</div>
+      <div class="A_TaskType texture inactive">T</div>
+      </div>
+      <%= form.select :type, [["C", "ColourTask"], ["F", "FontTask"], ["R", "RegularityTask"], ["S", "ShapeTask"], ["T", "TextureTask"]]%>
+    </div>
 
-  <div>
-    <%= form.label :colour_hex, style: "display: block" %>
-    <%= form.text_field :colour_hex %>
-  </div>
+  <div class="C_UploadFields">
+    <div class="W_UploadField colour">
+      <%= form.text_field :colour_hex, placeholder: "Введи #HEX цвета", :class => "A_UploadField" %>
+     </div>
 
-  <div class="field">
-    <%= form.label :vector_font %><br />
-    <%= form.file_field :vector_font %>
-  </div>
+     <div class="W_UploadField font">
+     <label for="task_vector_font" class="A_UploadField">Загрузить вектор шрифта</label>
+      <%= form.file_field :vector_font%>
+    </div>
 
-  <div class="field">
-    <%= form.label :vector_regularity %><br />
-    <%= form.file_field :vector_regularity %>
-  </div>
+     <div class="W_UploadField regularity">
+      <label for="task_vector_regularity" class="A_UploadField">Загрузить вектор закономерности</label>
+       <%= form.file_field :vector_regularity%>
+     </div>
 
-  <div class="field">
-    <%= form.label :vector_shape %><br />
-    <%= form.file_field :vector_shape %>
-  </div>
+     <div class="W_UploadField shape">
+       <label for="task_vector_shape" class="A_UploadField">Загрузить вектор формы</label>
+       <%= form.file_field :vector_shape%>
+     </div>
 
-  <div class="field">
-    <%= form.label :texture_image %><br />
-    <%= form.file_field :texture_image %>
-  </div>
+     <div class="W_UploadField texture">
+      <label for="task_texture_image" class="A_UploadField">Загрузить фото текстуры</label>
+      <%= form.file_field :texture_image%>
+     </div>
+     </div>
 
-  <div>
-    <%= form.submit %>
+      <%= form.submit "загрузить реф", :class => "M_Button primary m"%>
+
+  
+    </div>
+
+  <div class="W_Right">
+    <h2>?</h2>
+
   </div>
-<% end %>
+  </div>
+  <% end %>

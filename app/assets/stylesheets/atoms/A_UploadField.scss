@@ -1,0 +1,36 @@
+.A_UploadField {
+  display: block;
+  width: 540px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: solid 1px var(--gray);
+  background: transparent;
+  color: var(--gray);
+  font-size: 26px;
+  font-family: 'Fugue';
+  font-style: normal;
+  font-weight: 700;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--black);
+  }
+}
+
+.colour .A_UploadField {
+  display: block;
+  width: 540px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: solid 1px var(--gray);
+  background: transparent;
+  color: var(--gray);
+  font-size: 26px;
+  font-family: 'Fugue';
+  font-style: normal;
+  font-weight: 700;
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}

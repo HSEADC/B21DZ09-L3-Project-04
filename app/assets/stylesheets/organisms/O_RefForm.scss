@@ -1,0 +1,135 @@
+.O_RefForm {
+  padding: 72px 140px;
+  height: 740px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+
+  .Q_Rect {
+    background: var(--white);
+    border-radius: 30px;
+    position: absolute;
+    z-index: -1;
+
+    &.first {
+      width: 100px;
+      height: 560px;
+      top: 100px;
+      left: 0;
+    }
+
+    &.second {
+      width: 1620px;
+      height: 740px;
+      top: 0;
+      right: 0;
+    }
+
+    &.third {
+      width: 880px;
+      height: 804px;
+      right: 76px;
+      top: 0px;
+    }
+  }
+
+  .W_Left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .W_Description {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      h2 {
+        width: 380px;
+        font-family: 'Fugue';
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      p {
+        width: 420px;
+        font-family: 'Fugue';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+
+    .M_Button {
+      width: 264px;
+    }
+
+    .W_UploadField {
+      display: none;
+      input {
+        display: none;
+      }
+
+      &.colour {
+        display: block;
+        input {
+          display: block;
+        }
+      }
+    }
+
+    .W_Category {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      h3 {
+        font-family: 'Fugue';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      #task_type {
+        display: none;
+      }
+
+      .C_TaskTypes {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+
+        .A_TaskType {
+          &.active {
+          }
+          &.inactive {
+            color: var(--black);
+            background: var(--white);
+            border: 1px solid var(--black);
+          }
+        }
+      }
+    }
+  }
+}
+
+.W_Right {
+  width: 680px;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--lightgray);
+  border-radius: 24px;
+
+  h2 {
+    color: var(--white);
+    text-align: center;
+    font-family: 'Fugue';
+    font-size: 130px;
+    font-style: normal;
+    font-weight: 600;
+  }
+}
