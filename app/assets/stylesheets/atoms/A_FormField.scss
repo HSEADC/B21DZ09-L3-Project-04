@@ -1,15 +1,14 @@
-.A_DeviseField {
+.A_FormField,
+select {
   display: block;
   padding: 16px;
-  padding-left: 52px;
-  width: 472px;
+  width: 508px;
   border: none;
   border-radius: 10px;
   background: var(--white);
   color: var(--black);
   font-size: 16px;
   font-family: 'Fugue';
-  font-style: normal;
   font-weight: 400;
 
   &::placeholder {
@@ -20,28 +19,12 @@
     border: 1px solid var(--main-blue);
   }
 
-  &.email,
-  &.password,
-  &.name,
-  &.nickname {
+  &.email {
+    width: 472px;
+    padding-left: 52px;
+    background-image: url('assets/Q_Email.svg');
     background-position: 16px center;
     background-repeat: no-repeat;
     background-size: 24px 24px;
-  }
-
-  &.email {
-    background-image: url('assets/Q_Email.svg');
-  }
-
-  &.password {
-    background-image: url('assets/Q_Password.svg');
-  }
-
-  &.name {
-    background-image: url('assets/Q_Name.svg');
-  }
-
-  &.nickname {
-    background-image: url('assets/Q_Nickname.svg');
   }
 }

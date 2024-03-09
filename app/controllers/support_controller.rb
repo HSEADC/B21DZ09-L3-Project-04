@@ -15,7 +15,7 @@ class SupportController < ApplicationController
   private
     # Only allow a list of trusted parameters through.
     def support_params
-      params.require(:support).permit(:email, :comment)
+      params.require(:support).permit(:comment, :problem).merge(email: current_user.email)
     end
 
 end

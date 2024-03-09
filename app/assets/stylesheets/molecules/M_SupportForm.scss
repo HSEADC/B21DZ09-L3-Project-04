@@ -1,0 +1,55 @@
+.M_SupportForm {
+  padding: 62px 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  border-radius: 20px;
+  background: var(--white-hover);
+
+  h1 {
+    font-family: 'Fugue';
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .W_FormFields,
+  .W_FormField {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .W_FormField {
+    gap: 10px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    span {
+      color: #ff4747;
+    }
+
+    textarea {
+      height: 50px;
+    }
+
+    select {
+      width: 540px;
+      -moz-appearance: none; /* Firefox */
+      -webkit-appearance: none; /* Safari and Chrome */
+      appearance: none;
+      background-image: url('assets/arrow-down.svg');
+      background-position: 500px center;
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+    }
+  }
+
+  .M_Button {
+    width: 328px;
+  }
+}

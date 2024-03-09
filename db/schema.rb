@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_01_092256) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_09_165311) do
   create_table "answers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -84,6 +84,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_01_092256) do
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
+    t.string "problem"
   end
 
   create_table "tasks", force: :cascade do |t|
