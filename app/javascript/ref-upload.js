@@ -56,5 +56,7 @@ function placeholderChange() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  placeholderChange(), taskTypesInit();
+  if (document.body.id == 'refs-bank') {
+    placeholderChange(), taskTypesInit();
+  }
 });
