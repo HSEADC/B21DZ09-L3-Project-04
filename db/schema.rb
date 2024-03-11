@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_09_165311) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_10_092703) do
+  create_table "alerts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "count"
+    t.boolean "passed", default: true
+    t.boolean "blocked", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "answers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

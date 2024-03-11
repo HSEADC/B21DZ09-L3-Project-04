@@ -10,7 +10,7 @@
   transition: all 0.3s ease;
   user-select: none;
   cursor: pointer;
-  font-family: "Fugue";
+  font-family: 'Fugue';
   font-weight: 400;
 
   &:hover {
@@ -47,6 +47,20 @@
 
     &:active {
       background: var(--white-click);
+    }
+  }
+
+  &.primary.red {
+    color: var(--white);
+    background: var(--red);
+
+    &:hover {
+      background: var(--red-hover);
+      transition: all 0.5s ease-out;
+    }
+
+    &:active {
+      background: var(--red-click);
     }
   }
 

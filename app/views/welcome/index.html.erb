@@ -1,5 +1,6 @@
 <body id="main">
 
+<%= render 'alerts/alert' if current_user && !current_user.alert.passed%>
 <%= render 'onboardings/onboarding' if current_user && !current_user.onboarding.passed%>
 
 <div id="gallery_main">

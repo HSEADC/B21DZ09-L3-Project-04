@@ -1,0 +1,63 @@
+.S_Alert {
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 20px;
+  background: var(--pink);
+  color: var(--red);
+
+  .attention {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    .attention-icon {
+      width: 160px;
+      height: 160px;
+      background-image: url('assets/Q_Alert.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .circles {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+
+    .circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+
+      &.active {
+        background: var(--red);
+      }
+
+      &.inactive {
+        background: var(--white);
+      }
+    }
+  }
+
+  .text-block {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    p {
+      color: var(--red) !important;
+      font-size: 22px;
+    }
+
+    .M_Button {
+      width: max-content;
+    }
+  }
+}

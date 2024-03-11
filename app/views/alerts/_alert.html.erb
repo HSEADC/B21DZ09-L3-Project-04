@@ -1,0 +1,26 @@
+<%
+  alert = current_user.alert
+  alert_maximum = 3
+  alert_total = alert.count
+  i = 1
+%>
+
+<section id="alert">
+  <div class="background"></div>
+  <div class="S_Alert"> 
+    <div class="attention">
+      <div class="attention-icon"></div>
+      <div class="circles">
+        <% alert_maximum.times do %>
+          <div class="circle <%= i <= alert_total ? 'active' : 'inactive' %>"></div>
+          <% i += 1 %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="text-block">
+      <p>У тебя уже <%= alert.count%> замечания, после <%= alert_maximum%> твой аккаунт заблокируется</p>
+      <%= link_to 'я все понял', alert_passed_path, class:"M_Button primary red s" %>
+    </div>
+  </div>
+</section>

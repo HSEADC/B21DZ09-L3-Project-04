@@ -12,17 +12,22 @@ class User < ApplicationRecord
   has_many :poly_comments, as: :commentable, dependent: :destroy
   has_one :profile
   has_one :onboarding
+  has_one :alert
 
   after_create :create_user_profile
   after_create :create_user_onboarding
+  after_create :create_user_alert
 
   def create_user_profile
-    #Profile.create(user_id: id)
     self.create_profile
   end
 
   def create_user_onboarding
     self.create_onboarding
+  end
+
+  def create_user_alert
+    self.create_alert
   end
 
   mount_uploader :avatar_image, AvatarImageUploader

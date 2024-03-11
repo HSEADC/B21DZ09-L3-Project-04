@@ -5,13 +5,9 @@ Rails.application.routes.draw do
   resources :subscriptions, only: [:create, :show]
 
   get 'onboarding-passed', to: 'onboardings#set_passed', as: 'onboarding_passed'
-
-  # resources :onboarding do
-  #   put '/set_passed', to: 'onboardings#set_passed'
-  # end
-
-  #resources :onboarding
-
+  get 'alert-passed', to: 'alerts#set_passed', as: 'alert_passed'
+  get 'alert-unpassed', to: 'alerts#set_unpassed', as: 'alert_unpassed'
+  get 'alert-blocked', to: 'alerts#set_blocked', as: 'alert_blocked'
 
   resources :tasks do
     resources :answers do
