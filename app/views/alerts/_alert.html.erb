@@ -17,10 +17,17 @@
         <% end %>
       </div>
     </div>
-
+    
     <div class="text-block">
+    <% if alert_total < alert_maximum%>
       <p>У тебя уже <%= alert.count%> замечания, после <%= alert_maximum%> твой аккаунт заблокируется</p>
       <%= link_to 'я все понял', alert_passed_path, class:"M_Button primary red s" %>
+    <% end %>
+
+    <% if alert_total = alert_maximum%>
+      <p>У тебя <%= alert.count%> замечания! Как мы предупреждали, твой аккаунт теперь заблокирован.</p>
+      <%= link_to 'аккаунт будет заблокирован', alert_blocked_path, class:"M_Button primary red s" %>
+    <% end %>
     </div>
   </div>
 </section>

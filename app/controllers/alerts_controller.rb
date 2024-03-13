@@ -28,6 +28,8 @@ end
 def set_blocked
     @alert = current_user.alert
     @alert.update(blocked: true)
+    @alert.update(passed: true)
+    current_user.update(blocked: true)
 
     respond_to do |format|
       if @alert.update(blocked: true)
