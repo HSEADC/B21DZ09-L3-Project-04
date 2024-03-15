@@ -10,6 +10,10 @@ class User < ApplicationRecord
   has_many :answers
   has_many :comments
   has_many :poly_comments, as: :commentable, dependent: :destroy
+
+  has_many :likes
+  has_many :answers_i_liked, through: :likes, source: 'answer'
+
   has_one :profile
   has_one :onboarding
   has_one :alert

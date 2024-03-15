@@ -29,6 +29,7 @@ class Ability
 
     return unless user.present?
 
+    can :toggle_like, Answer
     can :create, Answer
     can :manage, Answer, user_id: user.id
 

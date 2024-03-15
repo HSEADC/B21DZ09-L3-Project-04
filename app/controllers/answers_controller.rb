@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: %i[ show edit update destroy ]
+  before_action :set_answer, only: %i[ show edit update destroy toggle_like ]
 
   # GET /answers or /answers.json
   def index
@@ -81,6 +81,23 @@ class AnswersController < ApplicationController
       format.html { redirect_to task_url(@task), notice: "answer was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_like
+
+    answer_user_ids = []
+
+    @answer.users_who_liked.each do |user|
+      answer_user_ids << user.id
+    end
+
+    if answer_user_ids.include?(current_user.id)
+      current_user.answers_i_liked.delete(@answer)
+    else
+      current_user.answers_i_liked << @answer
+    end
+
+    set_answer
   end
 
   private

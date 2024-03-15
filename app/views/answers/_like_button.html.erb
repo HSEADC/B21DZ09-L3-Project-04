@@ -1,0 +1,22 @@
+<%
+  answer_user_ids = []
+
+  answer.users_who_liked.each do |user|
+    answer_user_ids << user.id
+  end
+
+  counter = answer_user_ids.count 
+
+  if current_user
+    icon_class = answer_user_ids.include?(current_user.id) ? "active" : "inactive"
+  else
+    icon_class = "inactive"
+  end
+%>
+
+<%= turbo_frame_tag dom_id(answer) do %>
+    <a class="A_ButtonsTape" href="<%= toggle_like_answer_path(answer) %>">
+      <div class="Q_Icon like <%=icon_class%>"></div>
+      <p class="Q_Count"><%=counter%></p>
+    </a>
+<% end %>
