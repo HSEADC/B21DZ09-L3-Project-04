@@ -27,7 +27,7 @@ class TasksController < ApplicationController
   def toggle_marked
     set_task
 
-   task_user_ids = []
+    task_user_ids = []
 
     @task.users_who_marked.each do |user|
       task_user_ids << user.id

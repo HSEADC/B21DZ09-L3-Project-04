@@ -656,6 +656,10 @@ ul {
   position: fixed;
   top: 0;
   z-index: 100;
+
+  .how_container {
+    top: -80px;
+  }
 }
 
 #how,
@@ -673,7 +677,6 @@ ul {
     height: 770px;
     margin: 150px auto;
     position: relative;
-    top: -80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -878,6 +881,8 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 24px;
+    position: relative;
+    z-index: 10;
 
     .M_Button {
       padding: 16px 60px;

@@ -10,5 +10,20 @@
 @media only screen and (min-width: 1024px) and (max-width: 1660px) {
   .O_Menu {
     width: 964px;
+    margin-top: 12px;
+  }
+}
+
+@media only screen and (min-width: 704px) and (max-width: 1023px) {
+  .O_Menu {
+    width: 704px;
+    margin-top: 12px;
+  }
+}
+
+@media only screen and (min-width: 328px) and (max-width: 703px) {
+  .O_Menu {
+    width: 328px;
+    margin-top: 0px;
   }
 }

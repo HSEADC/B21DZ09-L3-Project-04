@@ -45,3 +45,17 @@
     background-image: url('assets/Q_Nickname.svg');
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
+  #registration {
+    .A_DeviseField {
+      width: 228px;
+    }
+  }
+}
+
+@media only screen and (min-width: 328px) and (max-width: 703px) {
+  .A_DeviseField {
+    width: 260px;
+  }
+}
