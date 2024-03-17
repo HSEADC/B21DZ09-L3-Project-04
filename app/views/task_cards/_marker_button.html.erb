@@ -1,0 +1,17 @@
+<%
+  task_user_ids = []
+
+  task.users_who_marked.each do |user|
+    task_user_ids << user.id
+  end
+
+  if current_user
+    link_text = task_user_ids.include?(current_user.id) ? 'убрать из поиска' : 'добавить в поиск'
+  else
+    link_text = 'добавить в поиск'
+  end
+%>
+
+<%= turbo_frame_tag id="task_#{task.id}" do %>
+  <%= link_to link_text, toggle_marked_task_path(task), class: "M_Button primary M" %>
+<% end %>

@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   has_many :likes
   has_many :answers_i_liked, through: :likes, source: 'answer'
+  has_many :markers
+  has_many :tasks_i_marked, through: :markers, source: 'task'
 
   has_one :profile
   has_one :onboarding

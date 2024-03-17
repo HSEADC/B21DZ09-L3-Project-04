@@ -11,9 +11,6 @@ Rails.application.routes.draw do
 
   resources :tasks do
     resources :answers do
-      # member do
-      #   get 'toggle_like', to: 'answers#toggle_like', as: 'toggle_like'
-      # end
       resources :comments
     end
   end
@@ -21,6 +18,12 @@ Rails.application.routes.draw do
   resources :answers do
       member do
         get 'toggle_like', to: 'answers#toggle_like', as: 'toggle_like'
+      end
+  end
+
+  resources :tasks do
+      member do
+        get 'toggle_marked', to: 'tasks#toggle_marked', as: 'toggle_marked'
       end
   end
 

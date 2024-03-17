@@ -4,8 +4,7 @@
   <div class="W_BottomPart">
       <%= render 'task_cards/task_title_big', task: task%>
     <div class="W_Buttons">
-      <%#= link_to "искать", task_path(task), class: "M_Button m secondary" %>
-      <%= link_to "присоединиться", new_task_answer_path(task.id), class: "M_Button m primary", task: task %>
+     <%= render 'task_cards/marker_button', task: task %>
     </div>
   </div>
 </div>

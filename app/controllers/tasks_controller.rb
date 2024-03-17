@@ -15,8 +15,6 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
-    @task = Task.find(params[:id])
-
     # Meta
     set_meta_tags(
       title: "Задание",
@@ -24,6 +22,24 @@ class TasksController < ApplicationController
       keywords: "refs, reference, creative, task"
     )
     # end
+  end
+
+  def toggle_marked
+    set_task
+
+   task_user_ids = []
+
+    @task.users_who_marked.each do |user|
+      task_user_ids << user.id
+    end
+
+    if task_user_ids.include?(current_user.id)
+      current_user.tasks_i_marked.destroy(@task)
+    else
+      current_user.tasks_i_marked << @task
+    end
+
+    set_task
   end
 
   private
