@@ -57,6 +57,7 @@ gem "meta-tags"
 gem "mini_magick"
 gem "devise-jwt"
 gem "will_paginate"
+gem 'browser'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
