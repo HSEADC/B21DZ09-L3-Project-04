@@ -4,3 +4,9 @@
   align-items: center;
   gap: 0;
 }
+
+@media only screen and (min-width: 740px) and (max-width: 1040px) {
+  .M_Participants {
+    display: none;
+  }
+}

@@ -1,7 +1,7 @@
 .M_Button {
   // width: 200px;
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--main-blue);
   text-decoration: none;
   text-align: center;
@@ -108,12 +108,18 @@
   .M_Button {
     // width: 200px;
     padding: 12px 0;
-    font-size: 20px;
+    font-size: 15px;
 
     &.m {
       // width: 185px;
       padding: 12px 0;
-      font-size: 20px;
+      font-size: 15px;
     }
+  }
+}
+
+@media only screen and (max-width: 1660px) {
+  .M_Button {
+    font-size: 15px;
   }
 }

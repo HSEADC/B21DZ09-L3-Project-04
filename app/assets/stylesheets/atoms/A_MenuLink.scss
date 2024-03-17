@@ -11,20 +11,26 @@
 }
 
 #tasks {
-  .A_MenuLink:nth-child(2) {
-    color: var(--main-blue);
+  .A_MenuLink {
+    &.all {
+      color: var(--main-blue);
+    }
   }
 }
 
 #search,
 #expireSearch {
-  .A_MenuLink:nth-child(3) {
-    color: var(--main-blue);
+  .A_MenuLink {
+    &.search {
+      color: var(--main-blue);
+    }
   }
 }
 
 #how {
-  .A_MenuLink:nth-child(4) {
-    color: var(--main-blue);
+  .A_MenuLink {
+    &.how {
+      color: var(--main-blue);
+    }
   }
 }

@@ -9,9 +9,11 @@
               <%= link_to "банк рефов", admin_tasks_path, class: "A_MenuLink" %>
               <%= link_to "жалобы", profile_path(current_user.id), class: "A_MenuLink" %>
               <% else %>
-              <%= link_to "все задания", allTasks_path, class: "A_MenuLink" %>
-              <%= link_to "в поиске", searchTasks_path, class: "A_MenuLink" %>
-              <%= link_to "как играть", howToPlay_path, class: "A_MenuLink" %>
+              <%= link_to "все задания", allTasks_path, class: "A_MenuLink all" %>
+              <% if user_signed_in? %>
+                <%= link_to "в поиске", searchTasks_path, class: "A_MenuLink search" %>
+              <% end %>
+              <%= link_to "как играть", howToPlay_path, class: "A_MenuLink how" %>
               <% end %>
           </div>
           <% if user_signed_in? %>
