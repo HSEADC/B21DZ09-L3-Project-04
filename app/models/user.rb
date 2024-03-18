@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :tasks_i_marked, through: :markers, source: 'task'
 
   has_one :profile
+  accepts_nested_attributes_for :profile
+
   has_one :onboarding
   has_one :alert
 

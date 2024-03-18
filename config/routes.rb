@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   post 'support/request_support'
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
 
   resources :subscriptions, only: [:create, :show]
 
