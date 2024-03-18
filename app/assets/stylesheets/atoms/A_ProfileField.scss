@@ -1,0 +1,19 @@
+.A_ProfileField {
+  width: 406px;
+  padding: 16px 40px;
+  background: var(--white);
+  border: 1px solid var(--main-blue);
+  border-radius: 30px;
+  color: var(--main-blue);
+  font-size: 28px;
+  font-family: 'Fugue';
+  font-weight: 400;
+
+  &::placeholder {
+    color: var(--main-blue);
+  }
+
+  &:focus {
+    border: 1px solid var(--main-blue);
+  }
+}

@@ -9,6 +9,19 @@ raw_text = 'К каждому заданию прилагаются специа
   "ShapeTask"
 ]
 
+@nicknames = [
+  "Kefir",
+  "Vzick",
+  "tauta_inka",
+  "uvvorobyova",
+  "olyamay",
+  "inchusya",
+  "esdnt",
+  "eldegron",
+  "Katato_potato",
+  "aloealya"
+]
+
 @colour_hexes = [
   "#C77DFF",
   "#F94144",
@@ -48,7 +61,8 @@ end
 def create_admin
   user_data = {
     email: "admin@email.com",
-    password: 'testtest',
+    password: "testtest",
+    nickname: "admin_boss",
     admin: true,
     avatar_image: upload_random_avatar,
     points: 500,
@@ -67,6 +81,7 @@ def create_users
     user_data = {
       email: "user_#{i}@email.com",
       password: 'testtest',
+      nickname: @nicknames.sample,
       avatar_image: upload_random_avatar,
       points: 500,
       tasks_strike: 4

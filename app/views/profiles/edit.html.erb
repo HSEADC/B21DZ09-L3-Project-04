@@ -1,27 +1,76 @@
-<%= form_with(model: @profile) do |form| %>
- <% if @profile.errors.any? %>
-   <div style="color: red">
-     <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this comment from being saved:</h2>
+<%  
+  if current_user.birthday != nil
+    birthday = current_user.birthday
+  else
+    birthday = "ваш день рождения"
+  end
 
-     <ul>
-       <% @profile.errors.each do |error| %>
-         <li><%= error.full_message %></li>
-       <% end %>
-     </ul>
-   </div>
- <% end %>
+  if current_user.tg != nil
+    tg = current_user.tg
+  else
+    tg = "ваш телеграм"
+  end
 
- <div class="field">
-   <%= form.label :username %><br />
-   <%= form.text_field :username %>
- </div>
+%>
+  <%= form_with(model: @profile) do |form| %>
+  <% if @profile.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this comment from being saved:</h2>
+      <ul>
+        <% @profile.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="Q_Grid">
 
- <div class="field">
-   <%= form.label :avatar_image %><br />
-   <%= form.file_field :avatar_image %>
- </div>
+  <div class="A_TopRow">
+    <%= link_to '', :back, class: "A_ArrowBack" %>
+  </div>
 
- <div class="actions">
-   <%= form.submit %>
- </div>
+  <div class=O_ProfileLeft>
+    <h2>фотография</h2>
+     <div class="A_Ava">
+      <%= image_tag current_user.avatar_image.large.url, class: "Q_Ava" if current_user.avatar_image.large.url %>
+    </div>
+    <%= form.label :avatar_image, "изменить", class: "M_Button secondary m"%>
+     <%= form.file_field :avatar_image%>
+  </div>
+
+  <div class="O_ProfileRight">
+    <div class="W_Required">
+      <div class="W_ProfileField">
+        <h2>имя пользователя</h2>
+        <%= form.text_field :username, placeholder: "#{current_user.nickname}", class: "A_ProfileField" %>
+      </div>
+       <div class="W_ProfileField">
+        <h2>электронная почта</h2>
+        <%= form.text_field :email, placeholder: "#{current_user.email}", class: "A_ProfileField" %>
+      </div>
+
+      <div class="W_ProfileField">
+        <h2>пароль</h2>
+        <div class="A_ProfileField">••••••••</div>
+        <%= link_to "изменить", "", :class => "M_Button secondary m" %>
+      </div>
+    </div>
+
+    <div class="W_Optional">
+      <div class="W_ProfileField">
+        <h2>дата рождения</h2>
+        <%= form.text_field :birthday, placeholder: "#{birthday}", autocomplete: "date", class: "A_ProfileField" %>
+      </div>
+      <div class="W_ProfileField">
+        <h2>ник в тг</h2>
+        <%= form.text_field :tg, placeholder: "#{tg}", class: "A_ProfileField" %>
+      </div>
+    </div>
+
+    <div class="W_Buttons">
+    <%= link_to "сбросить", "", :class => "M_Button secondary m" %>
+    <%= form.submit "сохранить", :class => "M_Button primary m"%>
+    </div>
+  </div>
+</div>
 <% end %>

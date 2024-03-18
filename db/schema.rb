@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_15_130342) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_18_125538) do
   create_table "alerts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "count"
@@ -147,6 +147,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_15_130342) do
     t.string "name"
     t.string "nickname"
     t.boolean "blocked", default: false
+    t.date "birthday"
+    t.string "tg"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["jti"], name: "index_users_on_jti", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -1,0 +1,28 @@
+.O_ProfileLeft {
+  grid-column: 2 / 5;
+  width: 100%;
+  height: min-content;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: var(--white);
+  border-radius: 30px;
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .A_Ava {
+    width: 230px;
+    height: 230px;
+  }
+
+  #profile_avatar_image {
+    display: none;
+  }
+}

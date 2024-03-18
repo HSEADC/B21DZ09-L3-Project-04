@@ -15,6 +15,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @profile = current_user.profile
   end
 
   # PATCH/PUT /answers/1 or /answers/1.json
@@ -37,7 +38,10 @@ class ProfilesController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def answer_params
-      params.require(:profile).permit(:username)
+    def profile_params
+      email = current_user.email
+      birthday = current_user.birthday
+      tg = current_user.tg
+      params.require(:profile).permit(:username, :email, :birthday, :tg)
     end
 end
