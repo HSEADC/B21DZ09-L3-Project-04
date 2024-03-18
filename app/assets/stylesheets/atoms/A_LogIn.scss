@@ -23,3 +23,26 @@
     }
   }
 }
+
+@media only screen and (max-width: 850px) and (min-width: 435px) {
+  .A_Log {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .A_Log {
+    margin-right: 22px;
+
+    &.in,
+    &.out {
+      background-image: url("assets/A_Bubger");
+
+      &:hover {
+        background-image: url("assets/A_BubgerHover");
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+}

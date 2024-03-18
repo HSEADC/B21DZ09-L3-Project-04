@@ -47,9 +47,13 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 435px) {
   .M_TitleWithFilters {
     flex-wrap: wrap;
+
+    .C_TasksTypes {
+      margin-top: 18px;
+    }
 
     .W_Fiters {
       margin-top: 26px;

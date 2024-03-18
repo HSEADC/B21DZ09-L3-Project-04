@@ -43,7 +43,8 @@ ul {
 }
 
 .Q_Grid {
-  width: 1660px;
+  // width: 1660px;
+  width: 98vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
@@ -154,15 +155,16 @@ ul {
 
 // адаптивы
 
-@media only screen and (min-width: 1024px) and (max-width: 1660px) {
-  .Q_Grid {
-    width: 964px;
-  }
-}
+// @media only screen and (min-width: 1024px) and (max-width: 1660px) {
+//   .Q_Grid {
+//     width: 964px;
+//   }
+// }
 
 @media only screen and (min-width: 320px) and (max-width: 700px) {
   .Q_Grid {
-    width: 328px;
+    // width: 328px;
+    width: 90vw;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     margin: 84px auto;

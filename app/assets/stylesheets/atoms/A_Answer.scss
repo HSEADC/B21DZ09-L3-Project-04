@@ -1,16 +1,24 @@
 .A_AnswerCard {
-  display: block;
-  width: 400px;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
-  border-radius: 30px;
-  overflow: hidden;
+  grid-column: 1fr;
+
+  // display: block;
+  // width: 400px;
+  // height: 400px;
+  // position: relative;
+  // border-radius: 30px;
+  // overflow: hidden;
 
   &.hidden {
     display: none;
   }
 
   .Q_ProfileAnswerImage {
+    aspect-ratio: 1 / 1;
+    border-radius: 30px;
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -21,5 +29,34 @@
     z-index: 2;
     right: 20px;
     top: 20px;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1040px) {
+  .A_AnswerCard {
+    .Q_ProfileAnswerImage {
+      border-radius: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .A_AnswerCard {
+    .Q_ProfileAnswerImage {
+      border-radius: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .A_AnswerCard {
+
+    .A_TaskType {
+      width: 36px;
+      height: 36px;
+      font-size: 30px;
+      top: 15px;
+      right: 15px;
+    }
   }
 }

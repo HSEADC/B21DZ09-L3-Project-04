@@ -20,3 +20,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 850px) and (min-width: 435px) {
+  .M_MenuProfile {
+    height: 80px;
+    padding: 0 10px;
+
+    p {
+      display: none;
+      ;
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .M_MenuProfile {
+    display: none;
+  }
+}

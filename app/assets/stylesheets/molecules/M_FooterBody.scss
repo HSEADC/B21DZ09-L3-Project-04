@@ -35,3 +35,41 @@
     }
   }
 }
+
+@media only screen and (max-width: 435px) {
+  .M_FooterBody {
+    padding: 40px;
+
+    .A_Logo {
+      width: 70px;
+    }
+
+    .C_FooterLinks {
+      flex-direction: column;
+
+      .W_LeftLinks {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+
+        .W_TwoLinks {
+          width: 60%;
+
+          .A_FooterLink:nth-of-type(1),
+          .A_FooterLink:nth-of-type(2) {
+            width: 100%;
+          }
+        }
+
+        .A_FooterLink:nth-of-type(1) {
+          width: 40%;
+        }
+      }
+
+      .W_TwoLinks:nth-of-type(2) {
+        width: 45%;
+        margin-left: 60%;
+      }
+    }
+  }
+}

@@ -45,11 +45,23 @@
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1023px) {
+@media only screen and (min-width: 435px) and (max-width: 1023px) {
   .O_Footer {
     .Q_Rect {
       &.second {
         width: 300px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .O_Footer {
+    .Q_Rect {
+
+      &.second,
+      &.third {
+        display: none;
       }
     }
   }
