@@ -1,0 +1,20 @@
+.A_Option {
+  min-width: 140px;
+  height: 26px;
+  color: var(--white);
+  font-family: 'Fugue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  border-bottom: 1px solid var(--white);
+
+  &:hover {
+    color: var(--white-hover);
+    border-bottom: 1px solid var(--white-hover);
+  }
+
+  &:active {
+    color: var(--white-click);
+    border-bottom: 1px solid var(--white-click);
+  }
+}

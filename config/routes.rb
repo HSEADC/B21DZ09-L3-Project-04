@@ -13,11 +13,12 @@ Rails.application.routes.draw do
 
   resources :tasks do
     resources :answers do
-      resources :comments
+      # resources :comments
     end
   end
 
   resources :answers do
+    resources :comments
       member do
         get 'toggle_like', to: 'answers#toggle_like', as: 'toggle_like'
       end
@@ -67,7 +68,6 @@ Rails.application.routes.draw do
     # end
     #
     resources :subscriptions
-
     root "admin/tasks#index"
   end
 
@@ -78,7 +78,6 @@ Rails.application.routes.draw do
   get 'expireTasks', to: 'welcome#expireTasks'
   get 'howToPlay', to: 'welcome#howToPlay'
   get 'support', to: 'support#index'
-  # get 'profile', to: 'profiles#show'
   get 'answersGallery', to: 'tasks#answersGallery'
 
   root "welcome#index"

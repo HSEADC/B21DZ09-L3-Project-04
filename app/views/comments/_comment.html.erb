@@ -1,3 +1,4 @@
+<div class="W_Comment">
 <div class="A_Comment" id="<%= dom_id comment %>">
 		 <%= image_tag comment.user.avatar_image.small.url, class: "Q_Ava" if comment.user.avatar_image.small.url %>
 
@@ -5,18 +6,19 @@
 			<%= comment.body %>
 		</p>
 
-		<div class="Q_MoreButton"></div>
-
-		<div class="smallButtonsContainer">
-		<% if can? :manage, comment %>
-			 <%#= link_to "Редактировать", edit_task_answer_comment_path(task, answer, comment), class: "smallButton" %>
-			 <%#= button_to "Удалить", [:task, answer, comment], method: :delete, class: "smallButton"  %>
-		 <% end %>
-		 </div>
-
+		<div class="A_CommentMoreButton"></div>
 		 <div class="commentReplies">
 			 <% comment.replies.each do |reply| %>
 		 	<%#= render reply, partial: "comments/comment", comment: reply, answer: answer %>
 			<% end %>
 		 </div>
+</div>
+ <div class="M_CommentOptions hidden">
+			<% if can? :manage, comment %>
+			 <%= link_to "Редактировать", edit_answer_comment_path(answer, comment), class: "A_Option" %>
+			 <%= button_to "Удалить", [answer, comment], method: :delete, class: "A_Option"  %>
+			<% else %>
+				<%= link_to "Пожаловаться", support_path(), class:"A_Option" %>
+			<% end %>
+  		</div>
 </div>
