@@ -12,7 +12,7 @@
 
   <div class="W_RightPart">
 
-    <%= render 'answers/like_button', answer: answer%>
+    <%#= render 'answers/like_button', answer: answer%>
 
     <div class="A_ButtonsTape comment">
       <div class="Q_Icon comment"></div>
@@ -48,10 +48,10 @@
       </div>
       <div class="W_Comments">
       <div class="C_Comments"> 
-        <%=render answer.comments, task: @task, answer: answer%>
+        <%=render answer.comments, answer: answer%>
       </div>
       <% if user_signed_in? %>
-        <%= render "comments/form", task: @task, answer: answer, comment: Comment.new %>
+        <%= render "comments/form", answer: answer, comment: Comment.new, url: @url %>
       <% end %>
      </div>
      </div>

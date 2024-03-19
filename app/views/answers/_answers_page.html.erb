@@ -1,3 +1,5 @@
   <% @answers.each do | answer | %>
-    <%= render 'answers_cards/answer_reels', task: @task, answer: answer%>
+  <%  @comment = Comment.new
+      @url = answer_comments_path(answer, @comment)%>
+    <%= render 'answers_cards/answer_reels', task: @task, answer: answer, url: @url%>
   <% end %>

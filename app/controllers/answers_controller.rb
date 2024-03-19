@@ -7,6 +7,9 @@ class AnswersController < ApplicationController
     @task = Task.find(params[:task_id])
     @answers = Answer.where(task_id: @task.id).paginate(page: params[:page])
 
+    # @comment = Comment.new
+    # url = answer_comments_path(@answer, @comment)
+
     # Meta
     set_meta_tags(
       title: "Ответы",
@@ -19,8 +22,9 @@ class AnswersController < ApplicationController
   # GET /answers/1 or /answers/1.json
   def show
     @task = Task.find(params[:task_id])
+    @answer = Answer.find(params[:id])
     @comment = Comment.new
-
+    @url = answer_comments_path(@answer, @comment)
     # Meta
     set_meta_tags(
       title: "Ответ",
@@ -49,7 +53,7 @@ class AnswersController < ApplicationController
 
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to task_url(@answer.task), notice: "answer was successfully created." }
+        format.html { redirect_to task_url(@task), notice: "answer was successfully created." }
         format.json { render :show, status: :created, location: @answer }
       else
         format.html { render :new, status: :unprocessable_entity }

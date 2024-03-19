@@ -15,6 +15,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @task = Task.find(params[:id])
     # Meta
     set_meta_tags(
       title: "Задание",

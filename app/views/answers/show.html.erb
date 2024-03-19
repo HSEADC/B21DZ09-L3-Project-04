@@ -3,7 +3,10 @@
 <%= render @answer %>
 
 <h3>Comments</h3>
-<%= render "comments/form", task: @task, answer: @answer, comment: Comment.new %>
+<br>
+<h2><%= url%></h2>
+<br>
+<%= render "comments/form", task: @task, answer: @answer, comment: Comment.new, url: url %>
 <%= render @answer.comments, answer: @answers %>
 
  <%#= link_to "New comment", new_task_answer_comment_path(@task, @answer) %>
