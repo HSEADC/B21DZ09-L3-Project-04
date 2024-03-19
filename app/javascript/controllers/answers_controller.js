@@ -4,7 +4,12 @@ export default class extends Controller {
   static targets = ['nextButton'];
 
   initialize() {
-    console.log('initialize');
+    this.element.addEventListener('turbo:before-fetch-response', (event) => {
+      const response = event.detail.fetchResponse.response;
+      if (response.status == '200' && response.url.includes('login')) {
+        location.reload();
+      }
+    });
   }
 
   connect() {
