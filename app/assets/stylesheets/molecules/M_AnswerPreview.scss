@@ -1,6 +1,8 @@
 .M_AnswerPreview {
-  width: 260px;
-  height: 260px;
+  width: 15.6vw;
+  height: 15.6vw;
+  // width: 260px;
+  // height: 260px;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
@@ -25,15 +27,15 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1660px) {
-  .M_AnswerPreview {
-    width: 144px;
-    height: 144px;
-    border-radius: 12px;
+// @media only screen and (min-width: 1024px) and (max-width: 1660px) {
+//   .M_AnswerPreview {
+//     width: 144px;
+//     height: 144px;
+//     border-radius: 12px;
 
-    .A_Ava {
-      bottom: 6px;
-      right: 6px;
-    }
-  }
-}
+//     .A_Ava {
+//       bottom: 6px;
+//       right: 6px;
+//     }
+//   }
+// }

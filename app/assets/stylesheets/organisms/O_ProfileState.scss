@@ -42,32 +42,182 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1660px) {
+@media only screen and (max-width: 1300px) {
   .O_ProfileState {
-    gap: 20px;
+    gap: 26px;
 
-    .C_UsersAnswers {
-      gap: 12px;
+    .M_ProfileRec {
+      height: 165px;
+      padding: 17px;
 
-      .M_AnswerPreview {
-        width: 176px;
-        height: 176px;
-        border-radius: 12px;
+      .A_Ava {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+    .Q_BannerScroll {
+      .C_UsersAnswers {
+        gap: 14px;
+
+        .M_AnswerPreview {
+          height: 202px;
+          width: 202px;
+        }
       }
     }
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 700px) {
+@media only screen and (max-width: 850px) {
   .O_ProfileState {
-    grid-column: 1 / 5;
     flex-direction: column;
-    gap: 20px;
-    padding: 16px;
+    align-items: center;
 
-    .C_UsersAnswers {
-      height: 294px;
-      gap: 12px;
+    .M_ProfileRec {
+      width: 89%;
+      margin-top: -1vw;
+      margin-left: -5vw;
+      height: 25vw;
+      padding: 5vw;
+
+      .A_Ava {
+        width: 20vw;
+        height: 20vw;
+      }
+
+      .C_InfoNums {
+        margin-top: 0.5vw;
+        gap: 50px;
+
+        h2 {
+          font-size: 74px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .A_TasksStrike {
+        margin-top: 3vw;
+
+        .Q_TasksStrikeCircle {
+          width: 2.5vw;
+          height: 2.5vw;
+        }
+      }
+    }
+
+    .Q_BannerScroll {
+      align-self: flex-start;
+      margin-left: -76px;
+      width: 104vw;
+
+      .C_UsersAnswers {
+        padding-right: 40px;
+
+        .M_AnswerPreview {
+          width: 28vw;
+          height: 28vw;
+        }
+      }
     }
   }
 }
+
+@media only screen and (max-width: 440px) {
+  .O_ProfileState {
+    margin-top: 30px;
+    align-items: center;
+
+    .M_ProfileRec {
+      width: 83%;
+      margin-top: -5.5vw;
+      margin-left: -10vw;
+      height: 100vw;
+      padding: 7vw;
+      flex-direction: column;
+
+      .M_AvatarName {
+        margin-left: -1vw;
+        margin-top: 3.5vw;
+
+        .A_Ava {
+          width: 40vw;
+          height: 40vw;
+        }
+      }
+
+      .C_InfoNums {
+        margin-top: -8vw;
+        margin-left: 2.5vw;
+        gap: 56px;
+        flex-direction: row;
+
+        .A_InfoNum {
+          gap: 8px;
+
+          h2 {
+            font-size: 68px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .A_TasksStrike {
+        position: relative;
+        margin-top: 2.5vw;
+        margin-left: -4.5vw;
+        align-items: center;
+
+        p {
+          font-size: 22px;
+        }
+
+        .C_TasksStrikeCircles {
+          gap: 6px;
+          width: 40%;
+
+          .Q_TasksStrikeCircle {
+            width: 2.5vw;
+            height: 2.5vw;
+          }
+        }
+      }
+    }
+
+    .Q_BannerScroll {
+      align-self: flex-start;
+      margin-left: -76px;
+      width: 104vw;
+
+      .C_UsersAnswers {
+        padding-right: 40px;
+
+        .M_AnswerPreview {
+          width: 60vw;
+          height: 60vw;
+        }
+      }
+    }
+  }
+}
+
+///
+// @media only screen and (min-width: 320px) and (max-width: 700px) {
+//   .O_ProfileState {
+//     grid-column: 1 / 5;
+//     flex-direction: column;
+//     gap: 20px;
+//     padding: 16px;
+
+//     .C_UsersAnswers {
+//       // height: 294px;
+//       gap: 12px;
+//     }
+//   }
+// }

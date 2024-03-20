@@ -88,9 +88,13 @@
 
     .C_InfoNums {
       margin-top: -23vw;
-      margin-left: 42vw;
+      margin-left: 40vw;
+      gap: 46px;
 
       .A_InfoNum {
+        flex-direction: row;
+        gap: 12px;
+
         h2 {
           font-size: 82px;
         }
@@ -100,8 +104,17 @@
     .A_TasksStrike {
       position: absolute;
       bottom: 4vw;
-      left: 46vw;
+      left: 44vw;
       align-items: flex-start;
+
+      p {
+        font-size: 22px;
+      }
+
+      .Q_TasksStrikeCircle {
+        width: 2.5vw;
+        height: 2.5vw;
+      }
     }
   }
 }
@@ -122,10 +135,16 @@
   .O_Profile {
     .C_InfoNums {
       margin-top: -24vw;
+      gap: 80px;
+
+      .A_InfoNum {
+        flex-direction: column;
+        gap: 8px;
+      }
     }
 
     .A_TasksStrike {
-      left: 47vw;
+      left: 45vw;
     }
   }
 }
@@ -157,11 +176,16 @@
       align-items: center;
       position: relative;
       margin-top: 10vw;
-      margin-left: -95vw;
+      margin-left: -90vw;
 
-      .Q_TasksStrikeCircle {
-        width: 2.5vw;
-        height: 2.5vw;
+      .C_TasksStrikeCircles {
+        justify-content: space-around;
+        width: 80%;
+
+        .Q_TasksStrikeCircle {
+          width: 2.5vw;
+          height: 2.5vw;
+        }
       }
     }
   }
