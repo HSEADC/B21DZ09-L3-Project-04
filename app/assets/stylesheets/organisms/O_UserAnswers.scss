@@ -11,6 +11,10 @@
 
   .M_TitleWithFilters {
     margin-bottom: 20px;
+
+    &:nth-of-type(3) {
+      margin-top: 64px;
+    }
   }
 
   .C_UserAnswers {
@@ -24,6 +28,14 @@
     // flex-direction: row;
     // flex-wrap: wrap;
     // gap: 20px;
+
+    &.wins {
+
+      .A_Ava,
+      .W_BottomPart {
+        display: none;
+      }
+    }
   }
 }
 

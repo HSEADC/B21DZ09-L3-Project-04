@@ -13,9 +13,9 @@
         <div class="Q_Circle"></div>
       </div>
       
-      <div class="A_WinTape">
+      <a href="#wins"><div class="A_WinTape">
         <p><%= @win_tasks.length %><p>
-      </div>
+      </div></a>
 
       <div class="M_AvatarName">
         <div class="A_Ava">
@@ -63,7 +63,7 @@
 <div class="O_UserAnswers">
   <div class="M_TitleWithFilters">
     <div class="W_TitleCounter">
-      <div class="A_Title small" data-id="all">твои находки</div>
+      <div class="A_Title small" data-id="all">находки</div>
       <div class="A_MoreCircle">
         <p><%=@user_answers.length %></p>
       </div>
@@ -83,6 +83,21 @@
     <% @user_answers.each do |answer| %>
     <%= render 'answers_cards/answer_card', answer: answer%>
     <% end %>
+  </div>
+
+<div class="M_TitleWithFilters" id="wins">
+    <div class="W_TitleCounter">
+      <div class="A_Title small" data-id="all">победы</div>
+      <div class="A_MoreCircle">
+        <p><%= @win_tasks.length %></p>
+      </div>
+      </div>
+  </div>
+
+  <div class="C_UserAnswers wins">
+    <% @win_tasks.each do |task| %>
+        <%= render 'task_cards/task_card', task: task%>
+        <% end %>
   </div>
 
 </div>

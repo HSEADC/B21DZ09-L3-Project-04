@@ -1,6 +1,8 @@
 .O_Profile {
-  width: 340px;
-  height: 564px;
+  width: 20vw;
+  height: 32.6vw;
+  // width: 340px;
+  // height: 564px;
   padding: 80px 30px 44px 30px;
   display: flex;
   flex-direction: column;
@@ -14,8 +16,10 @@
 
   .M_AvatarName {
     .A_Ava {
-      width: 240px;
-      height: 240px;
+      width: 13.8vw;
+      height: 13.8vw;
+      // width: 240px;
+      // height: 240px;
     }
 
     p {
@@ -24,7 +28,8 @@
   }
 
   .C_InfoNums {
-    margin-top: 50px;
+    margin-top: 2.9vw;
+    // margin-top: 50px;
     display: flex;
     flex-direction: row;
     gap: 80px;
@@ -36,7 +41,8 @@
   }
 
   .A_TasksStrike {
-    margin-top: 54px;
+    margin-top: 3.1vw;
+    // margin-top: 54px;
     gap: 10px;
     align-items: center;
 
@@ -45,8 +51,118 @@
     }
 
     .Q_TasksStrikeCircle {
-      width: 28px;
-      height: 28px;
+      width: 1.6vw;
+      height: 1.6vw;
+      // height: 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .O_Profile {
+    padding: 90px 40px 66px 40px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .O_Profile {
+    align-self: center;
+    align-items: flex-start;
+    margin-top: 34px;
+    width: 85%;
+    height: 15vw;
+
+    .M_AvatarName {
+      margin-top: -5vw;
+      margin-left: 5vw;
+
+      .A_Ava {
+        width: 20vw;
+        height: 20vw;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .C_InfoNums {
+      margin-top: -23vw;
+      margin-left: 42vw;
+
+      .A_InfoNum {
+        h2 {
+          font-size: 82px;
+        }
+      }
+    }
+
+    .A_TasksStrike {
+      position: absolute;
+      bottom: 4vw;
+      left: 46vw;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .O_Profile {
+    .C_InfoNums {
+      .A_InfoNum {
+        h2 {
+          font-size: 74px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .O_Profile {
+    .C_InfoNums {
+      margin-top: -24vw;
+    }
+
+    .A_TasksStrike {
+      left: 47vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .O_Profile {
+    align-items: center;
+    margin-top: 20px;
+    width: 68%;
+    height: 70vw;
+
+    .M_AvatarName {
+      margin-top: -10vw;
+      margin-left: -1vw;
+
+      .A_Ava {
+        width: 40vw;
+        height: 40vw;
+      }
+    }
+
+    .C_InfoNums {
+      margin-top: 3vw;
+      margin-left: -1vw;
+      gap: 60px;
+    }
+
+    .A_TasksStrike {
+      align-items: center;
+      position: relative;
+      margin-top: 10vw;
+      margin-left: -95vw;
+
+      .Q_TasksStrikeCircle {
+        width: 2.5vw;
+        height: 2.5vw;
+      }
     }
   }
 }

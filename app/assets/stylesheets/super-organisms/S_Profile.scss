@@ -14,32 +14,148 @@
 
     &.first {
       width: 100%;
-      height: 760px;
-      top: 0px;
+      height: 45vw;
+      // height: 760px;
+      top: 0;
     }
 
     &.second {
       width: 80%;
-      height: 810px;
+      height: 47.5vw;
+      // height: 810px;
       right: 0;
       top: 0;
     }
 
     &.third {
       width: 65%;
-      height: 870px;
+      height: 51vw;
+      // height: 870px;
       right: 0;
-      bottom: 0;
+      top: 0;
     }
-  }
-
-  .O_Profile {
-    margin: 44px 0 0 44px;
   }
 
   .A_GalleryButtons {
     position: absolute;
     right: 44px;
     bottom: 44px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .O_Profile {
+    margin: 2.6vw 0 0 2.6vw;
+    // margin: 44px 0 0 44px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .S_Profile {
+    height: 55vw;
+
+    .Q_Rect {
+      &.first {
+        height: 47vw;
+      }
+
+      &.second {
+        height: 50vw;
+      }
+
+      &.third {
+        height: 55vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .S_Profile {
+    height: 55vw;
+
+    .Q_Rect {
+      &.first {
+        height: 49vw;
+      }
+
+      &.second {
+        height: 52vw;
+      }
+
+      &.third {
+        height: 55vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .S_Profile {
+    height: 58vw;
+
+    .Q_Rect {
+      &.first {
+        height: 54vw;
+      }
+
+      &.second {
+        display: none;
+      }
+
+      &.third {
+        height: 58vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .S_Profile {
+    flex-direction: column;
+    height: 98vw;
+
+    .Q_Rect {
+      &.first {
+        height: 98vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .S_Profile {
+    height: 102vw;
+
+    .Q_Rect {
+      &.first {
+        height: 102vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .S_Profile {
+    height: 114vw;
+
+    .Q_Rect {
+      &.first {
+        height: 114vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .S_Profile {
+    margin-top: 30px;
+    height: 355vw;
+
+    .Q_Rect {
+      &.first {
+        height: 355vw;
+      }
+    }
   }
 }

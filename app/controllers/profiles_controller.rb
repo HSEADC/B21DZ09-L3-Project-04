@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
 
   def show
     @user_answers = Answer.where(user_id: current_user.id)
-    @win_tasks = Task.where(active: false).take(4)
+    @win_tasks = Task.where(active: false).take(2)
 
     # Meta
     set_meta_tags(
