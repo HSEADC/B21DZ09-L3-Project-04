@@ -1,20 +1,25 @@
 .A_Option {
   min-width: 140px;
   height: 26px;
-  color: var(--white);
+  color: var(--black);
   font-family: 'Fugue';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--gray);
 
   &:hover {
-    color: var(--white-hover);
-    border-bottom: 1px solid var(--white-hover);
+    color: var(--blue-hover);
+    border-bottom: 1px solid var(--blue-hover);
   }
 
   &:active {
-    color: var(--white-click);
-    border-bottom: 1px solid var(--white-click);
+    color: var(--blue-click);
+    border-bottom: 1px solid var(--blue-click);
+  }
+
+  &.danger {
+    color: #ff3b30;
+    border-bottom: 1px solid #ff3b30;
   }
 }

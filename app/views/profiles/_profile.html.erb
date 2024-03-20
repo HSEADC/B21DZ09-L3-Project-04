@@ -6,7 +6,10 @@
     <div class="Q_Rect third"></div>
 
     <div class="O_Profile">
-      <!-- <div class="A_Edit"></div> -->
+      <div class="M_ProfileOptions hidden">
+        <%= link_to "Редактировать", edit_profile_path(), class: "A_Option" %>
+        <%= link_to "Выйти", destroy_user_session_path, class: "A_Option danger" %>
+      </div>
 
       <div class="A_EditButton">
         <div class="Q_Circle"></div>

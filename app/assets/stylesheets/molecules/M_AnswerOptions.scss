@@ -1,15 +1,14 @@
 .M_AnswerOptions,
-.M_CommentOptions {
+.M_CommentOptions,
+.M_ProfileOptions {
   max-width: max-content;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background: var(--main-blue);
+  background: var(--white-hover);
   border-radius: 16px;
   position: absolute;
-  bottom: 60px;
-  right: 20px;
 
   &.hidden {
     display: none;
@@ -21,7 +20,7 @@
     background: none;
     color: inherit;
     border: none;
-    border-bottom: solid 1px var(--white);
+    border-bottom: solid 1px var(--gray);
     padding: 0;
     font: inherit;
     cursor: pointer;
@@ -31,8 +30,13 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    color: var(--white);
+    color: var(--black);
   }
+}
+
+.M_AnswerOptions {
+  bottom: 60px;
+  right: 20px;
 }
 
 .M_CommentOptions {
@@ -42,4 +46,9 @@
   .A_Option {
     min-width: 120px;
   }
+}
+
+.M_ProfileOptions {
+  top: 80px;
+  left: 30px;
 }
