@@ -42,8 +42,8 @@ class WelcomeController < ApplicationController
   end
 
   def searchTasks
-    @search_tasks = Task.where(in_search: true)
-    @expire_tasks = Task.where(in_search: true).take(2)
+    @search_tasks = current_user.tasks_i_marked
+    @expire_tasks = current_user.tasks_i_marked.take(2)
 
     # Meta
     set_meta_tags(
@@ -55,7 +55,7 @@ class WelcomeController < ApplicationController
   end
 
     def expireTasks
-    @expire_tasks = Task.where(in_search: true).take(4)
+    @expire_tasks = current_user.tasks_i_marked
 
     # Meta
     set_meta_tags(

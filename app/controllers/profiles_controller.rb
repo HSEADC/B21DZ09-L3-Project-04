@@ -4,6 +4,8 @@ class ProfilesController < ApplicationController
   def show
     @user_answers = Answer.where(user_id: current_user.id)
     @win_tasks = Task.where(active: false).take(4)
+    @all_likes = current_user.answers_i_liked.length
+
 
     # Meta
     set_meta_tags(
