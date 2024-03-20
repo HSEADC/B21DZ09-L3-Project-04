@@ -300,7 +300,7 @@ DEPENDENCIES
   mini_magick
   puma (~> 5.0)
   rack-cors
-  rails (~> 7.0.8)
+  rails (~> 7.0.7, >= 7.0.7.2)
   redis (~> 4.0)
   sass-rails
   selenium-webdriver

@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: %i[ show edit update destroy toggle_like ]
+  before_action :set_answer, only: %i[ show edit update destroy toggle_like]
 
   # GET /answers or /answers.json
   def index
@@ -87,8 +87,7 @@ class AnswersController < ApplicationController
     end
   end
 
-  def toggle_like
-
+    def toggle_like
     answer_user_ids = []
 
     @answer.users_who_liked.each do |user|
@@ -101,7 +100,7 @@ class AnswersController < ApplicationController
       current_user.answers_i_liked << @answer
     end
 
-    set_answer
+    @answer = Answer.find(params[:id])
   end
 
   private

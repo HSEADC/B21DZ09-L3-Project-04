@@ -1,15 +1,11 @@
 import { Controller } from '@hotwired/stimulus';
 
+// Connects to data-controller="answers"
 export default class extends Controller {
   static targets = ['nextButton'];
 
   initialize() {
-    this.element.addEventListener('turbo:before-fetch-response', (event) => {
-      const response = event.detail.fetchResponse.response;
-      if (response.status == '200' && response.url.includes('login')) {
-        location.reload();
-      }
-    });
+    console.log('initialize');
   }
 
   connect() {
