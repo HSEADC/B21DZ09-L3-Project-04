@@ -2,10 +2,47 @@
   grid-column: 1 / 13;
   margin-top: 60px;
   position: relative;
+  margin-bottom: 10px;
 
   .W_TaskCards {
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .O_AllActiveTasks {
+    .M_TitleWithFilters {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .W_Fiters {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 12px;
+        margin-bottom: -20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .O_AllActiveTasks {
+    .W_TaskCards {
+      gap: 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .O_AllActiveTasks {
+    .M_TitleWithFilters {
+      .W_Fiters {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
   }
 }

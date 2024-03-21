@@ -61,6 +61,35 @@
   }
 }
 
+@media only screen and (max-width: 1025px) {
+  .O_TaskWithButtons {
+    .Q_TaskImage {
+      width: 52vw;
+      height: 52vw;
+      clip-path: none;
+      border-radius: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .O_TaskWithButtons {
+    .Q_TaskImage {
+      width: 80vw;
+      height: 80vw;
+      clip-path: none;
+      border-radius: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .O_TaskWithButtons {
+    .Q_TaskImage {
+      margin-top: -10px;
+    }
+  }
+}
 
 // @media only screen and (min-width: 1024px) and (max-width: 1660px) {
 //   .O_TaskWithButtons {

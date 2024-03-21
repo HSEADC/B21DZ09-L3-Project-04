@@ -9,7 +9,7 @@
   background: var(--white);
   color: var(--main-blue);
   text-decoration: none;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
   p {
     font-size: 22px;
@@ -30,13 +30,16 @@
       padding-right: 44px;
       align-items: center;
 
+      .M_AnswerPreview {
+        height: 15.5vw;
 
-      .A_TaskType {
-        display: none;
-      }
+        .A_TaskType {
+          display: none;
+        }
 
-      .A_Ava {
-        display: none;
+        .A_Ava {
+          display: none;
+        }
       }
     }
   }
@@ -118,8 +121,8 @@
         padding-right: 40px;
 
         .M_AnswerPreview {
-          width: 28vw;
-          height: 28vw;
+          width: 35vw;
+          height: 35vw;
         }
       }
     }

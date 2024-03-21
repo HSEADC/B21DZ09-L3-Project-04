@@ -74,5 +74,9 @@
     select {
       font-size: 12px;
     }
+
+    &::after {
+      top: 8px;
+    }
   }
 }
