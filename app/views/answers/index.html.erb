@@ -17,14 +17,15 @@
   <% end %>
 </div>
 
-<div id="answers" class="S_AnswersReels">
-  <%#= turbo_frame_tag 'answers' do %>  
-    <%#= render partial: 'answers_page', locals: { answers: @answers } %>
-  <%# end %>
-  <%= render partial: 'answers_page', answers: @answers %>
-  <%#= turbo_frame_tag 'answers_pagination' do %>
-    <%#= render partial: 'answers_next_page_button', locals: { answers: @answers } %>
-  <%# end %>
+<div id="answers" class="S_AnswersReels" data-controller="answers">
+<%= @task.id%>
+  <%= turbo_frame_tag 'answers' do %>  
+    <%= render partial: 'answers_page', locals: { answers: @answers, task: @task } %>
+  <% end %>
+  <%#= render partial: 'answers_page', answers: @answers %>
+  <%= turbo_frame_tag 'answers_pagination' do %>
+    <%= render partial: 'answers_next_page_button', locals: { answers: @answers, task: @task } %>
+  <% end %>
 </div>
 </div>
 </body>

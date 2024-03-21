@@ -6,7 +6,6 @@ class AnswersController < ApplicationController
     #@answers = Answer.all
     @task = Task.find(params[:task_id])
     @answers = Answer.where(task_id: @task.id).paginate(page: params[:page])
-
     # @comment = Comment.new
     # url = answer_comments_path(@answer, @comment)
 

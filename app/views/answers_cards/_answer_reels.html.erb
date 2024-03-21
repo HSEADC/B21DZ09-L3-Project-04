@@ -47,8 +47,8 @@
         <div class="A_Close"></div>
       </div>
       <div class="W_Comments">
-      <div class="C_Comments"> 
-        <%=render answer.comments, answer: answer%>
+      <div class="C_Comments" id="C_Comments"> 
+        <%= render answer.comments, answer: answer %>
       </div>
       <% if user_signed_in? %>
         <%= render "comments/form", answer: answer, comment: Comment.new, url: @url %>
