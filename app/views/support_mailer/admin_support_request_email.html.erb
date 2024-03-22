@@ -4,7 +4,10 @@
 <p>Причина обращения <%= @problem %></p>
 
 <p>answer <%= @answer_id %></p>
-<p>comment<%#= @comment_id %></p>
+
+<% if @comment_id != nil %>
+<p>comment<%= @comment_id %></p>
+<% end %>
 
 <h3>Текст обращения</h3>
 <p><%= @comment %></p>

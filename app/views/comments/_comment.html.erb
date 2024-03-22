@@ -18,7 +18,7 @@
 			 <%= link_to "Редактировать", edit_answer_comment_path(answer, comment), class: "A_Option" %>
 			 <%= button_to "Удалить", [answer, comment], method: :delete, class: "A_Option"  %>
 			<% else %>
-				<%= link_to "Пожаловаться", support_path([:answer_id => answer.id, :comment_id => comment.id]), class:"A_Option" %>
+				<%= link_to "Пожаловаться", support_path(:c_id => comment.id), data: { turbo: "false" }, class:"A_Option" %>
 			<% end %>
   		</div>
 </div>
