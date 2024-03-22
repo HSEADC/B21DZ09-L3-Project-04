@@ -31,6 +31,7 @@ class WelcomeController < ApplicationController
      @random_task = Task.where(active: false).sample
      if user_signed_in?
      @profile_answers = Answer.where(user_id: current_user.id).take(5)
+     @all_likes = current_user.answers_i_liked.length
     end
 
     # Meta
