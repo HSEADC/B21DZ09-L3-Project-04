@@ -24,13 +24,8 @@
       </div>
         <% if user_signed_in? %>
       <a class="M_MenuProfile" href="<%=profile_path(current_user.id)%>">
-<<<<<<< HEAD
           <p>@<%= current_user.nickname%></p>
-          <div class="A_Ava medium">
-=======
-          <p>@<%= current_user.email.tr('_@email.com', '')%></p>
           <div class="A_Ava menu">
->>>>>>> 7760cb8c06018efdb9f9619dd5370b2d4ebf18f1
             <%= image_tag current_user.avatar_image.medium.url, class: "Q_Ava" if current_user.avatar_image.medium.url %>
           </div>
         <% end %>
