@@ -18,7 +18,6 @@
 </div>
 
 <div id="answers" class="S_AnswersReels" data-controller="answers">
-<%= @task.id%>
   <%= turbo_frame_tag 'answers' do %>  
     <%= render partial: 'answers_page', locals: { answers: @answers, task: @task } %>
   <% end %>

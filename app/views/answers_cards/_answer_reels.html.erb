@@ -29,7 +29,7 @@
       <%= link_to "Редактировать", edit_task_answer_path(answer.task, answer), class:"A_Option" %>
       <%= button_to "Удалить", task_answer_path(answer.task, answer), method: :delete, class:"A_Option" %>
     <% else %>
-      <%= link_to "Пожаловаться", support_path(), class:"A_Option" %>
+      <%= link_to "Пожаловаться", support_path(:a_id => answer.id), data: { turbo: "false" }, class:"A_Option" %>
     <% end %>
   </div>
 

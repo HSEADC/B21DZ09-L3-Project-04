@@ -15,6 +15,7 @@
   <div class="O_SupportForm">
   <div class="M_SupportForm">
     <h1>Форма поддержки</h1>
+     <h1><%= params[:a_id]%></h1>
     <div class="W_FormFields">
       <div class="W_FormField">
         <h3>Причина обращения<span>*</span></h3>
@@ -29,6 +30,8 @@
         <div class="A_FormField email"><%= current_user.email %></div>
       </div>
      </div>
+
+     <%= form.hidden_field :answer_id,  value: params[:a_id] %>
      <%= form.submit "отправить", :class => "M_Button primary" %>
   </div>
 </div>

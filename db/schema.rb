@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_18_145347) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_22_100912) do
   create_table "alerts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "count"
@@ -104,6 +104,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_18_145347) do
     t.datetime "updated_at", null: false
     t.string "type"
     t.string "problem"
+    t.integer "answer_id"
+    t.integer "comment_id"
   end
 
   create_table "tasks", force: :cascade do |t|

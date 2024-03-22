@@ -1,5 +1,7 @@
 class SupportController < ApplicationController
  def request_support
+    # @answer_id = params[answer_id]
+    # @comment_id = params[comment_id]
     @support = Support.new(support_params)
 
     respond_to do |format|
@@ -15,7 +17,7 @@ class SupportController < ApplicationController
   private
     # Only allow a list of trusted parameters through.
     def support_params
-      params.require(:support).permit(:comment, :problem).merge(email: current_user.email)
+      params.require(:support).permit(:comment, :problem, :answer_id, :comment_id).merge(email: current_user.email)
     end
 
 end
