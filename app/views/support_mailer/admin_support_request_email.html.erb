@@ -1,12 +1,18 @@
 <h1>Вам пришло новое обращение в поддержку</h1>
-<p>От пользователя <%#= @email %></p>
+<p>От пользователя <%= @email %></p>
 
 <p>Причина обращения <%= @problem %></p>
 
-<p>answer <%= @answer_id %></p>
+<% if @answer_id != nil %>
+  <p>answer <%= @answer_id %></p>
+    <%#= image_tag @user_answer.answer_image.small.url, class: "Q_ProfileAnswerImage" if @user_answer.answer_image.small.url %>
+  <h3>user <%= @user_answer.user_id%></h3>
+<% end %>
 
 <% if @comment_id != nil %>
-<p>comment<%= @comment_id %></p>
+  <p>comment<%= @comment_id %></p>
+  <%= @user_comment.body%>
+  <h3>user <%= @user_comment.user_id%></h3>
 <% end %>
 
 <h3>Текст обращения</h3>

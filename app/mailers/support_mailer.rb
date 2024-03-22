@@ -12,8 +12,14 @@ class SupportMailer < ApplicationMailer
     @email = params[:support][:email]
     @comment = params[:support][:comment]
     @problem = params[:support][:problem]
-    @answer_id = params[:support][:answer_id]
-    @comment_id = params[:support][:comment_id]
+    if params[:support][:answer_id] != nil
+      @answer_id = params[:support][:answer_id]
+      @user_answer = Answer.find(params[:support][:answer_id])
+    end
+    if params[:support][:comment_id] != nil
+      @comment_id = params[:support][:comment_id]
+      @user_comment = Comment.find(params[:support][:comment_id])
+    end
     mail(to: "admin@test.com", subject: "Новое обращение в поддержку")
   end
 end
