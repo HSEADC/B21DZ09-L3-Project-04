@@ -11,12 +11,47 @@
 
   .M_TitleWithFilters {
     margin-bottom: 20px;
+
+    &:nth-of-type(3) {
+      margin-top: 64px;
+    }
   }
 
   .C_UserAnswers {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 42px;
+
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // gap: 20px;
+
+    &.wins {
+
+      .A_Ava,
+      .W_BottomPart {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 440px) and (max-width: 1040px) {
+  .O_UserAnswers {
+    .C_UserAnswers {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .O_UserAnswers {
+    .C_UserAnswers {
+      grid-template-columns: 1fr;
+    }
   }
 }

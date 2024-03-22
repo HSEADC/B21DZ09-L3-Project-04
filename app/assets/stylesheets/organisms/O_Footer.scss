@@ -32,3 +32,37 @@
     }
   }
 }
+
+// адаптивы
+
+@media only screen and (min-width: 1024px) and (max-width: 1660px) {
+  .O_Footer {
+    .Q_Rect {
+      &.second {
+        width: 756px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 435px) and (max-width: 1023px) {
+  .O_Footer {
+    .Q_Rect {
+      &.second {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .O_Footer {
+    .Q_Rect {
+
+      &.second,
+      &.third {
+        display: none;
+      }
+    }
+  }
+}

@@ -4,10 +4,15 @@
   position: relative;
 
   .W_TaskCards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 42px 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 42px;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // gap: 42px 20px;
   }
 }
 
@@ -16,5 +21,28 @@
     grid-column: 1 / 13;
     margin-top: 0;
     position: relative;
+  }
+}
+
+@media only screen and (min-width: 440px) and (max-width: 1040px) {
+  .O_AllSearchTasks {
+    .W_TaskCards {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .O_AllSearchTasks {
+    .W_TaskCards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #expireSearch {
+    .O_AllSearchTasks {
+      margin-top: 30px;
+    }
   }
 }

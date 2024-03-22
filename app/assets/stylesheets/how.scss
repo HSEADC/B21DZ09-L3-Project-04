@@ -1,0 +1,275 @@
+// как играть + онбординг
+
+#onboarding {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 15;
+}
+
+#how,
+#onboarding {
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background: var(--lightgray);
+    opacity: 0.5;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    position: absolute;
+    z-index: -1;
+  }
+
+  .how_container {
+    width: 1660px;
+    height: 770px;
+    margin: 150px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    background-color: var(--main-blue);
+    color: var(--white);
+  }
+
+  .how_gallery {
+    width: -webkit-fill-available;
+    overflow: hidden;
+    padding: 30px 40px 50px 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .how_gallery_counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .counter,
+    .all_count {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      background-color: var(--main-blue);
+    }
+
+    .counter {
+      width: 130px;
+      height: 130px;
+      border: solid 2px var(--white);
+      position: relative;
+      z-index: 3;
+    }
+
+    .counter_p {
+      font-size: 68px;
+      font-weight: 400;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .all_count {
+      width: 80px;
+      height: 80px;
+      margin-left: -25px;
+      font-size: 42px;
+      border: solid 2px var(--gray);
+
+      position: relative;
+      z-index: 2;
+
+      p {
+        color: var(--gray);
+      }
+    }
+  }
+
+  .how_gallery_rail {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    transform: translate(-0px);
+    transition: all ease-in-out 1s;
+  }
+
+  .how_slide {
+    width: 1620px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .text_block {
+    width: 624px;
+    margin-top: 66px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    h2 {
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 22px;
+      width: 80%;
+      color: var(--white);
+    }
+  }
+
+  .content_block {
+    position: relative;
+  }
+
+  .image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.how1,
+    &.how2,
+    &.how6 {
+      width: 680px;
+      height: 680px;
+      border-radius: 30px;
+      position: absolute;
+      top: -110px;
+    }
+
+    &.how1 {
+      background-image: url('assets/how1.gif');
+    }
+
+    &.how2 {
+      background-image: url('assets/how2.png');
+    }
+
+    &.how6 {
+      background-image: url('assets/how6.png');
+    }
+
+    &.how3 {
+      width: 992px;
+      height: 749px;
+      position: absolute;
+      top: -130px;
+      left: -36px;
+      background-image: url('assets/how3.gif');
+    }
+
+    &.how4 {
+      width: 680px;
+      height: 680px;
+      position: absolute;
+      top: -110px;
+      left: 276px;
+      background-image: url('assets/how4.png');
+    }
+
+    &.how5 {
+      width: 591px;
+      height: 212px;
+      position: absolute;
+      top: 30px;
+      background-image: url('assets/how5.png');
+    }
+  }
+
+  .types {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px 194px;
+    user-select: none;
+  }
+
+  .type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    p {
+      font-size: 34px;
+      color: var(--white);
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      border: solid 3px var(--white);
+
+      &:hover {
+        background-color: var(--white);
+        transition: all 0.3s ease-out;
+
+        p {
+          color: var(--main-blue);
+        }
+      }
+
+      p {
+        font-size: 172px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    .M_Button {
+      padding: 16px 60px;
+    }
+  }
+
+  .rec {
+    position: absolute;
+    background: var(--main-blue);
+    border-radius: 30px;
+
+    &.first {
+      width: 1560px;
+      height: 100px;
+      bottom: -60px;
+      z-index: -1;
+    }
+
+    &.second {
+      width: 1460px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: -100px;
+    }
+  }
+
+  .progress_line {
+    width: 1300px;
+    height: 1px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 3px;
+    background: var(--lightgray);
+
+    .current_progress_line {
+      width: 16.6%;
+      height: 1px;
+      border-radius: 3px;
+      background: var(--white);
+    }
+  }
+}

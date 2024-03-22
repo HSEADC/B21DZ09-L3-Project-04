@@ -10,6 +10,7 @@
     font-size: 16px;
     font-weight: 600;
   }
+
   select {
     appearance: none;
     /*  safari  */
@@ -22,6 +23,11 @@
     font-family: "Fugue";
     font-size: 16px;
     font-weight: 600;
+
+    &:hover {
+      background-color: var(--white-hover);
+      transition: all 0.5s ease-out;
+    }
   }
 
   &::after {
@@ -59,4 +65,18 @@
   //   border-top: var(--size) solid black;
   //   top: 55%;
   // }
+}
+
+@media only screen and (max-width: 1660px) {
+  .A_Filter {
+
+    label,
+    select {
+      font-size: 12px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
 }

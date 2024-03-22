@@ -1,11 +1,13 @@
 .O_Suggestion {
   grid-column: 1 / 13;
-  height: 800px;
+  height: 46.3vw;
+  // height: 800px;
   margin-top: 60px;
   position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  overflow: hidden;
 
   .Q_Rect {
     background: var(--white);
@@ -13,28 +15,40 @@
     position: absolute;
 
     &.first {
-      width: 100px;
-      height: 560px;
-      top: 100px;
+      width: 5.8vw;
+      height: 32.4vw;
+      top: 5.8vw;
+      // width: 100px;
+      // height: 560px;
+      // top: 100px;
     }
 
     &.second {
-      width: 1622px;
-      height: 740px;
-      left: 36px;
+      width: 96vw;
+      height: 42.8vw;
+      left: 2vw;
+      // width: 1622px;
+      //   height: 740px;
+      //   left: 36px;
     }
 
     &.third {
-      width: 882px;
-      height: 100px;
-      right: 80px;
+      width: 51vw;
+      height: 5.8vw;
+      right: 4.6vw;
+      // width: 882px;
+      // height: 100px;
+      // right: 80px;
       bottom: 0;
     }
   }
 
   .W_RefPartial {
-    width: 680px;
-    height: 680px;
+    width: 39.3vw;
+    height: 39.3vw;
+    aspect-ratio: 1 / 1;
+    // width: 680px;
+    // height: 680px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,37 +61,209 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1660px) {
+@media only screen and (max-width: 1300px) {
   .O_Suggestion {
-    height: 586px;
-    margin-top: 60px;
-
-    .Q_Rect {
-      &.first {
-        width: 100px;
-        height: 448px;
-        top: 36px;
-      }
-
-      &.second {
-        width: 928px;
-        height: 534px;
-        left: 36px;
-      }
-
-      &.third {
-        width: 470px;
-        height: 100px;
-        right: 30px;
-        bottom: 0;
-      }
-    }
-
     .W_RefPartial {
-      width: 356px;
-      height: 356px;
-      margin-top: 80px;
       margin-right: 80px;
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .O_Suggestion {
+    .M_TextWithButton {
+      .W_TextBlock {
+        p {
+          width: 440px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .O_Suggestion {
+    height: 50vw;
+
+    .M_TextWithButton {
+      margin-left: 60px;
+      margin-top: 100px;
+
+      h1 {
+        font-size: 32px;
+        width: 340px;
+      }
+    }
+
+    .W_RefPartial {
+      margin-right: 40px;
+    }
+
+    .Q_Rect {
+      &.second {
+        left: 3vw;
+      }
+
+      &.third {
+        height: 12vw;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .O_Suggestion {
+    .W_RefPartial {
+      margin-right: 60px;
+    }
+
+    .M_TextWithButton {
+      .W_Buttons {
+        margin-top: -4vw;
+        width: 400px;
+      }
+
+      .W_TextBlock {
+        p {
+          font-size: 18px;
+          width: 360px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .O_Suggestion {
+    .W_RefPartial {
+      margin-top: 50px;
+      width: 30vw;
+      height: 30vw;
+    }
+
+    .M_TextWithButton {
+      margin-top: 70px;
+
+      .W_TextBlock {
+        p {
+          font-size: 18px;
+          width: 360px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .O_Suggestion {
+    height: 52vw;
+
+    .Q_Rect {
+      &.second {
+        height: 48vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .O_Suggestion {
+    height: 180vw;
+    flex-direction: column;
+    // align-content: center;
+
+    .M_TextWithButton {
+      margin-left: 30px;
+      margin-top: 60px;
+      width: 80%;
+      align-self: flex-start;
+
+      .W_Buttons {
+        margin-top: -11vw;
+        width: 110%;
+      }
+
+      .W_TextBlock {
+        h1 {
+          font-size: 24px;
+          width: 100%;
+        }
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    .W_RefPartial {
+      width: 74vw;
+      height: 74vw;
+      left: 32px;
+      top: -50px;
+    }
+
+    .Q_Rect {
+      &.first {
+        width: 100%;
+        height: 80vw;
+      }
+
+      &.second {
+        align-self: center;
+        width: 90%;
+        height: 10vw;
+        top: 80vw;
+        left: 4vw;
+        border-radius: 0;
+      }
+
+      &.third {
+        width: 100%;
+        height: 84vw;
+        top: 89vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .M_Button:nth-child(2) {
+    display: block;
+  }
+}
+
+// @media only screen and (min-width: 1024px) and (max-width: 1660px) {
+//   .O_Suggestion {
+//     height: 586px;
+//     margin-top: 60px;
+
+//     .Q_Rect {
+//       &.first {
+//         width: 100px;
+//         height: 448px;
+//         top: 36px;
+//       }
+
+//       &.second {
+//         width: 928px;
+//         height: 534px;
+//         left: 36px;
+//       }
+
+//       &.third {
+//         width: 470px;
+//         height: 100px;
+//         right: 30px;
+//         bottom: 0;
+//       }
+//     }
+
+//     .W_RefPartial {
+//       width: 356px;
+//       height: 356px;
+//       margin-top: 80px;
+//       margin-right: 80px;
+//     }
+//   }
+// }

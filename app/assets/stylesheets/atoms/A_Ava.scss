@@ -1,8 +1,15 @@
 .A_Ava {
-  width: 190px;
-  height: 190px;
+  width: 11vw;
+  height: 11vw;
+  // width: 190px;
+  // height: 190px;
   border-radius: 100%;
   overflow: hidden;
+
+  &.menu {
+    width: 56px;
+    height: 56px;
+  }
 
   &.medium {
     width: 56px;
@@ -31,10 +38,10 @@
     width: 136px;
     height: 136px;
 
-    &.medium {
-      width: 28px;
-      height: 28px;
-    }
+    // &.medium {
+    //   width: 36px;
+    //   height: 36px;
+    // }
 
     &.small {
       width: 40px;

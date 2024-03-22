@@ -6,5 +6,6 @@
   <div class="W_BottomPart">
     <%= render 'task_cards/task_title', task: task %>
     <%= link_to "загрузить находку", task_answers_path(task), class: "M_Button primary" %>
+    <%= link_to "загрузить", task_answers_path(task), class: "M_Button primary" %>
   </div>
 </div>

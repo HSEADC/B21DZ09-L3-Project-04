@@ -15,6 +15,7 @@
  *= require basics
  *= require index
  *= require how
+ *= require about
  *= require reset
  *= require_tree ./atoms
  *= require_tree ./molecules

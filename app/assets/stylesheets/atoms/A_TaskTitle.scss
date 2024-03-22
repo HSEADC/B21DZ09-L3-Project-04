@@ -8,3 +8,11 @@
     font-size: 52px;
   }
 }
+
+@media only screen and (max-width: 1440px) {
+  .A_TaskTitle {
+    &.big {
+      font-size: 36px;
+    }
+  }
+}

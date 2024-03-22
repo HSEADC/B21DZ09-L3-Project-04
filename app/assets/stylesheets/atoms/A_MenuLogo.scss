@@ -6,11 +6,34 @@
   background-image: url("assets/A_Logo_white.svg");
   background-color: var(--black);
   background-size: 80%;
-  background-position: center 22px;
+  background-position: center 40%;
   background-repeat: no-repeat;
 
   &:hover {
     background-color: var(--main-blue);
     transition: all 0.5s ease-out;
+  }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 435px) {
+  .A_MenuLogo {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .A_MenuLogo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url("assets/A_Logo.svg");
+    background-color: transparent;
+    margin-left: 22px;
+
+    &:hover {
+      background-image: url("assets/A_Logo_blue.svg");
+      transition: all 0.5s ease-out;
+    }
   }
 }

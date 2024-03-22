@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+
   def index
     @subscription = Subscription.new
     @random_answers = Answer.take(8)

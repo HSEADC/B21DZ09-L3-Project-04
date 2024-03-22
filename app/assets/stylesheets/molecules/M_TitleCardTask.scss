@@ -4,3 +4,9 @@
   gap: 24px;
   align-items: center;
 }
+
+@media only screen and (max-width: 435px) {
+  .M_TitleCardTask {
+    gap: 8px;
+  }
+}

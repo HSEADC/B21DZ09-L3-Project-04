@@ -1,9 +1,10 @@
 .M_TitleWithFilters {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 
   .A_Title {
     margin-bottom: 0;
@@ -42,6 +43,21 @@
         gap: 12px;
         margin-right: 24px;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .M_TitleWithFilters {
+    flex-wrap: wrap;
+
+    .C_TasksTypes {
+      margin-top: 18px;
+    }
+
+    .W_Fiters {
+      margin-top: 26px;
+      margin-bottom: -30px;
     }
   }
 }

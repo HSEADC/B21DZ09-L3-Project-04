@@ -12,7 +12,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1660px) {
+@media only screen and (max-width: 1660px) {
   .O_TasksOfDay {
     .C_TasksOfDay {
       width: 100%;
@@ -20,5 +20,67 @@
       overflow-x: scroll;
       overflow-y: hidden;
     }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .O_TasksOfDay {
+    .C_TasksOfDay {
+      width: 100%;
+      gap: 20px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .O_Task {
+        .Q_TaskImage {
+          width: 400px;
+          height: 400px;
+        }
+
+        .C_TaskCircles {
+
+          .A_Ava,
+          .A_TaskType {
+            width: 56px;
+            height: 56px;
+            font-size: 48px;
+          }
+        }
+      }
+    }
+  }
+
+  .M_Participants {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .O_TasksOfDay {
+    .C_TasksOfDay {
+      width: 100%;
+      gap: 20px;
+
+      .O_Task {
+        .Q_TaskImage {
+          width: 296px;
+          height: 296px;
+        }
+
+        .C_TaskCircles {
+
+          .A_Ava,
+          .A_TaskType {
+            width: 36px;
+            height: 36px;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .M_Participants {
+    display: none;
   }
 }
