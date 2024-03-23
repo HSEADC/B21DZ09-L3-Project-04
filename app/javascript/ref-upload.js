@@ -55,7 +55,7 @@ function placeholderChange() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   if (document.body.id == 'refs-bank') {
     placeholderChange(), taskTypesInit();
   }

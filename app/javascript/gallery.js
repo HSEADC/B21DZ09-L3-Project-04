@@ -45,7 +45,14 @@ function gallerySlide() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
+//   console.log('DOMContentLoaded');
+//   if (document.body.id == 'main') {
+//     gallerySlide();
+//   }
+// });
+
+document.addEventListener('turbo:load', () => {
   if (document.body.id == 'main') {
     gallerySlide();
   }

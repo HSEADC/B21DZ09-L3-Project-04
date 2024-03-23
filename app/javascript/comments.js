@@ -53,7 +53,7 @@ function openCommentOptions(commentOptions) {
   commentOptions.classList.toggle('hidden');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   if (document.body.id == 'reels') {
     initComments();
   }

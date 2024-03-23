@@ -7,7 +7,7 @@ function initOption() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   if (document.body.id == 'profile') {
     initOption();
   }
